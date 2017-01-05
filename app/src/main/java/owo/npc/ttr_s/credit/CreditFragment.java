@@ -25,7 +25,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
 import owo.npc.ttr_s.BaseFragment;
 import owo.npc.ttr_s.R;
 import owo.npc.ttr_s.model.CreditInfo;
@@ -193,11 +192,6 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                 RadarChartView radar_chart = (RadarChartView) v
                         .findViewById(R.id.radar_chart);
                 if (radar_chart != null) {
-                    tracker.send(new HitBuilders.EventBuilder()
-                            .setCategory(getString(R.string.analytics_category_credit))
-                            .setAction(getString(R.string.analytics_action_detail))
-                            .setLabel(RadarChartView.class.getSimpleName())
-                            .build());
                     radar_chart.startAnimation();
                 }
             }
@@ -364,11 +358,6 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
     };
 
     private void queryCredit() {
-        tracker.send(new HitBuilders.EventBuilder()
-                .setCategory(getString(R.string.analytics_category_credit))
-                .setAction(getString(R.string.analytics_action_update))
-                .setLabel(getString(R.string.analytics_label_click))
-                .build());
         if (WifiUtility.isNetworkAvailable(getActivity())) {
             if(Utility.checkAccount(getActivity())) {
                 pd = new ProgressDialog(getActivity());
@@ -431,12 +420,6 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
 
     @Override
     public void onSaveButtonClick(StandardCredit standardCredit) {
-        tracker.send(new HitBuilders.EventBuilder()
-                .setCategory(getString(R.string.analytics_category_credit))
-                .setAction(getString(R.string.analytics_action_save))
-                .setLabel(standardCredit.getYearText() + "-" + standardCredit.getDivisionText()
-                        + "-" + standardCredit.getDepartmentText())
-                .build());
         Model.getInstance().setStandardCredit(standardCredit);
         Model.getInstance().saveStandardCredit();
         refreshTotal();

@@ -32,8 +32,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
 import owo.npc.ttr_s.activity.ActivityFragment;
 import owo.npc.ttr_s.calendar.CalendarFragment;
 import owo.npc.ttr_s.course.CourseFragment;
@@ -46,7 +44,6 @@ import owo.npc.ttr_s.wifi.WifiFragment;
  * Created by Alan on 2015/9/12.
  */
 public class MainActivity extends AppCompatActivity {
-    private Tracker tracker;
     private Toolbar mToolbar;
     private NavigationView mSideBar;
     private DrawerLayout mDrawerLayout;
@@ -63,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
         mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolbar);
         setupSidePanel();
@@ -143,43 +139,36 @@ public class MainActivity extends AppCompatActivity {
     private void switchFragment(int index) {
         switch (index) {
             case 0:
-                tracker.setScreenName(getString(R.string.analytics_category_activity));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_activity_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_activity_selector));
                 changeFragment(activityFragment);
                 break;
             case 1:
-                tracker.setScreenName(getString(R.string.analytics_category_calendar));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_calendar_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_calendar_selector));
                 changeFragment(calendarFragment);
                 break;
             case 2:
-                tracker.setScreenName(getString(R.string.analytics_category_course));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_course_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_course_selector));
                 changeFragment(courseFragment);
                 break;
             case 3:
-                tracker.setScreenName(getString(R.string.analytics_category_credit));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_credit_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_credit_selector));
                 changeFragment(creditFragment);
                 break;
             case 4:
-                tracker.setScreenName(getString(R.string.analytics_category_wifi));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_wifi_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_wifi_selector));
                 changeFragment(wifiFragment);
                 break;
             case 5:
-                tracker.setScreenName(getString(R.string.analytics_category_setting));
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_account_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_account_selector));
                 changeFragment(accountSettingFragment);
                 break;
         }
-        tracker.send(new HitBuilders.ScreenViewBuilder().build());
     }
 
     private void changeFragment(BaseFragment to) {

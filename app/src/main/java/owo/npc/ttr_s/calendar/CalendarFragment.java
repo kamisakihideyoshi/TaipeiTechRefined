@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
 import owo.npc.ttr_s.BaseFragment;
 import owo.npc.ttr_s.R;
 import owo.npc.ttr_s.model.Model;
@@ -120,11 +119,6 @@ public class CalendarFragment extends BaseFragment implements OnClickListener,
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start_button:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getString(R.string.analytics_category_calendar))
-                        .setAction(getString(R.string.analytics_action_update))
-                        .setLabel(getString(R.string.analytics_label_click))
-                        .build());
                 updateCalendar();
                 break;
             case R.id.leftButton:
@@ -172,11 +166,6 @@ public class CalendarFragment extends BaseFragment implements OnClickListener,
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item_update:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getString(R.string.analytics_category_calendar))
-                        .setAction(getString(R.string.analytics_action_update))
-                        .setLabel(getString(R.string.analytics_label_click))
-                        .build());
                 updateCalendar();
                 break;
         }

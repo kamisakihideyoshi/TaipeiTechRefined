@@ -26,7 +26,6 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
 import owo.npc.ttr_s.BaseFragment;
 import owo.npc.ttr_s.R;
 import owo.npc.ttr_s.course.CourseTableLayout.TableInitializeListener;
@@ -209,11 +208,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
 
     public void startCourseDetail(Object object) {
         if (object instanceof Boolean) {
-            tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory(getString(R.string.analytics_category_course))
-                    .setAction(getString(R.string.analytics_action_detail))
-                    .setLabel("CourseNo :" + selectedCourseNo)
-                    .build());
             Intent i = new Intent(getActivity(),
                     CourseDetailActivity.class);
             i.putExtra("CourseNo", selectedCourseNo);
@@ -247,11 +241,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         if (object instanceof StudentCourse) {
             StudentCourse result = (StudentCourse) object;
             Model.getInstance().setStudentCourse(result);
-            tracker.send(new HitBuilders.EventBuilder()
-                    .setCategory(getString(R.string.analytics_category_course))
-                    .setAction(getString(R.string.analytics_action_query))
-                    .setLabel(result.getYear() + "-" + result.getSemester() + "-" + result.getSid())
-                    .build());
             StudentCourse studentCourse = Model.getInstance().getStudentCourse();
             showCourse(studentCourse);
             Snackbar.make(fragmentView.findViewById(R.id.main_layout), getText(R.string.course_offline_save)
@@ -259,11 +248,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                 @Override
                 public void onClick(View v) {
                     StudentCourse course = Model.getInstance().getStudentCourse();
-                    tracker.send(new HitBuilders.EventBuilder()
-                            .setCategory(getString(R.string.analytics_category_course))
-                            .setAction(getString(R.string.analytics_action_save_snackbar))
-                            .setLabel(course.getYear() + "-" + course.getSemester() + "-" + course.getSid())
-                            .build());
                     saveStudentCourse();
                 }
             }).setActionTextColor(getResources().getColor(R.color.dark_red)).show();
@@ -359,11 +343,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
             case R.id.item_save:
                 if (Model.getInstance().getStudentCourse() != null) {
                     StudentCourse course = Model.getInstance().getStudentCourse();
-                    tracker.send(new HitBuilders.EventBuilder()
-                            .setCategory(getString(R.string.analytics_category_course))
-                            .setAction(getString(R.string.analytics_action_save))
-                            .setLabel(course.getYear() + "-" + course.getSemester() + "-" + course.getSid())
-                            .build());
                     saveStudentCourse();
                 } else {
                     Toast.makeText(getActivity(), "目前無任何課表，無法設為離線瀏覽！",
@@ -371,10 +350,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                 }
                 break;
             case R.id.item_clear:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getString(R.string.analytics_category_course))
-                        .setAction(getString(R.string.analytics_action_clear))
-                        .build());
                 Model.getInstance().deleteStudentCourse();
                 Intent intent = new Intent(
                         Constants.ACTION_COURSEWIDGET_UPDATE_STR);

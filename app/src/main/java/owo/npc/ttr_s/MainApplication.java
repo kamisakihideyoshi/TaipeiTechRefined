@@ -22,7 +22,6 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
-        AnalyticsTrackers.initialize(this);
         singleton = this;
         Model.getInstance();
         Intent check_intent = new Intent(this, ActivityCheckReceiver.class);

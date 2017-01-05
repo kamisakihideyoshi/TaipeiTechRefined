@@ -13,9 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-import owo.npc.ttr_s.AnalyticsTrackers;
 import owo.npc.ttr_s.R;
 import owo.npc.ttr_s.model.EventInfo;
 import owo.npc.ttr_s.utility.Utility;
@@ -28,11 +25,9 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
     private static final int LAYOUT_ID = R.layout.calendar_item;
     private LayoutInflater inflater;
     private EventInfo selectedEvent;
-    private Tracker tracker;
 
     public CalendarListAdapter(Context context, List<EventInfo> objects) {
         super(context, LAYOUT_ID, objects);
-        tracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
         inflater = LayoutInflater.from(context);
     }
 
@@ -101,11 +96,6 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
     public void onClick(DialogInterface dialog, int position) {
         switch (position) {
             case DialogInterface.BUTTON_NEGATIVE:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getContext().getString(R.string.analytics_category_calendar))
-                        .setAction(getContext().getString(R.string.analytics_action_add_to_calendar))
-                        .setLabel(selectedEvent.getEvent())
-                        .build());
                 try {
                     Intent calendar_intent = new Intent(Intent.ACTION_EDIT);
                     calendar_intent.setType("vnd.android.cursor.item/event");
@@ -122,11 +112,6 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
                 }
                 break;
             case DialogInterface.BUTTON_POSITIVE:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getContext().getString(R.string.analytics_category_calendar))
-                        .setAction(getContext().getString(R.string.analytics_action_share))
-                        .setLabel(selectedEvent.getEvent())
-                        .build());
                 String shareBody = null;
                 if (selectedEvent.getStartDate().compareTo(
                         selectedEvent.getEndDate()) == 0) {

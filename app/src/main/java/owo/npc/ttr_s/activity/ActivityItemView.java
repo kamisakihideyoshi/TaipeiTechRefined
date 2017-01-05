@@ -18,9 +18,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
-import owo.npc.ttr_s.AnalyticsTrackers;
 import owo.npc.ttr_s.R;
 import owo.npc.ttr_s.model.ActivityInfo;
 import owo.npc.ttr_s.utility.ActivityConnector;
@@ -33,7 +30,6 @@ public class ActivityItemView extends RelativeLayout implements OnClickListener 
     private static final int CACHE_SIZE = 50 * 1024 * 1024; // 10MB
     private ActivityInfo activityInfo;
     private ImageView imageView;
-    private Tracker tracker;
     private static LruCache<String, Bitmap> imageCache;
     private SetBitmapTask task;
 
@@ -51,7 +47,6 @@ public class ActivityItemView extends RelativeLayout implements OnClickListener 
                 }
             };
         }
-        tracker = AnalyticsTrackers.getInstance().get(AnalyticsTrackers.Target.APP);
         imageView = (ImageView) findViewById(R.id.activity_image);
         setOnClickListener(this);
     }
@@ -90,11 +85,6 @@ public class ActivityItemView extends RelativeLayout implements OnClickListener 
 
     @Override
     public void onClick(View v) {
-        tracker.send(new HitBuilders.EventBuilder()
-                .setCategory(getContext().getString(R.string.analytics_category_activity))
-                .setAction(getContext().getString(R.string.analytics_action_detail))
-                .setLabel(activityInfo.getStart() + "-" + activityInfo.getHost() + "-" + activityInfo.getName())
-                .build());
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         builder.setCancelable(true);
         builder.setTitle(activityInfo.getName());
@@ -111,11 +101,6 @@ public class ActivityItemView extends RelativeLayout implements OnClickListener 
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        tracker.send(new HitBuilders.EventBuilder()
-                                .setCategory(getContext().getString(R.string.analytics_category_activity))
-                                .setAction(getContext().getString(R.string.analytics_action_add_to_calendar))
-                                .setLabel(activityInfo.getStart() + "-" + activityInfo.getHost() + "-" + activityInfo.getName())
-                                .build());
                         try {
                             Intent calendar_intent = new Intent(
                                     Intent.ACTION_EDIT);
@@ -144,11 +129,6 @@ public class ActivityItemView extends RelativeLayout implements OnClickListener 
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        tracker.send(new HitBuilders.EventBuilder()
-                                .setCategory(getContext().getString(R.string.analytics_category_activity))
-                                .setAction(getContext().getString(R.string.analytics_action_share))
-                                .setLabel(activityInfo.getStart() + "-" + activityInfo.getHost() + "-" + activityInfo.getName())
-                                .build());
                         String shareBody = null;
                         if (activityInfo.getStart().equals(
                                 activityInfo.getEnd())) {

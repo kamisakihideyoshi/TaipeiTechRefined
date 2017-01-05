@@ -24,7 +24,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.analytics.HitBuilders;
 import owo.npc.ttr_s.BaseFragment;
 import owo.npc.ttr_s.MainActivity;
 import owo.npc.ttr_s.MainApplication;
@@ -198,22 +197,12 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         boolean result = startService();
         switch (id) {
             case R.id.refresh_button:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getString(R.string.analytics_category_wifi))
-                        .setAction(getString(R.string.analytics_action_refresh))
-                        .setLabel(getString(R.string.analytics_label_click))
-                        .build());
                 if (result) {
                     WifiUtility.testCount = 0;
                     scanWifi();
                 }
                 break;
             case R.id.login_button:
-                tracker.send(new HitBuilders.EventBuilder()
-                        .setCategory(getString(R.string.analytics_category_wifi))
-                        .setAction(getString(R.string.analytics_action_login))
-                        .setLabel(getString(R.string.analytics_label_click))
-                        .build());
                 if (result) {
                     try {
                         String ssid = WifiUtility.getCurrentSSID(activityContext);
