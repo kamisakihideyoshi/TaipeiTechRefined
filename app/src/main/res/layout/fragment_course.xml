@@ -1,7 +1,7 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                 android:id="@+id/main_layout"
-                                                 android:layout_width="match_parent"
-                                                 android:layout_height="match_parent">
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             <owo.npc.taipeitechrefined.course.SemesterSelector
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:id="@+id/semester"
-                android:layout_width="100dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0"
