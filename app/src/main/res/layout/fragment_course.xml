@@ -38,7 +38,7 @@
                 android:textColor="@color/darken"
                 android:textSize="@dimen/textMedium"/>
 
-            <owo.npc.ttr_s.course.SemesterSelector
+            <owo.npc.taipeitechrefined.course.SemesterSelector
                 style="@style/Widget.AppCompat.Spinner.Underlined"
                 android:id="@+id/semester"
                 android:layout_width="100dp"
@@ -55,7 +55,7 @@
             android:layout_height="1dp"
             android:background="@color/cloud"/>
 
-        <owo.npc.ttr_s.course.CourseTableLayout
+        <owo.npc.taipeitechrefined.course.CourseTableLayout
             android:id="@+id/courseTable"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
