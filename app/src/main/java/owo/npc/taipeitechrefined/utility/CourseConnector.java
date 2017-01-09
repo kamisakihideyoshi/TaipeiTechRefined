@@ -118,7 +118,6 @@ public class CourseConnector {
 
             TagNode[] rows = tables[0].getElementsByName("tr", true);
             for (TagNode row : rows) {
-                if (isRevoked(row)) continue;
                 TagNode[] cols = row.getElementsByName("th", true);
                 String d = cols[0].getText().toString();
                 cols = row.getElementsByName("td", true);
@@ -205,6 +204,9 @@ public class CourseConnector {
         TagNode[] rows = nodes[0].getElementsByName("tr", true);
         for (int i = 3; i < rows.length - 1; i++) {
             TagNode[] cols = rows[i].getElementsByName("td", true);
+            if (isWithdraw(cols)){
+                continue;
+            }
             CourseInfo course = new CourseInfo();
             TagNode[] a = cols[0].getElementsByName("a", true);
             if (a.length == 0) {
@@ -230,11 +232,9 @@ public class CourseConnector {
     public static boolean isLogin() {
         return isLogin;
     }
-    private static boolean isRevoked(TagNode row) throws Exception {
+    private static boolean isWithdraw(TagNode[] node) throws Exception {
         try{
-            TagNode[] tds = row.getElementsByName("td", true);
-            TagNode[] revoked = tds[16].getElementsByName("div", true);
-            return revoked[0].getText().toString().equals("撤選");
+            return node[16].getText().toString().contains("撤選");
         } catch (Exception e) {
             isLogin = false;
             throw new Exception("撤選資訊讀取時發生錯誤");
