@@ -164,7 +164,7 @@ public class CourseConnector {
         return classmates;
     }
 
-    public static String getCourseType(String courseNo) throws Exception {
+    static String getCourseType(String courseNo) throws Exception {
         try {
             if (!isLogin) {
                 loginCourse();
@@ -230,17 +230,11 @@ public class CourseConnector {
     public static boolean isLogin() {
         return isLogin;
     }
-    public static Boolean isRevoked(TagNode row) throws Exception {
+    private static boolean isRevoked(TagNode row) throws Exception {
         try{
             TagNode[] tds = row.getElementsByName("td", true);
             TagNode[] revoked = tds[16].getElementsByName("div", true);
-
-            if(revoked[0].getText().toString() == "撤選") {
-                return true;
-            }
-            else {
-                return false;
-            }
+            return revoked[0].getText().toString().equals("撤選");
         } catch (Exception e) {
             isLogin = false;
             throw new Exception("撤選資訊讀取時發生錯誤");
