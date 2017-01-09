@@ -230,7 +230,7 @@ public class CourseConnector {
     public static boolean isLogin() {
         return isLogin;
     }
-    public static Boolean isRevoked(TagNode row) throws Exception {
+    public static boolean isRevoked(TagNode row) throws Exception {
         try{
             TagNode[] tds = row.getElementsByName("td", true);
             TagNode[] revoked = tds[16].getElementsByName("div", true);
