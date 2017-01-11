@@ -131,7 +131,8 @@ public class MainActivity extends AppCompatActivity {
             String versionName = getPackageManager().getPackageInfo(
                     getPackageName(), 0).versionName;
             TextView version_text_view = (TextView) findViewById(R.id.main_version_text_view);
-            version_text_view.setText(getString(R.string.version_text, versionName));
+            version_text_view.setText(getString(R.string.version_text, versionName)+"\n"+
+                    getString(R.string.original_developer));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

@@ -14,7 +14,8 @@
     <string name="tool_text">選單</string>
     <string name="menu_prompt">功能</string>
     <string name="check_network_available">請檢查您的網路連線狀態，或再試一次！</string>
-    <string name="version_text">version %s by Alan Chiou</string>
+    <string name="version_text">version %s by NPC</string>
+    <string name="original_developer">based on Alen Chiou\'s</string>
     <string name="open_drawer">打開</string>
     <string name="close_drawer">關閉</string>
     <string name="account_password_empty_toast_text">請先至帳號設定，設定校園入口網站帳號密碼！</string>
