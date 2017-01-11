@@ -41,11 +41,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="0"
-                android:textColor="@color/white"
-                android:textSize="@dimen/textSmall"/>
+                android:textColor="@color/progress_gray"
+                android:textSize="@dimen/textSmall"
+                android:gravity="right"/>
+
         </LinearLayout>
     </android.support.design.widget.NavigationView>
 

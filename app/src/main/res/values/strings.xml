@@ -14,7 +14,8 @@
     <string name="tool_text">Menu</string>
     <string name="menu_prompt">function OωO</string>
     <string name="check_network_available">Please check your network status and try again</string>
-    <string name="version_text">version %s by Alan Chiou</string>
+    <string name="version_text">version %s by NPC</string>
+    <string name="original_developer">based on Alen Chiou\'s</string>
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
     <string name="account_password_empty_toast_text">Please set account at \"Account\" first OωO</string>
