@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.ActivityInfo;
 import owo.npc.taipeitechrefined.utility.ActivityConnector;
 import owo.npc.taipeitechrefined.utility.BitmapUtility;

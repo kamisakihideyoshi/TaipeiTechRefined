@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 import owo.npc.taipeitechrefined.model.Model;
-import owo.npc.ttr_s.R;
 import owo.npc.taipeitechrefined.model.CourseInfo;
 import owo.npc.taipeitechrefined.model.StudentCourse;
 import owo.npc.taipeitechrefined.utility.Constants;

@@ -73,6 +73,11 @@
     <string name="credit_clear">清除學分資訊</string>
     <string name="credit_clear_standard_credit">清除畢業學分標準</string>
 
+    <string name="Overview_Credit">學分總覽</string>
+    <string name="Overview_General">博雅總覽</string>
+    <string name="Got_Credit_General_Core">實得核心:</string>
+    <string name="Got_Credit_General_Elective">實得選修:</string>
+
     <!-- Wifi -->
     <string name="wifi_text">Ntutcc登入</string>
     <string name="current_wifi">目前偵測到的Wifi</string>
@@ -93,4 +98,5 @@
     <string name="save_success">帳號密碼已儲存！</string>
     <string name="account_empty_error_message">請填入學號</string>
     <string name="password_empty_error_message">請填入密碼</string>
+    <string name="Exception_loginNportal">請先至帳號設定，設定校園入口網站帳號密碼！</string>
 </resources>

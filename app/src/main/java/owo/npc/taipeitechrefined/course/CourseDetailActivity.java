@@ -24,7 +24,7 @@ import android.widget.TextView;
 
 import owo.npc.taipeitechrefined.runnable.ClassmateRunnable;
 import owo.npc.taipeitechrefined.runnable.CourseDetailRunnable;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.utility.Utility;
 
 import java.util.ArrayList;

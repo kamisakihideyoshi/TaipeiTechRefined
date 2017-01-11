@@ -15,7 +15,7 @@ import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.LinearLayout;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.CourseInfo;
 import owo.npc.taipeitechrefined.model.StudentCourse;
 import owo.npc.taipeitechrefined.utility.Utility;

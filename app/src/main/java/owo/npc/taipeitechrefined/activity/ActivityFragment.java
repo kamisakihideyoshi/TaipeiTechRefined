@@ -21,7 +21,7 @@ import owo.npc.taipeitechrefined.runnable.ActivityRunnable;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;
 import owo.npc.taipeitechrefined.utility.WifiUtility;
 import owo.npc.taipeitechrefined.BaseFragment;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.utility.Utility;
 
 import java.lang.ref.WeakReference;

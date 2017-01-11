@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import owo.npc.taipeitechrefined.utility.SlideAnimator;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class CreditGroupView extends LinearLayout implements OnClickListener {
     private SlideAnimator animator;

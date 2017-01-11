@@ -10,8 +10,6 @@ import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 
-import owo.npc.ttr_s.R;
-
 
 public abstract class BaseFragment extends Fragment {
     private Animation.AnimationListener mAnimationListener;

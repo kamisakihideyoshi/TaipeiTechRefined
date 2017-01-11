@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import owo.npc.taipeitechrefined.BaseFragment;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.CreditInfo;
 import owo.npc.taipeitechrefined.model.GeneralCredit;
 import owo.npc.taipeitechrefined.model.Model;
@@ -143,16 +143,16 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
 
     private void createTotalGroup(StudentCredit studentCredit) {
         total_group = new CreditGroupView(getActivity());
-        total_group.setGroupTitle("學分總覽");
+        total_group.setGroupTitle(getString(R.string.Overview_Credit));
         refreshTotal();
         credit.addView(total_group);
     }
 
     private void createGeneralGroup(StudentCredit studentCredit) {
         CreditGroupView group = new CreditGroupView(getActivity());
-        group.setGroupTitle("博雅總覽");
-        group.setGroupPS("實得核心:" + studentCredit.getGeneralCoreCredits()
-                + "  實得選修:" + studentCredit.getGeneralCommonCredits());
+        group.setGroupTitle(getString(R.string.Overview_General));
+        group.setGroupPS(getString(R.string.Got_Credit_General_Core) + studentCredit.getGeneralCoreCredits()
+                + "  " + getString(R.string.Got_Credit_General_Elective) + studentCredit.getGeneralCommonCredits());
         int count = studentCredit.getGeneralCredits().size();
         String[] titles = new String[count];
         float[] totals = new float[count];
@@ -267,7 +267,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
             NportalConnector.login(account, password, loginHandler);
         } else {
             pd.dismiss();
-            showAlertMessage("請先至帳號設定，設定校園入口網站帳號密碼！");
+            showAlertMessage(getString(R.string.Exception_loginNportal));
         }
     }
 

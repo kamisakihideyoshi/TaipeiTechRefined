@@ -6,7 +6,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class SlideAnimator {
     private Context context;
