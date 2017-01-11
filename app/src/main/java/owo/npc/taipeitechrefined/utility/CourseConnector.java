@@ -229,9 +229,6 @@ public class CourseConnector {
         return courses;
     }
 
-    public static boolean isLogin() {
-        return isLogin;
-    }
     private static boolean isWithdraw(TagNode[] node) throws Exception {
         try{
             return node[16].getText().toString().contains("撤選");
@@ -239,5 +236,9 @@ public class CourseConnector {
             isLogin = false;
             throw new Exception("撤選資訊讀取時發生錯誤");
         }
+    }
+
+    public static boolean isLogin() {
+        return isLogin;
     }
 }

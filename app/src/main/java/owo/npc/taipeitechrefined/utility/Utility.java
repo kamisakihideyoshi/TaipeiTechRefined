@@ -106,7 +106,7 @@ public class Utility {
         notification_index++;
     }
 
-    public static int getScreenHeight(Context context) {
+    static int getScreenHeight(Context context) {
         WindowManager windowManager = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -135,7 +135,7 @@ public class Utility {
         return result.size() > 0 ? result : null;
     }
 
-    public static StudentCourse cleanString(StudentCourse student) {
+    static StudentCourse cleanString(StudentCourse student) {
         Gson gson = new Gson();
         String json = gson.toJson(student);
         json = json.replace("　", " ");
@@ -144,7 +144,7 @@ public class Utility {
         return student;
     }
 
-    public static StudentCredit cleanString(StudentCredit student) {
+    static StudentCredit cleanString(StudentCredit student) {
         Gson gson = new Gson();
         String json = gson.toJson(student);
         json = json.replace("　", "");
@@ -154,7 +154,7 @@ public class Utility {
         return student;
     }
 
-    public static String cleanString(String s) {
+    static String cleanString(String s) {
         s = s.replace("　", " ");
         s = s.replace(System.getProperty("line.separator"), " ");
         s = s.replaceAll("(\r\n|\r|\n|\n\r)", "");
@@ -172,16 +172,22 @@ public class Utility {
         ArrayList<String> infos = new ArrayList<>();
         String[] temp = timeString.split(" ");
         for (String t : temp) {
-            if (t.equals("A")) {
-                infos.add("10");
-            } else if (t.equals("B")) {
-                infos.add("11");
-            } else if (t.equals("C")) {
-                infos.add("12");
-            } else if (t.equals("D")) {
-                infos.add("13");
-            } else {
-                infos.add(t);
+            switch (t) {
+                case "A":
+                    infos.add("10");
+                    break;
+                case "B":
+                    infos.add("11");
+                    break;
+                case "C":
+                    infos.add("12");
+                    break;
+                case "D":
+                    infos.add("13");
+                    break;
+                default:
+                    infos.add(t);
+                    break;
             }
         }
         return infos;
@@ -199,6 +205,8 @@ public class Utility {
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         int date_no = cal.get(Calendar.DAY_OF_MONTH);
+        if (date_no < 10)
+            return "0" + String.valueOf(date_no);
         return String.valueOf(date_no);
     }
 
