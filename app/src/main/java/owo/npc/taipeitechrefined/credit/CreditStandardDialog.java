@@ -56,10 +56,10 @@ public class CreditStandardDialog extends AlertDialog implements
 
     public CreditStandardDialog(Context context, StandardCredit standardCredit) {
         super(context);
-        setTitle("畢業學分標準設定");
+        setTitle(context.getString(R.string.setting_graduation_credits));
         setView(getView(standardCredit));
-        setButton(BUTTON_NEGATIVE, "取消", (OnClickListener) null);
-        setButton(BUTTON_POSITIVE, "儲存", (OnClickListener) null);
+        setButton(BUTTON_NEGATIVE, context.getString(R.string.cancel), (OnClickListener) null);
+        setButton(BUTTON_POSITIVE, context.getString(R.string.save), (OnClickListener) null);
         setOnShowListener(this);
     }
 
@@ -75,7 +75,7 @@ public class CreditStandardDialog extends AlertDialog implements
             divisions.add(standardCredit.getDivisionText());
             departments.add(standardCredit.getDepartmentText());
         } else {
-            years.add("請選擇入學年度");
+            years.add(String.valueOf(R.string.choose_enter_semester));
         }
         year_list = (MenuSpinner) contentView.findViewById(R.id.year_list);
         year_adapter = new ArrayAdapter<>(getContext(),
@@ -94,7 +94,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         }
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, "學制清單讀取中~", true);
+                                    null, getContext().getString(R.string.loading_academic_system), true);
                             year = years.get(position).split(" ")[1];
                             Thread t = new Thread(new StandardDivisionRunnable(
                                     divisionHandler, year));
@@ -117,7 +117,7 @@ public class CreditStandardDialog extends AlertDialog implements
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (WifiUtility.isNetworkAvailable(getContext())) {
                         progressDialog = ProgressDialog.show(getContext(),
-                                null, "入學年度清單讀取中~", true);
+                                null, getContext().getString(R.string.loading_semester_list), true);
                         Thread t = new Thread(new StandardYearRunnable(
                                 yearHandler));
                         t.start();
@@ -148,7 +148,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         isCorrect = false;
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, "系所清單讀取中~", true);
+                                    null, getContext().getString(R.string.loading_faculty_list), true);
                             division_index = position;
                             Thread t = new Thread(
                                     new StandardDepartmentRunnable(
@@ -183,7 +183,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         isCorrect = false;
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, "畢業學分標準讀取中~", true);
+                                    null, getContext().getString(R.string.loading_graduation_credits), true);
                             Thread t = new Thread(new StandardCreditRunnable(
                                     creditsHandler, year, division_index,
                                     departments.get(position)));
@@ -279,7 +279,7 @@ public class CreditStandardDialog extends AlertDialog implements
                     }
                     break;
                 case BaseRunnable.ERROR:
-                    Utility.showDialog("提示", (String) msg.obj, getContext());
+                    Utility.showDialog(getContext().getString(R.string.hint), (String) msg.obj, getContext());
                     break;
             }
             progressDialog.dismiss();
@@ -302,7 +302,7 @@ public class CreditStandardDialog extends AlertDialog implements
                     }
                     break;
                 case BaseRunnable.ERROR:
-                    Utility.showDialog("提示", (String) msg.obj, getContext());
+                    Utility.showDialog(getContext().getString(R.string.hint), (String) msg.obj, getContext());
                     break;
             }
             progressDialog.dismiss();
@@ -325,7 +325,7 @@ public class CreditStandardDialog extends AlertDialog implements
                     }
                     break;
                 case BaseRunnable.ERROR:
-                    Utility.showDialog("提示", (String) msg.obj, getContext());
+                    Utility.showDialog(getContext().getString(R.string.hint), (String) msg.obj, getContext());
                     break;
             }
             progressDialog.dismiss();
@@ -353,7 +353,7 @@ public class CreditStandardDialog extends AlertDialog implements
                     }
                     break;
                 case BaseRunnable.ERROR:
-                    Utility.showDialog("提示", (String) msg.obj, getContext());
+                    Utility.showDialog(getContext().getString(R.string.hint), (String) msg.obj, getContext());
                     break;
             }
             progressDialog.dismiss();
@@ -367,7 +367,7 @@ public class CreditStandardDialog extends AlertDialog implements
             dialogListener.onSaveButtonClick(standardCredit);
             dismiss();
         } else {
-            Toast.makeText(getContext(), "入學標準未完成設定！", Toast.LENGTH_LONG)
+            Toast.makeText(getContext(), R.string.admission_criteria_error, Toast.LENGTH_LONG)
                     .show();
         }
     }

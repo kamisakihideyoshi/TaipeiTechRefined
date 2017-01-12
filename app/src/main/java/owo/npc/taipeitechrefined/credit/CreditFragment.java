@@ -105,7 +105,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
             } else {
                 credit_text = String.valueOf(studentCredit.getTotalCredits());
             }
-            total_group.setGroupPS("實得學分:" + credit_text);
+            total_group.setGroupPS(getString(R.string.credit) + credit_text);
             total_group.removeAllViews();
             for (int i = 1; i < 7; i++) {
                 LayoutInflater inflater = LayoutInflater.from(getActivity());
@@ -143,23 +143,26 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
 
     private void createTotalGroup(StudentCredit studentCredit) {
         total_group = new CreditGroupView(getActivity());
-        total_group.setGroupTitle("學分總覽");
+        total_group.setGroupTitle(getString(R.string.credit_overview));
         refreshTotal();
         credit.addView(total_group);
     }
 
     private void createGeneralGroup(StudentCredit studentCredit) {
         CreditGroupView group = new CreditGroupView(getActivity());
-        group.setGroupTitle("博雅總覽");
-        group.setGroupPS("實得核心:" + studentCredit.getGeneralCoreCredits()
-                + "  實得選修:" + studentCredit.getGeneralCommonCredits());
+        group.setGroupTitle(getString(R.string.boya_overview));
+        group.setGroupPS(getString(R.string.core) + studentCredit.getGeneralCoreCredits()
+                + "  "+getString(R.string.elective) + studentCredit.getGeneralCommonCredits());
         int count = studentCredit.getGeneralCredits().size();
-        String[] titles = new String[count];
+        //String[] titles = new String[count];
+        String[] titles = {getString(R.string.cultural_dimension), getString(R.string.historical_dimension),
+                getString(R.string.philosophical_dimension), getString(R.string.legal_dimension), getString(R.string.social_dimension),
+                getString(R.string.natural_dimension), getString(R.string.social_philosophy_dimension), getString(R.string.creative_dimension)};
         float[] totals = new float[count];
         float[] cores = new float[count];
         int i = 0;
         for (GeneralCredit general : studentCredit.getGeneralCredits()) {
-            titles[i] = general.getTypeName();
+            //titles[i] = general.getTypeName();
             totals[i] = general.getHadCoreCredit()
                     + general.getHadCommonCredit();
             cores[i] = general.getHadCoreCredit();
@@ -267,7 +270,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
             NportalConnector.login(account, password, loginHandler);
         } else {
             pd.dismiss();
-            showAlertMessage("請先至帳號設定，設定校園入口網站帳號密碼！");
+            showAlertMessage(getString(R.string.none_account_error));
         }
     }
 
@@ -285,7 +288,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                     break;
                 case BaseRunnable.ERROR:
                     pd.dismiss();
-                    Utility.showDialog("提示", (String) msg.obj, getActivity());
+                    Utility.showDialog(getString(R.string.hint), (String) msg.obj, getActivity());
             }
         }
     };
@@ -301,7 +304,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                     break;
                 case BaseRunnable.ERROR:
                     pd.dismiss();
-                    Utility.showDialog("提示", (String) msg.obj, getActivity());
+                    Utility.showDialog(getString(R.string.hint), (String) msg.obj, getActivity());
                     break;
             }
         }
@@ -319,18 +322,18 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                         initView();
                         pd.dismiss();
                         if (CreditConnector.isHaveError) {
-                            Utility.showDialog("學分資訊查詢完成",
-                                    "可以開始瀏覽學分及歷年成績！\n查詢過程有發生錯誤，請重新查詢或自行修正！",
+                            Utility.showDialog(getString(R.string.credit_imformation_complete),
+                                    getString(R.string.credit_final)+"\n"+getString(R.string.check_credit_error),
                                     getActivity());
                         } else {
-                            Utility.showDialog("學分資訊查詢完成", "可以開始瀏覽學分及歷年成績！",
+                            Utility.showDialog(getString(R.string.credit_imformation_complete), getString(R.string.credit_final),
                                     getActivity());
                         }
                     }
                     break;
                 case BaseRunnable.ERROR:
                     pd.dismiss();
-                    Utility.showDialog("提示", (String) msg.obj, getActivity());
+                    Utility.showDialog(getString(R.string.hint), (String) msg.obj, getActivity());
                     break;
             }
         }
@@ -363,7 +366,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                 pd = new ProgressDialog(getActivity());
                 pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                 pd.setProgress(0);
-                pd.setTitle("學分資料查詢中~");
+                pd.setTitle(getString(R.string.checking_credit));
                 pd.setCancelable(false);
                 pd.show();
                 nextThread = new Thread(new CreditLoginRunnable(creditLoginHandler));
@@ -406,7 +409,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                 break;
             default:
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("博雅總覽");
+                builder.setTitle(getString(R.string.boya_overview));
                 View view = new CreditGeneralView(getActivity(), Model
                         .getInstance().getStudentCredit());
                 builder.setView(view);

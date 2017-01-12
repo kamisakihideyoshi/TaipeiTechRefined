@@ -46,8 +46,8 @@ public class CreditGeneralView extends ScrollView {
             TextView text = (TextView) inflater.inflate(
                     R.layout.credit_textview, this, false);
             text.setBackgroundResource(R.color.white);
-            String credit_text = "應修核心:" + general.getMustCoreCredit()
-                    + "  實得核心:" + general.getHadCoreCredit() + "  實得選修:"
+            String credit_text = getContext().getString(R.string.essential_core) + general.getMustCoreCredit()
+                    + "  "+getContext().getString(R.string.core) + general.getHadCoreCredit() + "  實得選修:"
                     + general.getHadCommonCredit();
             text.setText(credit_text);
             container.addView(text);
