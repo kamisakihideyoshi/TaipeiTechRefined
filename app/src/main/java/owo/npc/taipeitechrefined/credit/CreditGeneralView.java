@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.GeneralCredit;
 import owo.npc.taipeitechrefined.model.GeneralCreditInfo;
 import owo.npc.taipeitechrefined.model.StudentCredit;

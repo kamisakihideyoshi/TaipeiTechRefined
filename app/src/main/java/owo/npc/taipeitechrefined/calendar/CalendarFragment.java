@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import owo.npc.taipeitechrefined.BaseFragment;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.model.YearCalendar;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;

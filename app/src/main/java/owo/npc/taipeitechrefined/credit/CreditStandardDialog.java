@@ -29,7 +29,7 @@ import owo.npc.taipeitechrefined.runnable.StandardDivisionRunnable;
 import owo.npc.taipeitechrefined.runnable.StandardYearRunnable;
 import owo.npc.taipeitechrefined.utility.Utility;
 import owo.npc.taipeitechrefined.utility.WifiUtility;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 import java.util.ArrayList;
 
@@ -379,7 +379,7 @@ public class CreditStandardDialog extends AlertDialog implements
     }
 
     public interface DialogListener {
-        public void onSaveButtonClick(StandardCredit standardCredit);
+        void onSaveButtonClick(StandardCredit standardCredit);
 
     }
 

@@ -1,4 +1,4 @@
-package owo.npc.ttr_s;
+package owo.npc.taipeitechrefined;
 
 import org.junit.Test;
 

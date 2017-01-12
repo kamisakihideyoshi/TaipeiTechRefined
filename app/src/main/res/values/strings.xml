@@ -9,7 +9,7 @@
     <string name="play_store_not_support">Cannot open play store！</string>
     <string name="press_again_to_exit">Press again to exit</string>
     <string name="web_back_hint">實體返回鍵，可以回到前一瀏覽頁面！</string>
-    <string name="back">Back OωO</string>
+    <string name="back">Back</string>
     <string name="start_query">Refresh</string>
     <string name="tool_text">Menu</string>
     <string name="menu_prompt">function OωO</string>
@@ -68,14 +68,19 @@
     <string name="division">Division</string>
     <string name="department">Department</string>
     <string name="credit_type">Type</string>
-    <string name="credit_query">Search credit information (may take few seconds)</string>
-    <string name="credit_standard_credit">Standard OωO</string>
+    <string name="credit_query">Search credit information</string>
+    <string name="credit_standard_credit">Set graduation threshold</string>
     <string name="credit_clear">Clear credit information</string>
-    <string name="credit_clear_standard_credit">Clear standard OωO</string>
+    <string name="credit_clear_standard_credit">Clear threshold setting</string>
+
+    <string name="Overview_Credit">Credit Overview</string>
+    <string name="Overview_General">General education</string>
+    <string name="Got_Credit_General_Core">Core:</string>
+    <string name="Got_Credit_General_Elective">elective:</string>
 
     <!-- Wifi -->
-    <string name="wifi_text">Ntutcc登入</string>
-    <string name="current_wifi">目前偵測到的Wifi</string>
+    <string name="wifi_text">Login to ntutcc</string>
+    <string name="current_wifi">Current detected hotspots</string>
     <string name="login">Login</string>
     <string name="scan">Rescan</string>
 
@@ -134,4 +139,5 @@
     <string name="natural_dimension">自然向度</string>
     <string name="social_philosophy_dimension">社哲向度</string>
     <string name="creative_dimension">創創向度</string>
+    <string name="Exception_loginNportal">Please set account at \"Account\" first OωO</string>
 </resources>

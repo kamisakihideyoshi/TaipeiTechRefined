@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="owo.npc.ttr_s"
+    package="owo.npc.taipeitechrefined"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:installLocation="auto"
-    android:versionCode="25"
-    android:versionName="3.0.1">
+    android:installLocation="auto">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
@@ -28,7 +26,7 @@
             android:name="owo.npc.taipeitechrefined.CourseWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-                <action android:name="owo.npc.ttr_s.action.COURSEWIDGET_UPDATE"/>
+                <action android:name="owo.npc.taipeitechrefined.action.COURSEWIDGET_UPDATE"/>
             </intent-filter>
 
             <meta-data
@@ -45,7 +43,7 @@
             android:exported="false">
             <intent-filter>
                 <action
-                    android:name="owo.npc.ttr_s.action.ACTIVITY_CHECK"
+                    android:name="owo.npc.taipeitechrefined.action.ACTIVITY_CHECK"
                     android:exported="false"/>
             </intent-filter>
         </receiver>

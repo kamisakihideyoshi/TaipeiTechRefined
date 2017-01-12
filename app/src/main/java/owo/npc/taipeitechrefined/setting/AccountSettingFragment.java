@@ -19,7 +19,7 @@ import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.utility.NportalConnector;
 import owo.npc.taipeitechrefined.utility.WifiUtility;
 import owo.npc.taipeitechrefined.BaseFragment;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class AccountSettingFragment extends BaseFragment implements
         OnClickListener {

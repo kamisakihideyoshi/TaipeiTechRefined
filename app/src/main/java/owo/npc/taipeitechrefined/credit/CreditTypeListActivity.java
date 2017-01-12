@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import owo.npc.taipeitechrefined.model.CreditInfo;
 import owo.npc.taipeitechrefined.model.Model;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.SemesterCredit;
 import owo.npc.taipeitechrefined.utility.Utility;
 

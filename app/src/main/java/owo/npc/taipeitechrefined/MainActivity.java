@@ -36,7 +36,6 @@ import owo.npc.taipeitechrefined.calendar.CalendarFragment;
 import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.credit.CreditFragment;
 import owo.npc.taipeitechrefined.setting.AccountSettingFragment;
-import owo.npc.ttr_s.R;
 import owo.npc.taipeitechrefined.activity.ActivityFragment;
 import owo.npc.taipeitechrefined.utility.PermissionRequestListener;
 import owo.npc.taipeitechrefined.wifi.WifiFragment;

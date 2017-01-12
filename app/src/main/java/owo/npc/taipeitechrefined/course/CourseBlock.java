@@ -8,7 +8,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class CourseBlock extends TextView {
 

@@ -16,7 +16,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import owo.npc.ttr_s.R;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;
 import owo.npc.taipeitechrefined.runnable.LoginNportalRunnable;

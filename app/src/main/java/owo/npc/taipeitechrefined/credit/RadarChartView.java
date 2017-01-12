@@ -14,7 +14,7 @@ import android.view.View;
 import android.view.animation.Interpolator;
 import android.view.animation.OvershootInterpolator;
 
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class RadarChartView extends View {
     private int count;

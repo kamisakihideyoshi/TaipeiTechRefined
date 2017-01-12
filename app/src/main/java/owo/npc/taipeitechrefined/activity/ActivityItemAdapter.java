@@ -7,7 +7,7 @@ import android.widget.ArrayAdapter;
 
 import owo.npc.taipeitechrefined.model.ActivityInfo;
 import owo.npc.taipeitechrefined.model.ActivityList;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 public class ActivityItemAdapter extends ArrayAdapter<ActivityInfo> {
 

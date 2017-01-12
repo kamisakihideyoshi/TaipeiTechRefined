@@ -14,7 +14,6 @@ import android.text.TextUtils;
 import owo.npc.taipeitechrefined.model.ActivityInfo;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.utility.BitmapUtility;
-import owo.npc.ttr_s.R;
 import owo.npc.taipeitechrefined.utility.Utility;
 
 import java.util.ArrayList;

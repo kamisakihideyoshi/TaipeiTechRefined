@@ -12,7 +12,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import owo.npc.ttr_s.R;
 import owo.npc.taipeitechrefined.utility.Utility;
 
 public class DonateActivity extends AppCompatActivity {

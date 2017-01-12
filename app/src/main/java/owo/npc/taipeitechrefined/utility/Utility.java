@@ -25,7 +25,7 @@ import owo.npc.taipeitechrefined.MainActivity;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.model.StudentCourse;
 import owo.npc.taipeitechrefined.model.StudentCredit;
-import owo.npc.ttr_s.R;
+import owo.npc.taipeitechrefined.R;
 
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;
