@@ -11,19 +11,19 @@
         <item>★</item>
     </string-array>
     <string-array name="rank_type">
-        <item>班級排名</item>
-        <item>分組排名</item>
-        <item>系(科)所排名</item>
+        <item>@string/class_rank</item>
+        <item>@string/group_rank</item>
+        <item>@string/department_rank</item>
     </string-array>
     <string-array name="type_name">
-        <item>○部訂共同必修</item>
-        <item>△校訂共同必修</item>
-        <item>☆共同選修</item>
-        <item>●部訂專業必修</item>
-        <item>▲校訂專業必修</item>
-        <item>★專業選修</item>
-        <item>跨系選修上限學分</item>
-        <item>最低畢業學分</item>
+        <item>@string/authorities_common_compulsory</item>
+        <item>@string/school_common_compulsory</item>
+        <item>@string/common_elective</item>
+        <item>@string/authorities_vocational_elective</item>
+        <item>@string/school_vocational_compulsory</item>
+        <item>@string/vocational_elective</item>
+        <item>@string/maximun_elective_credit</item>
+        <item>@string/minimum_graduation_credits</item>
     </string-array>
     <string-array name="tools">
         <item>@string/activity_text</item>
