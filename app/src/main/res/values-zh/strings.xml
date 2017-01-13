@@ -73,10 +73,10 @@
     <string name="credit_clear">清除學分資訊</string>
     <string name="credit_clear_standard_credit">清除畢業學分標準</string>
 
-    <string name="Overview_Credit">學分總覽</string>
-    <string name="Overview_General">博雅總覽</string>
-    <string name="Got_Credit_General_Core">實得核心:</string>
-    <string name="Got_Credit_General_Elective">實得選修:</string>
+    <string name="overview_credit">學分總覽</string>
+    <string name="overview_general">博雅總覽</string>
+    <string name="credit_general_core">實得核心:</string>
+    <string name="credit_general_elective">實得選修:</string>
 
     <!-- Wifi -->
     <string name="wifi_text">Ntutcc登入</string>
@@ -100,10 +100,6 @@
     <string name="password_empty_error_message">請填入密碼</string>
 
     <string name="credit">實得學分:</string>
-    <string name="credit_overview">學分總覽</string>
-    <string name="boya_overview">博雅總覽</string>
-    <string name="core">實得核心:</string>
-    <string name="elective">實得選修:</string>
     <string name="none_account_error">請先至帳號設定，設定校園入口網站帳號密碼！</string>
     <string name="hint">提示</string>
     <string name="check_credit_error">查詢過程有發生錯誤，請重新查詢或自行修正！</string>
@@ -127,7 +123,7 @@
     <string name="authorities_vocational_elective">●部訂專業必修</string>
     <string name="school_vocational_compulsory">▲校訂專業必修</string>
     <string name="vocational_elective">★專業選修</string>
-    <string name="maximun_elective_credit">跨系選修上限學分</string>
+    <string name="maximum_elective_credit">跨系選修上限學分</string>
     <string name="minimum_graduation_credits">最低畢業學分</string>
     <string name="class_rank">班級排名</string>
     <string name="group_rank">分組排名</string>

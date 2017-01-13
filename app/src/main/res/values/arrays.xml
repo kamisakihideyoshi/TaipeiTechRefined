@@ -22,7 +22,7 @@
         <item>@string/authorities_vocational_elective</item>
         <item>@string/school_vocational_compulsory</item>
         <item>@string/vocational_elective</item>
-        <item>@string/maximun_elective_credit</item>
+        <item>@string/maximum_elective_credit</item>
         <item>@string/minimum_graduation_credits</item>
     </string-array>
     <string-array name="tools">
@@ -47,7 +47,6 @@
         <item>19:20 &#8211; 20:10</item>
         <item>20:20 &#8211; 21:10</item>
         <item>21:10 &#8211; 22:00</item>
-        <item></item>
     </string-array>
 
 </resources>

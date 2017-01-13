@@ -143,16 +143,16 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
 
     private void createTotalGroup(StudentCredit studentCredit) {
         total_group = new CreditGroupView(getActivity());
-        total_group.setGroupTitle(getString(R.string.credit_overview));
+        total_group.setGroupTitle(getString(R.string.overview_credit));
         refreshTotal();
         credit.addView(total_group);
     }
 
     private void createGeneralGroup(StudentCredit studentCredit) {
         CreditGroupView group = new CreditGroupView(getActivity());
-        group.setGroupTitle(getString(R.string.boya_overview));
-        group.setGroupPS(getString(R.string.core) + studentCredit.getGeneralCoreCredits()
-                + "  "+getString(R.string.elective) + studentCredit.getGeneralCommonCredits());
+        group.setGroupTitle(getString(R.string.overview_general));
+        group.setGroupPS(getString(R.string.credit_general_core) + studentCredit.getGeneralCoreCredits()
+                + "  "+getString(R.string.credit_general_elective) + studentCredit.getGeneralCommonCredits());
         int count = studentCredit.getGeneralCredits().size();
         //String[] titles = new String[count];
         String[] titles = {getString(R.string.cultural_dimension), getString(R.string.historical_dimension),
@@ -409,7 +409,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                 break;
             default:
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle(getString(R.string.boya_overview));
+                builder.setTitle(getString(R.string.overview_general));
                 View view = new CreditGeneralView(getActivity(), Model
                         .getInstance().getStudentCredit());
                 builder.setView(view);

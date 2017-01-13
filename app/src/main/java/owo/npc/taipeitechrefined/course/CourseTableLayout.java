@@ -202,7 +202,7 @@ public class CourseTableLayout extends LinearLayout {
         LinearLayout table_row = (LinearLayout) courseContainer.getChildAt(row);
         CourseBlock table_cell = (CourseBlock) table_row.getChildAt(col);
         table_cell.setVisibility(View.INVISIBLE);
-        table_cell.setText(course.getCourseName());
+        table_cell.setText(course.getCourseName().trim());
         table_cell.setTag(course);
         table_cell.setBackgroundColor(color);
         table_cell.setOnClickListener(onClickListener);
