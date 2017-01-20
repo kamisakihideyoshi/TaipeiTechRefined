@@ -9,17 +9,19 @@ import owo.npc.taipeitechrefined.model.Model;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.CookiePolicy;
+import java.util.Locale;
 
 public class MainApplication extends Application {
     private static MainApplication singleton;
     public static String SETTING_NAME = "TaipeiTech";
-
+    public static String lang;
     public static MainApplication getInstance() {
         return singleton;
     }
 
     @Override
     public void onCreate() {
+        lang = Locale.getDefault().getLanguage();
         super.onCreate();
         CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
         singleton = this;

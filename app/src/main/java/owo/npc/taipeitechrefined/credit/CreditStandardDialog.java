@@ -33,6 +33,8 @@ import owo.npc.taipeitechrefined.R;
 
 import java.util.ArrayList;
 
+import static owo.npc.taipeitechrefined.MainApplication.lang;
+
 public class CreditStandardDialog extends AlertDialog implements
         View.OnClickListener, OnShowListener {
 
@@ -95,7 +97,11 @@ public class CreditStandardDialog extends AlertDialog implements
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
                                     null, getContext().getString(R.string.loading_academic_system), true);
-                            year = years.get(position).split(" ")[1];
+                            if(lang == "zh")
+                                year = years.get(position).split(" ")[1];
+                            else
+                                year = years.get(position).split(" ")[2];
+//                            year = years.get(position).split(" ")[1];
                             Thread t = new Thread(new StandardDivisionRunnable(
                                     divisionHandler, year));
                             t.start();

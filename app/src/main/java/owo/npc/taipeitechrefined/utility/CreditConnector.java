@@ -18,14 +18,22 @@ import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static owo.npc.taipeitechrefined.MainApplication.lang;
+
 public class CreditConnector {
     private final static String POST_CREDIT_URI = "http://nportal.ntut.edu.tw/ssoIndex.do?apOu=aa_003&apUrl=http://aps-stu.ntut.edu.tw/StuQuery/LoginSID.jsp";
     private final static String CREDITS_URI = "http://aps-stu.ntut.edu.tw/StuQuery/LoginSID.jsp";
     private final static String CREDIT_URI = "http://aps-stu.ntut.edu.tw/StuQuery/QryScore.jsp";
     private final static String GENERAL_URI = "http://aps-stu.ntut.edu.tw/StuQuery/QryLAECourse.jsp";
-    private final static String STANDARD_URI = "http://aps.ntut.edu.tw/course/tw/Cprog.jsp";
+    private final static String STANDARD_URI_TW = "http://aps.ntut.edu.tw/course/tw/Cprog.jsp";
+    private final static String STANDARD_URI_EN = "http://aps.ntut.edu.tw/course/en/Cprog.jsp";
     private final static String CURRENT_URI = "http://aps-stu.ntut.edu.tw/StuQuery/QrySCWarn.jsp";
 
+    private static String getStandardUri(String lang) {
+        if (lang.equals("zh"))
+            return STANDARD_URI_TW;
+        return STANDARD_URI_EN;
+    }
     public static ArrayList<String> matrics = new ArrayList<>();
     public static Boolean isHaveError = false;
 
@@ -244,7 +252,7 @@ public class CreditConnector {
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-1");
             String result = Connector
-                    .getDataByPost(STANDARD_URI, params, "big5");
+                    .getDataByPost(getStandardUri(lang), params, "big5");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] rows = tagNode.getElementsByName("a", true);
@@ -268,7 +276,7 @@ public class CreditConnector {
             params.put("format", "-2");
             params.put("year", year);
             String result = Connector
-                    .getDataByPost(STANDARD_URI, params, "big5");
+                    .getDataByPost(getStandardUri(lang), params, "big5");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] rows = tagNode.getElementsByName("a", true);
@@ -295,7 +303,7 @@ public class CreditConnector {
             params.put("year", year);
             params.put("matric", matrics.get(index));
             String result = Connector
-                    .getDataByPost(STANDARD_URI, params, "big5");
+                    .getDataByPost(getStandardUri(lang), params, "big5");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] tables = tagNode.getElementsByAttValue("border", "1",
@@ -321,7 +329,7 @@ public class CreditConnector {
             params.put("year", year);
             params.put("matric", matrics.get(index));
             String result = Connector
-                    .getDataByPost(STANDARD_URI, params, "big5");
+                    .getDataByPost(getStandardUri(lang), params, "big5");
             result = result.replace("<td", "</td><td");
             result = result.replace("<tr>", "</td><tr>");
             HtmlCleaner cleaner = new HtmlCleaner();

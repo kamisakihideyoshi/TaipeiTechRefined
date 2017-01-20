@@ -11,7 +11,8 @@ import org.htmlcleaner.TagNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Locale;
+
+import static owo.npc.taipeitechrefined.MainApplication.lang;
 
 public class CourseConnector {
     private static boolean isLogin = false;
@@ -21,22 +22,21 @@ public class CourseConnector {
     private static final String POST_COURSES_URI_EN = "http://nportal.ntut.edu.tw/ssoIndex.do?apOu=aa_0010-&apUrl=http://aps.ntut.edu.tw/course/en/courseSID.jsp";
     private static final String COURSES_URI_EN = "http://aps.ntut.edu.tw/course/en/courseSID.jsp";
     private static final String COURSE_URI_EN = "http://aps.ntut.edu.tw/course/en/Select.jsp";
-    private static String lang = Locale.getDefault().getLanguage();
 
-    private static String postCoursesUri(String lang) {
+    private static String getPostCoursesUri(String lang) {
         if (lang.equals("zh"))
             return POST_COURSES_URI_TW;
         return POST_COURSES_URI_EN;
     }
 
-    private static String CoursesUri(String lang) {
+    private static String getCoursesUri(String lang) {
         if (lang.equals("zh"))
             return COURSES_URI_TW;
         return COURSES_URI_EN;
     }
 
 
-    private static String CourseUri(String lang) {
+    private static String getCourseUri(String lang) {
         if (lang.equals("zh"))
             return COURSE_URI_TW;
         return COURSE_URI_EN;
@@ -45,7 +45,7 @@ public class CourseConnector {
     public static String loginCourse() throws Exception {
         try {
             isLogin = false;
-            String result = Connector.getDataByGet(postCoursesUri("zh"), "utf-8", "http://nportal.ntut.edu.tw/aptreeList.do?apDn=ou=aa,ou=aproot,o=ldaproot");
+            String result = Connector.getDataByGet(getPostCoursesUri("zh"), "utf-8", "http://nportal.ntut.edu.tw/aptreeList.do?apDn=ou=aa,ou=aproot,o=ldaproot");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] nodes = tagNode.getElementsByAttValue("name",
@@ -62,7 +62,7 @@ public class CourseConnector {
             courseParams.put("reqFrom", "Portal");
             courseParams.put("userid", userid);
             courseParams.put("userType", userType);
-            result = Connector.getDataByPost(CoursesUri("zh"), courseParams, "big5");
+            result = Connector.getDataByPost(getCoursesUri("zh"), courseParams, "big5");
             isLogin = true;
             return result;
         } catch (Exception e) {
@@ -84,7 +84,7 @@ public class CourseConnector {
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-3");
             params.put("code", sid);
-            result = Connector.getDataByPost(CourseUri("zh"), params, "big5");
+            result = Connector.getDataByPost(getCourseUri("zh"), params, "big5");
             tagNode = new HtmlCleaner().clean(result);
         } catch (Exception e) {
             isLogin = false;
@@ -136,7 +136,7 @@ public class CourseConnector {
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-1");
             params.put("code", courseNo);
-            String result = Connector.getDataByPost(CourseUri("zh"), params, "big5");
+            String result = Connector.getDataByPost(getCourseUri("zh"), params, "big5");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] tables = tagNode.getElementsByAttValue("border", "1",
@@ -167,7 +167,7 @@ public class CourseConnector {
         params.put("code", courseNo);
         String result;
         try {
-            result = Connector.getDataByPost(CourseUri("zh"), params, "big5");
+            result = Connector.getDataByPost(getCourseUri("zh"), params, "big5");
         } catch (Exception e) {
             throw new Exception("學生名單讀取時發生錯誤");
         }
@@ -197,7 +197,7 @@ public class CourseConnector {
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-1");
             params.put("code", courseNo);
-            String result = Connector.getDataByPost(CourseUri("zh"), params, "big5");
+            String result = Connector.getDataByPost(getCourseUri("zh"), params, "big5");
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] tables = tagNode.getElementsByAttValue("border", "1",
@@ -222,7 +222,7 @@ public class CourseConnector {
         params.put("code", sid);
         params.put("year", year);
         params.put("sem", semester);
-        String result = Connector.getDataByPost(CourseUri(lang), params, "big5");
+        String result = Connector.getDataByPost(getCourseUri(lang), params, "big5");
         TagNode tagNode;
         tagNode = new HtmlCleaner().clean(result);
         TagNode[] nodes = tagNode.getElementsByAttValue("border", "1", true,
