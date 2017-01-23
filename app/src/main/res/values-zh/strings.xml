@@ -136,5 +136,5 @@
     <string name="natural_dimension">自然向度</string>
     <string name="social_philosophy_dimension">社哲向度</string>
     <string name="creative_dimension">創創向度</string>
-    <string name="Exception_loginNportal">請先至帳號設定，設f定校園入口網站帳號密碼！</string>
+    <string name="Exception_loginNportal">請先至帳號設定，設定校園入口網站帳號密碼！</string>
 </resources>
