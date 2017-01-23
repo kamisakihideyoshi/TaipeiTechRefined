@@ -5,5 +5,5 @@ package owo.npc.taipeitechrefined.utility;
  */
 
 public class HttpHelper {
-    public static final String SERVER_HOST = "http://taipeitechapp.neocities.org/";
+    public static final String SERVER_HOST = "https://raw.githubusercontent.com/kamisakihideyoshi/TaipeiTechRefined/master/crawler/";
 }
