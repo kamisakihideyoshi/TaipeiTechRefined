@@ -35,6 +35,7 @@ import android.widget.Toast;
 import owo.npc.taipeitechrefined.calendar.CalendarFragment;
 import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.credit.CreditFragment;
+import owo.npc.taipeitechrefined.feedback.FeedbackFragment;
 import owo.npc.taipeitechrefined.setting.AccountSettingFragment;
 import owo.npc.taipeitechrefined.activity.ActivityFragment;
 import owo.npc.taipeitechrefined.utility.PermissionRequestListener;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private CalendarFragment calendarFragment = new CalendarFragment();
     private AccountSettingFragment accountSettingFragment = new AccountSettingFragment();
     private ActivityFragment activityFragment = new ActivityFragment();
+    private FeedbackFragment feedbackFragment = new FeedbackFragment();
     private BaseFragment currentFragment;
     private Boolean lockFinish = true;
 
@@ -96,6 +98,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.sidebar_item_account_setting:
                         switchFragment(5);
+                        break;
+                    case R.id.sidebar_item_feedback:
+                        switchFragment(6);
                         break;
                     default:
                         return false;
@@ -169,6 +174,10 @@ public class MainActivity extends AppCompatActivity {
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_account_selector));
                 changeFragment(accountSettingFragment);
                 break;
+            case 6:
+                mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_feedback_selector));
+                mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_feedback_selector));
+                changeFragment(feedbackFragment);
         }
     }
 
