@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#85bdc3c7"
+    android:weightSum="1">
+
+    <TextView
+        android:text="問題或建議"
+        android:textColor="#2a2a2a"
+        android:textSize="20sp"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:lineSpacingExtra="3dp"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:gravity="left"
+        android:inputType="textMultiLine"
+        android:textSize="20sp"
+        android:hint="感謝您的提問與建議\n我們的進步離不開您的饋"
+        android:id="@+id/feedback"
+        android:layout_weight="0.19" />
+
+    <TextView
+        android:text="聯繫方式"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#2a2a2a"
+        android:textSize="20sp"
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:id="@+id/textView3" />
+
+    <EditText
+        android:hint="請輸入您的聯絡信箱"
+        android:background="@drawable/shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:paddingRight="10sp"
+        android:paddingLeft="10sp"
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:gravity="left"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/contact_imformatoin"
+        android:layout_weight="0.08" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_send_white_24dp"
+        android:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/blue"
+        app:rippleColor="@color/dark_blue" />
+
+
+
+
+</LinearLayout>

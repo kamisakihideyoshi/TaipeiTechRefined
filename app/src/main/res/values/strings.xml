@@ -97,6 +97,9 @@
     <string name="login">Login</string>
     <string name="scan">Rescan</string>
 
+    <!-- Feedback -->
+    <string name="feedback_text">feedback</string>
+
     <!-- Setting -->
     <string name="account_setting_text">Account OωO</string>
     <string name="portal_title">Portal</string>
@@ -141,4 +144,5 @@
     <string name="department_rank">Department rank</string>
 
     <string name="Exception_loginNportal">Please set account at \"Account\" first OωO</string>
+
 </resources>

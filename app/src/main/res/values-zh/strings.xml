@@ -78,6 +78,9 @@
     <string name="credit_general_core">實得核心:</string>
     <string name="credit_general_elective">實得選修:</string>
 
+    <!-- Feedback -->
+    <string name="feedback_text">意見回饋</string>
+
     <!-- Wifi -->
     <string name="wifi_text">Ntutcc登入</string>
     <string name="current_wifi">目前偵測到的Wifi</string>
