@@ -33,7 +33,7 @@
         android:gravity="left"
         android:inputType="textMultiLine"
         android:textSize="20sp"
-        android:hint="感謝您的提問與建議\n我們的進步離不開您的回饋"
+        android:hint="感謝您的提問與建議\n我們的進步離不開您的饋"
         android:id="@+id/feedback"
         android:layout_weight="0.19" />
 
