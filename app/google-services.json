@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "675312916885",
+    "firebase_url": "https://ntut-feedback.firebaseio.com",
+    "project_id": "ntut-feedback",
+    "storage_bucket": "ntut-feedback.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675312916885:android:bd679908ebf31289",
+        "android_client_info": {
+          "package_name": "owo.npc.taipeitechrefined"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675312916885-mb8j1l6nog3sodljtocjf96osmgjlorh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "owo.npc.taipeitechrefined",
+            "certificate_hash": "4E7EA922AC3574413E15CC97ADC607D198DDD41C"
+          }
+        },
+        {
+          "client_id": "675312916885-fe99sfcjdu6u60pg6bd8rs5fu384gfrq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_8wZW_bRMJRSQk6VpZwAo-5GuLijsrQM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675312916885-fe99sfcjdu6u60pg6bd8rs5fu384gfrq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
