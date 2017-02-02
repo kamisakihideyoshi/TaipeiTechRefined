@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +21,7 @@ import owo.npc.taipeitechrefined.runnable.BaseRunnable;
 import owo.npc.taipeitechrefined.BaseFragment;
 import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.utility.Utility;
+import owo.npc.taipeitechrefined.utility.WifiUtility;
 
 import java.lang.ref.WeakReference;
 import java.util.Calendar;
@@ -57,8 +59,16 @@ public class FeedbackFragment extends BaseFragment implements
         mFab = (android.support.design.widget.FloatingActionButton) getActivity().findViewById(R.id.fab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                setMessage();
-                writeDataBase(getMessage());
+                if(WifiUtility.isNetworkAvailable(getActivity())){
+                    setMessage();
+                    writeDataBase(getMessage());
+                    Utility.showDialog("傳送成功", "感謝您的提問與建議，我們將盡快解決您的問題", getActivity());
+                }
+                else{
+                    Toast.makeText(getActivity(), R.string.check_network_available,
+                            Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }
@@ -103,7 +113,7 @@ public class FeedbackFragment extends BaseFragment implements
     }
 
     private String getMessage(){
-        return (feedback+" ("+contact_imformation+")");
+        return (feedback+contact_imformation);
     }
 
     private void writeDataBase(String message){

@@ -80,6 +80,10 @@
 
     <!-- Feedback -->
     <string name="feedback_text">意見回饋</string>
+    <string name="question_or_suggestion">問題或建議</string>
+    <string name="feedback_hint">感謝您的提問與建議\n我們的進步離不開您的回饋</string>
+    <string name="feedback_contact">聯繫方式</string>
+    <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
 
     <!-- Wifi -->
     <string name="wifi_text">Ntutcc登入</string>

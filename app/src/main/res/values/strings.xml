@@ -99,6 +99,10 @@
 
     <!-- Feedback -->
     <string name="feedback_text">feedback</string>
+    <string name="question_or_suggestion">問題或建議</string>
+    <string name="feedback_hint">感謝您的提問與建議\n我們的進步離不開您的回饋</string>
+    <string name="feedback_contact">聯繫方式</string>
+    <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
 
     <!-- Setting -->
     <string name="account_setting_text">Account OωO</string>
@@ -144,5 +148,6 @@
     <string name="department_rank">Department rank</string>
 
     <string name="Exception_loginNportal">Please set account at \"Account\" first OωO</string>
+
 
 </resources>
