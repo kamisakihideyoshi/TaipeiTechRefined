@@ -22,6 +22,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -73,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
         } else {
             switchFragment(2);
         }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Intent intent = getIntent();
+        String msg = intent.getStringExtra("msg");
+        if (msg!=null)
+            Log.d("FCM", "msg:"+msg);
     }
 
     private void setupSidePanel() {

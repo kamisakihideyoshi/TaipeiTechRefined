@@ -131,5 +131,4 @@ public class FeedbackFragment extends BaseFragment implements
     public void onRefresh() {
 
     }
-
 }
