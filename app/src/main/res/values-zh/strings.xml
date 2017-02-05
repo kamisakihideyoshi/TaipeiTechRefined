@@ -68,15 +68,33 @@
     <string name="division">學制</string>
     <string name="department">系所</string>
     <string name="credit_type">學分類別</string>
+
+    <!-- Credit : Toolbar -->
     <string name="credit_query">學分資訊查詢〈需要一些時間〉</string>
     <string name="credit_standard_credit">畢業學分標準設定</string>
     <string name="credit_clear">清除學分資訊</string>
     <string name="credit_clear_standard_credit">清除畢業學分標準</string>
 
+    <!-- Credit : General education -->
+    <string name="credit">實得學分:</string>
     <string name="overview_credit">學分總覽</string>
     <string name="overview_general">博雅總覽</string>
     <string name="credit_general_core">實得核心:</string>
     <string name="credit_general_elective">實得選修:</string>
+    <string name="cultural_dimension">文化向度</string>
+    <string name="historical_dimension">歷史向度</string>
+    <string name="philosophical_dimension">哲學向度</string>
+    <string name="legal_dimension">法治向度</string>
+    <string name="social_dimension">社會向度</string>
+    <string name="natural_dimension">自然向度</string>
+    <string name="social_philosophy_dimension">社哲向度</string>
+    <string name="creative_dimension">創創向度</string>
+
+    <!-- Wifi -->
+    <string name="wifi_text">Ntutcc登入</string>
+    <string name="current_wifi">目前偵測到的Wifi</string>
+    <string name="login">認證登入</string>
+    <string name="scan">重新掃描</string>
 
     <!-- Feedback -->
     <string name="feedback_text">意見回饋</string>
@@ -84,12 +102,6 @@
     <string name="feedback_hint">感謝您的提問與建議\n我們的進步離不開您的回饋</string>
     <string name="feedback_contact">聯繫方式</string>
     <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
-
-    <!-- Wifi -->
-    <string name="wifi_text">Ntutcc登入</string>
-    <string name="current_wifi">目前偵測到的Wifi</string>
-    <string name="login">認證登入</string>
-    <string name="scan">重新掃描</string>
 
     <!-- Setting -->
     <string name="account_setting_text">帳號設定</string>
@@ -101,12 +113,12 @@
     <string name="nportal_text"><u>校園入口網站</u></string>
     <string name="right_link"><u>免責聲明</u></string>
     <string name="right_text">免責聲明</string>
-    <string name="right">本軟體僅提供免費測試，但不保證運作正確性，同時不承擔造成任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
+    <string name="right">本軟體提供免費使用，但不保證資訊正確性，同時不承擔任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切意外風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
     <string name="save_success">帳號密碼已儲存！</string>
     <string name="account_empty_error_message">請填入學號</string>
     <string name="password_empty_error_message">請填入密碼</string>
 
-    <string name="credit">實得學分:</string>
+
     <string name="none_account_error">請先至帳號設定，設定校園入口網站帳號密碼！</string>
     <string name="hint">提示</string>
     <string name="check_credit_error">查詢過程有發生錯誤，請重新查詢或自行修正！</string>
@@ -135,13 +147,18 @@
     <string name="class_rank">班級排名</string>
     <string name="group_rank">分組排名</string>
     <string name="department_rank">系(科)所排名</string>
-    <string name="cultural_dimension">文化向度</string>
-    <string name="historical_dimension">歷史向度</string>
-    <string name="philosophical_dimension">哲學向度</string>
-    <string name="legal_dimension">法治向度</string>
-    <string name="social_dimension">社會向度</string>
-    <string name="natural_dimension">自然向度</string>
-    <string name="social_philosophy_dimension">社哲向度</string>
-    <string name="creative_dimension">創創向度</string>
+
     <string name="Exception_loginNportal">請先至帳號設定，設定校園入口網站帳號密碼！</string>
+    <string name="send_suceed">傳送成功</string>
+    <string name="feedback_finish">感謝您的提問與建議，我們將盡快解決您的問題</string>
+    <string name="blank_forbid">請勿傳送空白回饋</string>
+    <string name="Su">日</string>
+    <string name="Mo">一</string>
+    <string name="Tu">二</string>
+    <string name="We">三</string>
+    <string name="Sa">六</string>
+    <string name="Th">四</string>
+    <string name="Fr">五`</string>
+    <string name="determine">確定</string>
+    <string name="feedback_check">您的聯絡方式為空，我們將以匿名方式為您送出，並且將無法給予您適當的回覆，您確定要送出嗎？</string>
 </resources>

@@ -227,8 +227,8 @@ public class Utility {
     public static String getDateString(String format, Date date) {
         SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.TAIWAN);
         DateFormatSymbols dfs = new DateFormatSymbols();
-        dfs.setShortWeekdays(new String[]{"", "日", "一", "二", "三", "四", "五",
-                "六"});
+        dfs.setShortWeekdays(new String[]{"", String.valueOf(R.string.Su), String.valueOf(R.string.Mo), String.valueOf(R.string.Tu), String.valueOf(R.string.We), String.valueOf(R.string.Th), String.valueOf(R.string.Fr),
+                String.valueOf(R.string.Sa)});
         sdf.setDateFormatSymbols(dfs);
         return sdf.format(date);
     }

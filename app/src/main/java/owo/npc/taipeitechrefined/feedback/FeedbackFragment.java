@@ -1,11 +1,13 @@
 package owo.npc.taipeitechrefined.feedback;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +35,10 @@ public class FeedbackFragment extends BaseFragment implements
     EditText edt_feedback;
     EditText edt_contact_imformation;
     String feedback, contact_imformation;
+    private static final String NO_MESSAGE = "NO_MESSAGE";
+    private static final String NO_CONTACT_INFORMATION = "NO_CONTACT_INFORMATION";
+    private static final String OK = "OK";
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,9 +66,36 @@ public class FeedbackFragment extends BaseFragment implements
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 if(WifiUtility.isNetworkAvailable(getActivity())){
-                    setMessage();
-                    writeDataBase(getMessage());
-                    Utility.showDialog("傳送成功", "感謝您的提問與建議，我們將盡快解決您的問題", getActivity());
+                    switch (setMessage()) {
+                        case NO_MESSAGE:
+                            Toast.makeText(getActivity(), R.string.blank_forbid,
+                                    Toast.LENGTH_LONG).show();
+                            return;
+                        case NO_CONTACT_INFORMATION:
+                            AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                            alertDialog.setMessage(R.string.feedback_check);
+                            alertDialog.setPositiveButton(R.string.determine, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    writeDataBase(getMessage());
+                                    initFeedback();
+                                    Utility.showDialog(getString(R.string.send_suceed), getString(R.string.feedback_finish), getActivity());
+                                }
+                            });
+                            alertDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    return;
+                                }
+                            });
+                            alertDialog.show();
+                            break;
+                        case OK:
+                            writeDataBase(getMessage());
+                            initFeedback();
+                            Utility.showDialog(getString(R.string.send_suceed), getString(R.string.feedback_finish), getActivity());
+                            break;
+                    }
                 }
                 else{
                     Toast.makeText(getActivity(), R.string.check_network_available,
@@ -71,6 +104,13 @@ public class FeedbackFragment extends BaseFragment implements
 
             }
         });
+    }
+
+    private void initFeedback() {
+        edt_feedback.setText("");
+        feedback = null;
+        contact_imformation = null;
+        edt_contact_imformation.setText("");
     }
 
 
@@ -107,13 +147,22 @@ public class FeedbackFragment extends BaseFragment implements
         }
     }
 
-    private void setMessage(){
+    private String setMessage() {
         feedback = String.valueOf(edt_feedback.getText());
         contact_imformation = String.valueOf(edt_contact_imformation.getText());
+        if(feedback.isEmpty()){
+            return NO_MESSAGE;
+        }
+        else if (contact_imformation.isEmpty()){
+            return NO_CONTACT_INFORMATION;
+        }
+        else {
+            return OK;
+        }
     }
 
     private String getMessage(){
-        return (feedback+contact_imformation);
+        return (feedback+"，"+contact_imformation);
     }
 
     private void writeDataBase(String message){

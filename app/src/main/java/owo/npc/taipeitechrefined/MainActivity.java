@@ -287,16 +287,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-        builder.setPositiveButton(R.string.donate_text,
-                new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(MainActivity.this,
-                                DonateActivity.class);
-                        startActivity(intent);
-                    }
-                });
         builder.create().show();
     }
 
