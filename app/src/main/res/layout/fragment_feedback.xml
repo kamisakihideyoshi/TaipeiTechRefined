@@ -8,7 +8,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="問題或建議"
+        android:text="@string/question_or_suggestion"
         android:textColor="#2a2a2a"
         android:textSize="20sp"
         android:layout_marginTop="50px"
@@ -33,12 +33,13 @@
         android:gravity="left"
         android:inputType="textMultiLine"
         android:textSize="20sp"
-        android:hint="感謝您的提問與建議\n我們的進步離不開您的饋"
+        android:hint="@string/feedback_hint"
         android:id="@+id/feedback"
-        android:layout_weight="0.19" />
+        android:layout_weight="0.19"
+        android:elevation="3dp" />
 
     <TextView
-        android:text="聯繫方式"
+        android:text="@string/feedback_contact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#2a2a2a"
@@ -49,7 +50,8 @@
         android:id="@+id/textView3" />
 
     <EditText
-        android:hint="請輸入您的聯絡信箱"
+        android:elevation="3dp"
+        android:hint="@string/feedback_contact_hint"
         android:background="@drawable/shape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

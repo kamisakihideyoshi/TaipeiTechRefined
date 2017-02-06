@@ -75,20 +75,20 @@
     <string name="credit_clear">Clear credit information</string>
     <string name="credit_clear_standard_credit">Clear threshold setting</string>
 
-    <string name="credit">Total:</string>
-    <string name="overview_credit">Credit Overview</string>
 
     <!-- Credit : General education -->
+    <string name="credit">Total:</string>
+    <string name="overview_credit">Credit Overview</string>
     <string name="overview_general">General education</string>
     <string name="credit_general_core">Core:</string>
     <string name="credit_general_elective">elective:</string>
     <string name="cultural_dimension">Culture</string>
     <string name="historical_dimension">History</string>
-    <string name="philosophical_dimension">.  Philosophy</string>
+    <string name="philosophical_dimension">Philosophy</string>
     <string name="legal_dimension">Law</string>
     <string name="social_dimension">Social</string>
     <string name="natural_dimension">Nature</string>
-    <string name="social_philosophy_dimension">Social Phil. .</string>
+    <string name="social_philosophy_dimension">Social Phil.</string>
     <string name="creative_dimension">Creativity</string>
 
     <!-- Wifi -->
@@ -99,6 +99,10 @@
 
     <!-- Feedback -->
     <string name="feedback_text">feedback</string>
+    <string name="question_or_suggestion">問題或建議</string>
+    <string name="feedback_hint">感謝您的提問與建議\n我們的進步離不開您的回饋</string>
+    <string name="feedback_contact">聯繫方式</string>
+    <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
 
     <!-- Setting -->
     <string name="account_setting_text">Account OωO</string>
@@ -108,12 +112,13 @@
     <string name="clear_button">Clear</string>
     <string name="nportal_loggingin">Logging in</string>
     <string name="nportal_text"><u>Taipei Tech Portal OωO</u></string>
-    <string name="right_link"><u>免責聲明</u></string>
-    <string name="right_text">免責聲明</string>
-    <string name="right">本軟體僅提供免費測試，但不保證運作正確性，同時不承擔造成任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
+    <string name="right_link"><u>Disclaimer</u></string>
+    <string name="right_text">Disclaimer</string>
+    <string name="right">本軟體提供免費使用，但不保證資訊正確性，同時不承擔任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切意外風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
     <string name="save_success">Account data saved OωO</string>
     <string name="account_empty_error_message">Username is empty OωO</string>
     <string name="password_empty_error_message">Password is empty OωO</string>
+
     <string name="none_account_error">請先至帳號設定，設定校園入口網站帳號密碼！</string>
     <string name="hint">Hint</string>
     <string name="check_credit_error">查詢過程有發生錯誤，請重新查詢或自行修正！</string>
@@ -131,18 +136,31 @@
     <string name="loading_graduation_credits">畢業學分標準讀取中~</string>
     <string name="admission_criteria_error">入學標準未完成設定！</string>
     <string name="sum">Total：</string>
-    <string name="authorities_common_compulsory">○部訂共同必修</string>
-    <string name="school_common_compulsory">△校訂共同必修</string>
-    <string name="common_elective">☆共同選修</string>
-    <string name="authorities_vocational_elective">●部訂專業必修</string>
-    <string name="school_vocational_compulsory">▲校訂專業必修</string>
-    <string name="vocational_elective">★專業選修</string>
-    <string name="maximum_elective_credit">跨系選修上限學分</string>
-    <string name="minimum_graduation_credits">Graduation threshold</string>
+    <string name="authorities_common_compulsory">○Dept. Common Required</string>
+    <string name="school_common_compulsory">△University Common Required</string>
+    <string name="common_elective">☆Common Elective</string>
+    <string name="authorities_vocational_elective">●Dept. Major Required</string>
+    <string name="school_vocational_compulsory">▲University Major Required</string>
+    <string name="vocational_elective">★Major Elective</string>
+    <string name="maximum_elective_credit">Max. Credits for Inter-Dept. Elective</string>
+    <string name="minimum_graduation_credits">Min. Credits for Graduation</string>
     <string name="class_rank">Class rank</string>
     <string name="group_rank">Group rank</string>
     <string name="department_rank">Department rank</string>
 
     <string name="Exception_loginNportal">Please set account at \"Account\" first OωO</string>
+    <string name="send_suceed">傳送成功</string>
+    <string name="feedback_finish">感謝您的提問與建議，我們將盡快解決您的問題</string>
+    <string name="blank_forbid">請勿傳送空白回饋</string>
+    <string name="Su">Su</string>
+    <string name="Mo">Mo</string>
+    <string name="Tu">Tu</string>
+    <string name="We">We</string>
+    <string name="Sa">Sa</string>
+    <string name="Th">Th</string>
+    <string name="Fr">Fr`</string>
+    <string name="determine">OK</string>
+    <string name="feedback_check">您的聯絡方式為空，我們將以匿名方式為您送出，並且將無法給予您適當的回覆，您確定要送出嗎？</string>
+
 
 </resources>
