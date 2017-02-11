@@ -1,6 +1,7 @@
 package owo.npc.taipeitechrefined.utility;
 
 import android.os.Handler;
+import android.util.Log;
 
 import owo.npc.taipeitechrefined.model.CreditInfo;
 import owo.npc.taipeitechrefined.model.GeneralCredit;
@@ -348,7 +349,7 @@ public class CreditConnector {
             for (int i = 1; i < rows.length; i++) {
                 TagNode[] cols = rows[i].getElementsByName("td", true);
                 String temp = cols[0].getText().toString();
-                if (temp.contains(department)) {
+                if (temp.replace(" ", "").replace("\n", "").contains(department.replace(" ", "").replace("\n", ""))) {
                     for (int j = 1; j < 9; j++) {
                         String credit = Utility.cleanString(cols[j].getText()
                                 .toString());

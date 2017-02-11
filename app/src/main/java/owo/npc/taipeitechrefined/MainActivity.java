@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView qrImageView = new ImageView(this);
         qrImageView.setImageResource(R.drawable.qrcode);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.title);
+        builder.setTitle("About");
         builder.setView(qrImageView);
         builder.setNegativeButton(R.string.play_store_text,
                 new DialogInterface.OnClickListener() {
@@ -277,7 +277,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             Intent intent = new Intent(
                                     Intent.ACTION_VIEW,
-                                    Uri.parse("market://details?id=owo.npc.ttr_s"));
+                                    Uri.parse("market://details?id=owo.npc.taipeitechrefined"));
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                         } catch (Exception e) {
