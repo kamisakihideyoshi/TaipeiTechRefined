@@ -8,11 +8,11 @@
     <string name="play_store_text">Play store</string>
     <string name="play_store_not_support">Cannot open play store！</string>
     <string name="press_again_to_exit">Press again to exit</string>
-    <string name="web_back_hint">實體返回鍵，可以回到前一瀏覽頁面！</string>
+    <string name="web_back_hint">To back to the previous page, press the back button!</string>
     <string name="back">Back</string>
     <string name="start_query">Refresh</string>
     <string name="tool_text">Menu</string>
-    <string name="menu_prompt">function OωO</string>
+    <string name="menu_prompt">function</string>
     <string name="check_network_available">Please check your network status and try again</string>
     <string name="version_text">version %s by NPC</string>
     <string name="original_developer">based on Alen Chiou\'s</string>
@@ -21,9 +21,9 @@
     <string name="account_password_empty_toast_text">Please set account at \"Account\" first OωO</string>
 
     <!-- Activity -->
-    <string name="activity_text">Event OωO</string>
+    <string name="activity_text">Event</string>
     <string name="share_using">Share</string>
-    <string name="activity_update">Update OωO</string>
+    <string name="activity_update">Update</string>
     <string name="activity_detail">Event detail</string>
     <string name="activity_date">Date：</string>
     <string name="activity_enddate">End date：</string>
@@ -31,7 +31,7 @@
     <!-- Calendar -->
     <string name="calendar_text">Calendar</string>
     <string name="add_to_calendar">Add to calendar</string>
-    <string name="calendar_not_support">The device does not support this function (´･ω･`)</string>
+    <string name="calendar_not_support">The device does not support this function!</string>
     <string name="calendar_update">Update</string>
 
     <!-- Course -->
@@ -41,8 +41,8 @@
     <string name="course_detail_title">Course Detail</string>
     <string name="course_detail">Course Detail</string>
     <string name="classmates">Classmates</string>
-    <string name="course_offline_save">Save course as offline data OωO</string>
-    <string name="course_offline_clear">Clear offline course data OωO</string>
+    <string name="course_offline_save">Save course as offline data</string>
+    <string name="course_offline_clear">Clear offline course data</string>
     <string name="mon">Mon</string>
     <string name="tue">Tue</string>
     <string name="wed">Wed</string>
@@ -67,7 +67,7 @@
     <!-- Credit -->
     <string name="credit_text">Credit</string>
     <string name="semester">Semester</string>
-    <string name="year">入學年度</string>
+    <string name="year">Admission Year</string>
     <string name="division">Division</string>
     <string name="department">Department</string>
     <string name="credit_type">Type</string>
@@ -102,13 +102,13 @@
 
     <!-- Feedback -->
     <string name="feedback_text">feedback</string>
-    <string name="question_or_suggestion">問題或建議</string>
-    <string name="feedback_hint">感謝您的提問與建議\n我們的進步離不開您的回饋</string>
-    <string name="feedback_contact">聯繫方式</string>
-    <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
+    <string name="question_or_suggestion">Problems and Suggestions</string>
+    <string name="feedback_hint">Sincerely thanks for contacting us and we\'ll get back to you as fast as possible. \nYour advice is the greatest push for our progress.</string>
+    <string name="feedback_contact">Your Email</string>
+    <string name="feedback_contact_hint">Please leave your email here.</string>
 
     <!-- Setting -->
-    <string name="account_setting_text">Account OωO</string>
+    <string name="account_setting_text">Account</string>
     <string name="portal_title">Portal</string>
     <string name="password_text">Password</string>
     <string name="save_button">Save</string>
@@ -117,27 +117,27 @@
     <string name="nportal_text"><u>Taipei Tech Portal OωO</u></string>
     <string name="right_link"><u>Disclaimer</u></string>
     <string name="right_text">Disclaimer</string>
-    <string name="right">本軟體提供免費使用，但不保證資訊正確性，同時不承擔任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切意外風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
-    <string name="save_success">Account data saved OωO</string>
+    <string name="right">"The application is for testing and NOT guarantee its functionality, please use it at your own risk. Also, we are NOT assume responsibilities to anyone for any reasons, close and uninstall if you are not accept. "</string>
+    <string name="save_success">Account data saved</string>
     <string name="account_empty_error_message">Username is empty OωO</string>
-    <string name="password_empty_error_message">Password is empty OωO</string>
+    <string name="password_empty_error_message">Password is empty</string>
 
-    <string name="none_account_error">請先至帳號設定，設定校園入口網站帳號密碼！</string>
+    <string name="none_account_error">Please set account at \\\"Account\\\" first.</string>
     <string name="hint">Hint</string>
-    <string name="check_credit_error">查詢過程有發生錯誤，請重新查詢或自行修正！</string>
-    <string name="credit_imformation_complete">學分資訊查詢完成</string>
-    <string name="credit_final">可以開始瀏覽學分及歷年成績！</string>
-    <string name="checking_credit">學分資料查詢中~</string>
-    <string name="essential_core">應修核心:</string>
-    <string name="setting_graduation_credits">畢業學分標準設定</string>
+    <string name="check_credit_error">Some trouble happened, please try again later.</string>
+    <string name="credit_imformation_complete">Credit information updated</string>
+    <string name="credit_final">Let\'s check your nightmare</string>
+    <string name="checking_credit">Updating credit information</string>
+    <string name="essential_core">Essential:</string>
+    <string name="setting_graduation_credits">Set graduation threshold</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
-    <string name="choose_enter_semester">請選擇入學年度</string>
-    <string name="loading_academic_system">學制清單讀取中~</string>
-    <string name="loading_semester_list">入學年度清單讀取中~</string>
-    <string name="loading_faculty_list">系所清單讀取中~</string>
-    <string name="loading_graduation_credits">畢業學分標準讀取中~</string>
-    <string name="admission_criteria_error">入學標準未完成設定！</string>
+    <string name="choose_enter_semester">Set admission year</string>
+    <string name="loading_academic_system">Loading division list~</string>
+    <string name="loading_semester_list">Loading admission year list~</string>
+    <string name="loading_faculty_list">Loading department list~</string>
+    <string name="loading_graduation_credits">Loading graduation threshold~</string>
+    <string name="admission_criteria_error">Admission criteria is not set up!</string>
     <string name="sum">Total：</string>
     <string name="authorities_common_compulsory">○Dept. Common Required</string>
     <string name="school_common_compulsory">△University Common Required</string>
@@ -152,9 +152,9 @@
     <string name="department_rank">Department rank</string>
 
     <string name="Exception_loginNportal">Please set account at \"Account\" first OωO</string>
-    <string name="send_suceed">傳送成功</string>
-    <string name="feedback_finish">感謝您的提問與建議，我們將盡快解決您的問題</string>
-    <string name="blank_forbid">請勿傳送空白回饋</string>
+    <string name="send_suceed">Sent successfully</string>
+    <string name="feedback_finish">Sincerely thanks for contacting us and we\'ll get back to you as fast as possible.</string>
+    <string name="blank_forbid">Do not send empty feedback</string>
     <string name="Su">Su</string>
     <string name="Mo">Mo</string>
     <string name="Tu">Tu</string>
@@ -163,7 +163,7 @@
     <string name="Th">Th</string>
     <string name="Fr">Fr</string>
     <string name="determine">OK</string>
-    <string name="feedback_check">您的聯絡方式為空，我們將以匿名方式為您送出，並且將無法給予您適當的回覆，您確定要送出嗎？</string>
+    <string name="feedback_check">"You're not fill in the contact information, we'll send it as anonymous and couldn't respond you properly.\\nAre you sure? "</string>
     <string name="activity_startdate">Start date：</string>
 
 </resources>
