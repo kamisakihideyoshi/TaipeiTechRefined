@@ -295,22 +295,27 @@ public class CreditConnector {
         }
     }
 
+    //取得科系列表
     public static ArrayList<String> getDepartmentList(String year, int index)
             throws Exception {
         try {
             ArrayList<String> departemt_list = new ArrayList<>();
+            //登入網頁
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-3");
             params.put("year", year);
             params.put("matric", matrics.get(index));
             String result = Connector
                     .getDataByPost(getStandardUri(lang), params, "big5");
+            //取出所需資料
             TagNode tagNode;
             tagNode = new HtmlCleaner().clean(result);
             TagNode[] tables = tagNode.getElementsByAttValue("border", "1",
                     true, false);
+            //取出第一個超連結的內容 <- 因網頁裡的科系名有加上超連結，連到課程科目表
             TagNode[] rows = tables[0].getElementsByName("a", true);
             for (TagNode row : rows) {
+                //加入科系列表
                 String department = row.getText().toString();
                 departemt_list.add(department);
             }

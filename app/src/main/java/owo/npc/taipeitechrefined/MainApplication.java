@@ -21,8 +21,8 @@ public class MainApplication extends Application {
 
     @Override
     public void onCreate() {
-        lang = Locale.getDefault().getLanguage();
         super.onCreate();
+        lang = Locale.getDefault().getLanguage();   //取得當前系統語言 <- 作為課表和學分語言的判斷依據
         CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
         singleton = this;
         Model.getInstance();
