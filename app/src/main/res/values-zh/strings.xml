@@ -161,4 +161,8 @@
     <string name="Fr">五`</string>
     <string name="determine">確定</string>
     <string name="feedback_check">您的聯絡方式為空，我們將以匿名方式為您送出，並且將無法給予您適當的回覆，您確定要送出嗎？</string>
+    <string name="activity_detail">活動內容</string>
+    <string name="activity_date">時間：</string>
+    <string name="activity_enddate">結束時間：</string>
+    <string name="activity_startdate">開始時間：</string>
 </resources>

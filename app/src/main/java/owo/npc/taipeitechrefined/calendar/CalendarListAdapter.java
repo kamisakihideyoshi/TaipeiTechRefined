@@ -67,19 +67,19 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
     public void onClick(View v) {
         selectedEvent = (EventInfo) v.getTag(R.id.data_tag);
         Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("活動內容");
+        builder.setTitle(R.string.activity_detail);
         String message = null;
         if (selectedEvent.getStartDate().compareTo(selectedEvent.getEndDate()) == 0) {
             message = String.format(
                     Locale.TAIWAN,
-                    "%s\n\n時間：%s",
+                    "%s\n\n" + getContext().getString(R.string.activity_date) + "%s",
                     selectedEvent.getEvent(),
                     Utility.getDateString("yyyy/MM/dd (E)",
                             selectedEvent.getStartDate(), getContext()));
         } else {
             message = String.format(
                     Locale.TAIWAN,
-                    "%s\n\n開始時間：%s\n結束時間：%s",
+                    "%s\n\n" + getContext().getString(R.string.activity_startdate) + "%s\n" + getContext().getString(R.string.activity_enddate) + "%s",
                     selectedEvent.getEvent(),
                     Utility.getDateString("yyyy/MM/dd (E)",
                             selectedEvent.getStartDate(), getContext()),

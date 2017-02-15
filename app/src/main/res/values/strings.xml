@@ -24,6 +24,9 @@
     <string name="activity_text">Event OωO</string>
     <string name="share_using">Share</string>
     <string name="activity_update">Update OωO</string>
+    <string name="activity_detail">Event detail</string>
+    <string name="activity_date">Date：</string>
+    <string name="activity_enddate">End date：</string>
 
     <!-- Calendar -->
     <string name="calendar_text">Calendar</string>
@@ -161,6 +164,6 @@
     <string name="Fr">Fr</string>
     <string name="determine">OK</string>
     <string name="feedback_check">您的聯絡方式為空，我們將以匿名方式為您送出，並且將無法給予您適當的回覆，您確定要送出嗎？</string>
-
+    <string name="activity_startdate">Start date：</string>
 
 </resources>
