@@ -14,7 +14,8 @@ import owo.npc.taipeitechrefined.model.EventInfo;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class CalendarPageAdapter extends PagerAdapter {
+public class
+CalendarPageAdapter extends PagerAdapter {
     private Model model = Model.getInstance();
     private Context context;
     private Calendar calendar;
