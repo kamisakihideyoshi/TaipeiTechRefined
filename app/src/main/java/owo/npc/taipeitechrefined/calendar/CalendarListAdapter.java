@@ -50,7 +50,7 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
         EventInfo event = getItem(position);
         holder.date_textview.setText(Utility.getDate(event.getStartDate()));
         holder.day_textview.setText(Utility.getDateString("E",
-                event.getStartDate()));
+                event.getStartDate(), getContext()));
         holder.event_textview.setText(event.getEvent());
         convertView.setTag(R.id.data_tag, event);
         convertView.setOnClickListener(this);
@@ -75,16 +75,16 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
                     "%s\n\n時間：%s",
                     selectedEvent.getEvent(),
                     Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getStartDate()));
+                            selectedEvent.getStartDate(), getContext()));
         } else {
             message = String.format(
                     Locale.TAIWAN,
                     "%s\n\n開始時間：%s\n結束時間：%s",
                     selectedEvent.getEvent(),
                     Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getStartDate()),
+                            selectedEvent.getStartDate(), getContext()),
                     Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getEndDate()));
+                            selectedEvent.getEndDate(), getContext()));
         }
         builder.setMessage(message);
         builder.setNegativeButton(R.string.add_to_calendar, this);
@@ -116,15 +116,15 @@ public class CalendarListAdapter extends ArrayAdapter<EventInfo> implements
                 if (selectedEvent.getStartDate().compareTo(
                         selectedEvent.getEndDate()) == 0) {
                     shareBody = Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getStartDate())
+                            selectedEvent.getStartDate(), getContext())
                             + " "
                             + selectedEvent.getEvent();
                 } else {
                     shareBody = Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getStartDate())
+                            selectedEvent.getStartDate(), getContext())
                             + "~"
                             + Utility.getDateString("yyyy/MM/dd (E)",
-                            selectedEvent.getEndDate())
+                            selectedEvent.getEndDate(), getContext())
                             + " "
                             + selectedEvent.getEvent();
                 }

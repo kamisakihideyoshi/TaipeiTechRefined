@@ -224,11 +224,11 @@ public class Utility {
         return String.valueOf(year);
     }
 
-    public static String getDateString(String format, Date date) {
+    public static String getDateString(String format, Date date, Context context) {
         SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.TAIWAN);
         DateFormatSymbols dfs = new DateFormatSymbols();
-        dfs.setShortWeekdays(new String[]{"", String.valueOf(R.string.Su), String.valueOf(R.string.Mo), String.valueOf(R.string.Tu), String.valueOf(R.string.We), String.valueOf(R.string.Th), String.valueOf(R.string.Fr),
-                String.valueOf(R.string.Sa)});
+        dfs.setShortWeekdays(new String[]{"", context.getString(R.string.Su), context.getString(R.string.Mo), context.getString(R.string.Tu), context.getString(R.string.We), context.getString(R.string.Th), context.getString(R.string.Fr),
+                context.getString(R.string.Sa)});
         sdf.setDateFormatSymbols(dfs);
         return sdf.format(date);
     }

@@ -77,7 +77,7 @@ public class CreditStandardDialog extends AlertDialog implements
             divisions.add(standardCredit.getDivisionText());
             departments.add(standardCredit.getDepartmentText());
         } else {
-            years.add(String.valueOf(R.string.choose_enter_semester));
+            years.add(contentView.getContext().getString(R.string.choose_enter_semester));
         }
         year_list = (MenuSpinner) contentView.findViewById(R.id.year_list);
         year_adapter = new ArrayAdapter<>(getContext(),

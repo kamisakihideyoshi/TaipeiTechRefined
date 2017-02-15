@@ -43,7 +43,7 @@ public class ActivityCheckReceiver extends BroadcastReceiver {
 
     private boolean needToCheck(Context context) {
         String date = Utility.getDateString("yyyy-MM-dd", Calendar
-                .getInstance().getTime());
+                .getInstance().getTime(), context);
         SharedPreferences settings = context.getSharedPreferences(
                 MainApplication.SETTING_NAME, Context.MODE_PRIVATE);
         String date_flag = settings.getString(CHECK_FLAG, null);
