@@ -12,6 +12,7 @@ import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,7 +32,7 @@ import java.util.Calendar;
 public class FeedbackFragment extends BaseFragment implements
         SwipeRefreshLayout.OnRefreshListener {
     private static View fragmentView = null;
-    FloatingActionButton mFab = null;
+    Button send_button;
     EditText edt_feedback;
     EditText edt_contact_imformation;
     String feedback, contact_imformation;
@@ -57,13 +58,13 @@ public class FeedbackFragment extends BaseFragment implements
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        initFab();
+        initButton();
         super.onActivityCreated(savedInstanceState);
     }
 
-    private void initFab(){
-        mFab = (android.support.design.widget.FloatingActionButton) getActivity().findViewById(R.id.fab);
-        mFab.setOnClickListener(new View.OnClickListener() {
+    private void initButton(){
+        send_button = (Button) getActivity().findViewById(R.id.send_button);
+        send_button.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 if(WifiUtility.isNetworkAvailable(getActivity())){
                     switch (setMessage()) {

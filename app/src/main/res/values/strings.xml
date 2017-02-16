@@ -197,5 +197,6 @@
     <string name="save">Save</string>
     <string name="ok">OK</string>
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
+    <string name="send">Send</string>
 
 </resources>
