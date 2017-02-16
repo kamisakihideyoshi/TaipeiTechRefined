@@ -167,7 +167,7 @@
     <!-- Feedback -->
     <string name="feedback_text">feedback</string>
     <string name="question_or_suggestion">Problems and Suggestions</string>
-    <string name="feedback_hint">Sincerely thanks for contacting us and we\'ll get back to you as fast as possible. \nYour advice is the greatest push for our progress.</string>
+    <string name="feedback_hint">Sincerely thanks for contacting us. \nYour advice is the greatest push for our progress.</string>
     <string name="feedback_contact">Your Email</string>
     <string name="feedback_contact_hint">Please leave your email here.</string>
     <string name="feedback_send_suceed">Sent successfully</string>
