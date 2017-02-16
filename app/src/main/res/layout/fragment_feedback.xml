@@ -67,19 +67,29 @@
         android:ems="10"
         android:id="@+id/contact_imformatoin"
         android:layout_weight="0.08" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+
+    <Button
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_send_white_24dp"
-        android:elevation="6dp"
-        app:pressedTranslationZ="12dp"
-        app:backgroundTint="@color/blue"
-        app:rippleColor="@color/dark_blue" />
+        android:id="@+id/send_button"
+        android:background="@drawable/blue_background_selector"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="20dp"/>
 
-
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:src="@drawable/ic_send_white_24dp"-->
+        <!--android:elevation="6dp"-->
+        <!--app:pressedTranslationZ="12dp"-->
+        <!--app:backgroundTint="@color/blue"-->
+        <!--app:rippleColor="@color/dark_blue" />-->
 
 
 </LinearLayout>

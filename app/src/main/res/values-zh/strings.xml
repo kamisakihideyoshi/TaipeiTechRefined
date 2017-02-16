@@ -190,4 +190,5 @@
     <string name="course_load_semester">學期清單查詢中...</string>
     <string name="course_load_course">課表查詢中...</string>
     <string name="calendar_loading">行事曆資料讀取中~</string>
+    <string name="send">送出</string>
 </resources>
