@@ -10,6 +10,7 @@ import org.htmlcleaner.HtmlCleaner;
 import org.htmlcleaner.TagNode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import static owo.npc.taipeitechrefined.MainApplication.lang;
@@ -261,7 +262,9 @@ public class CourseConnector {
                     continue;
                 }
                 CourseInfo course = new CourseInfo();
-                if (cols[0].isEmpty()) {
+//                Log.d("Course Name", cols[1].getText().toString());
+//                Log.d("Course ID", cols[0].getText().toString());
+                if (cols[1].getText().toString().contains("Class Meeting")) {
                     course.setCourseNo("0");
                 } else {
                     course.setCourseNo(cols[0].getText().toString());

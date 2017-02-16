@@ -3,6 +3,7 @@ package owo.npc.taipeitechrefined.course.task;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.utility.Constants;
 import owo.npc.taipeitechrefined.utility.CourseConnector;
@@ -27,7 +28,7 @@ public class QuerySemesterTask extends AsyncTask<String, Void, Object> {
         super.onPreExecute();
         CourseFragment fragment = mCourseFragmentWeakReference.get();
         if (fragment != null) {
-            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, "學期清單查詢中...");
+            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, fragment.getContext().getString(R.string.course_load_semester));
             mProgressDialogWeakReference = new WeakReference<>(progressDialog);
         } else {
             cancel(true);

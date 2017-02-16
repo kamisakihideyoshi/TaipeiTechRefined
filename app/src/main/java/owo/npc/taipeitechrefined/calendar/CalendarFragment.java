@@ -94,7 +94,7 @@ public class CalendarFragment extends BaseFragment implements OnClickListener,
             Model.getInstance().saveYearCalendar();
             showYearMonth();
             setData();
-            Toast.makeText(getActivity(), "行事曆更新完成，可以開始瀏覽行事曆！",
+            Toast.makeText(getActivity(), R.string.calendar_updated,
                     Toast.LENGTH_LONG).show();
         } else {
             showAlertMessage("此服務發生錯誤，請檢查網路狀態或使用原網頁查詢！");
@@ -104,7 +104,7 @@ public class CalendarFragment extends BaseFragment implements OnClickListener,
 
     private void updateCalendar() {
         if (WifiUtility.isNetworkAvailable(getActivity())) {
-            progressDialog = ProgressDialog.show(getActivity(), null, "資料讀取中~",
+            progressDialog = ProgressDialog.show(getActivity(), null, getString(R.string.calendar_loading),
                     true);
             Thread t = new Thread(new CalendarRunnable(
                     new CalendarHandler(this)));
@@ -149,7 +149,7 @@ public class CalendarFragment extends BaseFragment implements OnClickListener,
                             });
                     month_dialog.show();
                 } else {
-                    Toast.makeText(getActivity(), "請先更新行事曆！", Toast.LENGTH_SHORT)
+                    Toast.makeText(getActivity(), R.string.calendar_update_first, Toast.LENGTH_SHORT)
                             .show();
                 }
                 break;

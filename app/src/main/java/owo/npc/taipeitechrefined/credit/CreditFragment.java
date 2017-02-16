@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
 import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -168,8 +169,9 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
             cores[i] = general.getHadCoreCredit();
             i++;
         }
-        int width = Utility.getScreenWidth(getActivity());
+        int width = (int) (Utility.getScreenWidth(getActivity()) * 0.95);
         LinearLayout.LayoutParams chart_params = new LayoutParams(width, width);
+        chart_params.gravity = Gravity.CENTER_HORIZONTAL;
         RadarChartView radar_chart = new RadarChartView(getActivity(), count,
                 titles);
         radar_chart.setId(R.id.radar_chart);
@@ -323,7 +325,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                         pd.dismiss();
                         if (CreditConnector.isHaveError) {
                             Utility.showDialog(getString(R.string.credit_imformation_complete),
-                                    getString(R.string.credit_final)+"\n"+getString(R.string.check_credit_error),
+                                    getString(R.string.credit_final)+"\n"+getString(R.string.credit_error),
                                     getActivity());
                         } else {
                             Utility.showDialog(getString(R.string.credit_imformation_complete), getString(R.string.credit_final),
@@ -366,7 +368,7 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                 pd = new ProgressDialog(getActivity());
                 pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                 pd.setProgress(0);
-                pd.setTitle(getString(R.string.checking_credit));
+                pd.setTitle(getString(R.string.credit_updating));
                 pd.setCancelable(false);
                 pd.show();
                 nextThread = new Thread(new CreditLoginRunnable(creditLoginHandler));

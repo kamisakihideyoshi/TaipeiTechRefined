@@ -58,7 +58,7 @@ public class CreditStandardDialog extends AlertDialog implements
 
     public CreditStandardDialog(Context context, StandardCredit standardCredit) {
         super(context);
-        setTitle(context.getString(R.string.setting_graduation_credits));
+        setTitle(context.getString(R.string.credit_setting_graduation));
         setView(getView(standardCredit));
         setButton(BUTTON_NEGATIVE, context.getString(R.string.cancel), (OnClickListener) null);
         setButton(BUTTON_POSITIVE, context.getString(R.string.save), (OnClickListener) null);
@@ -77,7 +77,7 @@ public class CreditStandardDialog extends AlertDialog implements
             divisions.add(standardCredit.getDivisionText());
             departments.add(standardCredit.getDepartmentText());
         } else {
-            years.add(contentView.getContext().getString(R.string.choose_enter_semester));
+            years.add(contentView.getContext().getString(R.string.credit_choose_enter_semester));
         }
         year_list = (MenuSpinner) contentView.findViewById(R.id.year_list);
         year_adapter = new ArrayAdapter<>(getContext(),
@@ -96,7 +96,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         }
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, getContext().getString(R.string.loading_academic_system), true);
+                                    null, getContext().getString(R.string.credit_loading_academic_system), true);
                             if(lang.equals("zh"))
                                 year = years.get(position).split(" ")[1];
                             else
@@ -123,7 +123,7 @@ public class CreditStandardDialog extends AlertDialog implements
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (WifiUtility.isNetworkAvailable(getContext())) {
                         progressDialog = ProgressDialog.show(getContext(),
-                                null, getContext().getString(R.string.loading_semester_list), true);
+                                null, getContext().getString(R.string.credit_loading_semester_list), true);
                         Thread t = new Thread(new StandardYearRunnable(
                                 yearHandler));
                         t.start();
@@ -154,7 +154,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         isCorrect = false;
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, getContext().getString(R.string.loading_faculty_list), true);
+                                    null, getContext().getString(R.string.credit_loading_faculty_list), true);
                             division_index = position;
                             Thread t = new Thread(
                                     new StandardDepartmentRunnable(
@@ -189,7 +189,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         isCorrect = false;
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
-                                    null, getContext().getString(R.string.loading_graduation_credits), true);
+                                    null, getContext().getString(R.string.credit_loading_graduation_credits), true);
                             Thread t = new Thread(new StandardCreditRunnable(
                                     creditsHandler, year, division_index,
                                     departments.get(position)));
@@ -373,7 +373,7 @@ public class CreditStandardDialog extends AlertDialog implements
             dialogListener.onSaveButtonClick(standardCredit);
             dismiss();
         } else {
-            Toast.makeText(getContext(), R.string.admission_criteria_error, Toast.LENGTH_LONG)
+            Toast.makeText(getContext(), R.string.credit_admission_criteria_error, Toast.LENGTH_LONG)
                     .show();
         }
     }

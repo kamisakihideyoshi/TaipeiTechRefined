@@ -3,9 +3,10 @@
     android:id="@+id/logo_layout"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:clickable="true"
-    android:onClick="showAppDialog"
     android:orientation="horizontal">
+
+    <!--android:clickable="true"-->
+    <!--android:onClick="showAppDialog"-->
 
     <ImageView
         android:layout_width="50dp"

@@ -110,10 +110,10 @@ public class ActivityFragment extends BaseFragment implements
             Model.getInstance().saveActivityArray();
             setData();
             if (result.size() == 0) {
-                Toast.makeText(getActivity(), "活動更新完成，目前無任何活動資訊！",
+                Toast.makeText(getActivity(), R.string.activity_noevent,
                         Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(getActivity(), "活動更新完成，可以開始瀏覽活動！",
+                Toast.makeText(getActivity(), R.string.activity_updated,
                         Toast.LENGTH_LONG).show();
             }
 

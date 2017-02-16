@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void showAppDialog(View view) {
+    /*public void showAppDialog(View view) {
         ImageView qrImageView = new ImageView(this);
         qrImageView.setImageResource(R.drawable.qrcode);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
         builder.create().show();
-    }
+    }*/
 
     private Animation.AnimationListener fragmentAnimationListener = new Animation.AnimationListener() {
         @Override

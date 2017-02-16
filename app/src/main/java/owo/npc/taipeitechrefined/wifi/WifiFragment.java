@@ -184,7 +184,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
 
     @Override
     public void onServiceDisconnected(ComponentName name) {
-        Toast.makeText(getActivity(), "Ntutcc自動連線已關閉！", Toast.LENGTH_SHORT)
+        Toast.makeText(getActivity(), R.string.wifi_autoconnect_disabled, Toast.LENGTH_SHORT)
                 .show();
     }
 
@@ -209,7 +209,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
                         if (ssid != null && ssid.contains("ntutcc")) {
                             loginService.LoginNtutcc();
                         } else {
-                            Toast.makeText(getActivity(), "僅提供ntutcc認證登入！",
+                            Toast.makeText(getActivity(), R.string.wifi_ntutcc_only,
                                     Toast.LENGTH_SHORT).show();
                         }
                     } catch (Exception e) {
@@ -239,7 +239,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
             if (result == PackageManager.PERMISSION_GRANTED) {
                 scanWifi();
             } else {
-                Toast.makeText(activityContext, "未取得權限，無法提供此功能", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activityContext, R.string.wifi_permission_error, Toast.LENGTH_SHORT).show();
             }
         }
     }

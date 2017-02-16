@@ -68,18 +68,18 @@ public class FeedbackFragment extends BaseFragment implements
                 if(WifiUtility.isNetworkAvailable(getActivity())){
                     switch (setMessage()) {
                         case NO_MESSAGE:
-                            Toast.makeText(getActivity(), R.string.blank_forbid,
+                            Toast.makeText(getActivity(), R.string.feedback_blank_forbid,
                                     Toast.LENGTH_LONG).show();
                             return;
                         case NO_CONTACT_INFORMATION:
                             AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
                             alertDialog.setMessage(R.string.feedback_check);
-                            alertDialog.setPositiveButton(R.string.determine, new DialogInterface.OnClickListener() {
+                            alertDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
                                     writeDataBase(getMessage());
                                     initFeedback();
-                                    Utility.showDialog(getString(R.string.send_suceed), getString(R.string.feedback_finish), getActivity());
+                                    Utility.showDialog(getString(R.string.feedback_send_suceed), getString(R.string.feedback_finish), getActivity());
                                 }
                             });
                             alertDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -93,7 +93,7 @@ public class FeedbackFragment extends BaseFragment implements
                         case OK:
                             writeDataBase(getMessage());
                             initFeedback();
-                            Utility.showDialog(getString(R.string.send_suceed), getString(R.string.feedback_finish), getActivity());
+                            Utility.showDialog(getString(R.string.feedback_send_suceed), getString(R.string.feedback_finish), getActivity());
                             break;
                     }
                 }

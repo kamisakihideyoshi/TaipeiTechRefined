@@ -3,6 +3,7 @@ package owo.npc.taipeitechrefined.course.task;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.utility.NportalConnector;
@@ -25,7 +26,7 @@ public class CourseDetailTask extends AsyncTask<String, Void, Object> {
         super.onPreExecute();
         CourseFragment fragment = mCourseFragmentWeakReference.get();
         if (fragment != null && !NportalConnector.isLogin()) {
-            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, "登入校園入口網站中...");
+            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, fragment.getContext().getString(R.string.course_login_portal));
             mProgressDialogWeakReference = new WeakReference<>(progressDialog);
         }
     }

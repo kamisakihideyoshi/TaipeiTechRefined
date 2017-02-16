@@ -154,7 +154,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                         Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(getActivity(), "未輸入學號，請輸入再查詢！", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.course_no_studentid_typed, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -171,7 +171,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                         Toast.LENGTH_LONG).show();
             }
         } else {
-            Toast.makeText(getActivity(), "未輸入學號，請輸入再查詢！", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.course_no_studentid_typed, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -261,7 +261,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         @Override
         public void onClick(DialogInterface arg0, int arg1) {
             if (selectedCourseNo.equals("0")) {
-                Toast.makeText(getActivity(), "班會課無法查詢瀏覽詳細資訊！",
+                Toast.makeText(getActivity(), R.string.course_classmeeting,
                         Toast.LENGTH_LONG).show();
             } else {
                 if (WifiUtility.isNetworkAvailable(getActivity())) {
@@ -282,7 +282,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         @Override
         public void onSemesterSelected(Semester semester) {
             if (semesters.size() == 0) {
-                showAlertMessage("此學生無任何學期課表！");
+                showAlertMessage(getString(R.string.course_nosemester));
                 lockSemesterSpinner();
                 return;
             }
@@ -304,7 +304,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         Intent intent = new Intent(
                 Constants.ACTION_COURSEWIDGET_UPDATE_STR);
         getActivity().sendBroadcast(intent);
-        Toast.makeText(getActivity(), "目前課表已設為離線瀏覽！",
+        Toast.makeText(getActivity(), R.string.course_offline_saved,
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -313,11 +313,11 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         Builder course_dialog_builder = new AlertDialog.Builder(getActivity());
         course_dialog_builder.setTitle(courseName);
         String message = String.format(Locale.TAIWAN,
-                "課號：%s\n時間：%s\n地點：%s\n授課老師：%s", course.getCourseNo(),
+                getString(R.string.course_courseid) + "%s\n" + getString(R.string.course_classtime) + "%s\n" + getString(R.string.course_classplace) + "%s\n" + getString(R.string.course_classteacher) + "%s", course.getCourseNo(),
                 TIME_ARRAY[id - 1], course.getCourseRoom(),
                 course.getCourseTeacher());
         course_dialog_builder.setMessage(message);
-        course_dialog_builder.setPositiveButton("詳細內容", courseDetailDialogLis);
+        course_dialog_builder.setPositiveButton(R.string.course_classdetail, courseDetailDialogLis);
         course_dialog_builder.show();
     }
 
@@ -327,7 +327,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                 .getStudentCourse();
         if (studentCourse != null) {
             showCourse(studentCourse);
-            Toast.makeText(getActivity(), "點課程瀏覽詳細內容！", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.course_click_for_detail, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -344,7 +344,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                     StudentCourse course = Model.getInstance().getStudentCourse();
                     saveStudentCourse();
                 } else {
-                    Toast.makeText(getActivity(), "目前無任何課表，無法設為離線瀏覽！",
+                    Toast.makeText(getActivity(), R.string.course_nocourse,
                             Toast.LENGTH_SHORT).show();
                 }
                 break;
@@ -353,7 +353,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                 Intent intent = new Intent(
                         Constants.ACTION_COURSEWIDGET_UPDATE_STR);
                 getActivity().sendBroadcast(intent);
-                Toast.makeText(getActivity(), "已取消離線瀏覽！", Toast.LENGTH_SHORT)
+                Toast.makeText(getActivity(), R.string.course_offline_cleared, Toast.LENGTH_SHORT)
                         .show();
                 break;
         }

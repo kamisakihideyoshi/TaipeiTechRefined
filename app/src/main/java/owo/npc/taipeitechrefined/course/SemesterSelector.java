@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.course.data.Semester;
 
 import java.util.ArrayList;
@@ -65,7 +66,7 @@ public class SemesterSelector extends Button implements View.OnClickListener {
             return;
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setTitle("學期");
+        builder.setTitle(R.string.course_semester);
         builder.setItems(mSemesterArray, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

@@ -35,7 +35,7 @@ public class CreditTypeListActivity extends AppCompatActivity {
         Intent i = getIntent();
         type = i.getIntExtra("type", 0);
         String type_text = getResources().getStringArray(R.array.type_name)[type - 1];
-        setActionBar(type_text + "  "+getString(R.string.sum)
+        setActionBar(type_text + "  "+getString(R.string.credit_sum)
                 + Model.getInstance().getStudentCredit().getTypeCredits(type));
         credit = (LinearLayout) findViewById(R.id.credit);
         createSemesterGroups();

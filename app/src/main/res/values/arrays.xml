@@ -11,19 +11,19 @@
         <item>★</item>
     </string-array>
     <string-array name="rank_type">
-        <item>@string/class_rank</item>
-        <item>@string/group_rank</item>
-        <item>@string/department_rank</item>
+        <item>@string/credit_class_rank</item>
+        <item>@string/credit_group_rank</item>
+        <item>@string/credit_department_rank</item>
     </string-array>
     <string-array name="type_name">
-        <item>@string/authorities_common_compulsory</item>
-        <item>@string/school_common_compulsory</item>
-        <item>@string/common_elective</item>
-        <item>@string/authorities_vocational_elective</item>
-        <item>@string/school_vocational_compulsory</item>
-        <item>@string/vocational_elective</item>
-        <item>@string/maximum_elective_credit</item>
-        <item>@string/minimum_graduation_credits</item>
+        <item>@string/credit_authorities_common_compulsory</item>
+        <item>@string/credit_school_common_compulsory</item>
+        <item>@string/credit_common_elective</item>
+        <item>@string/credit_authorities_vocational_elective</item>
+        <item>@string/credit_school_vocational_compulsory</item>
+        <item>@string/credit_vocational_elective</item>
+        <item>@string/credit_maximum_elective</item>
+        <item>@string/credit_minimum_graduation</item>
     </string-array>
     <string-array name="tools">
         <item>@string/activity_text</item>
