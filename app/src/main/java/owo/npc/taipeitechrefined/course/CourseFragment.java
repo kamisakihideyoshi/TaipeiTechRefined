@@ -144,7 +144,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         if (!TextUtils.isEmpty(sid)) {
             if (WifiUtility.isNetworkAvailable(getActivity())) {
                 closeSoftKeyboard();
-                if(Utility.checkAccount(getActivity())) {
+                if (Utility.checkAccount(getActivity())) {
                     lastSid = sid;
                     QuerySemesterTask querySemesterTask = new QuerySemesterTask(this);
                     querySemesterTask.execute(sid);
@@ -162,7 +162,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         if (!TextUtils.isEmpty(sid)) {
             if (WifiUtility.isNetworkAvailable(getActivity())) {
                 closeSoftKeyboard();
-                if(Utility.checkAccount(getActivity())) {
+                if (Utility.checkAccount(getActivity())) {
                     SearchCourseTask searchCourseTask = new SearchCourseTask(this);
                     searchCourseTask.execute(sid, semester.getYear(), semester.getSemester());
                 }
@@ -265,7 +265,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                         Toast.LENGTH_LONG).show();
             } else {
                 if (WifiUtility.isNetworkAvailable(getActivity())) {
-                    if(Utility.checkAccount(getActivity())) {
+                    if (Utility.checkAccount(getActivity())) {
                         CourseDetailTask courseDetailTask = new CourseDetailTask(CourseFragment.this);
                         courseDetailTask.execute(selectedCourseNo);
                     }
@@ -312,10 +312,11 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         selectedCourseNo = course.getCourseNo();
         Builder course_dialog_builder = new AlertDialog.Builder(getActivity());
         course_dialog_builder.setTitle(courseName);
-        String message = String.format(Locale.TAIWAN,
-                getString(R.string.course_courseid) + "%s\n" + getString(R.string.course_classtime) + "%s\n" + getString(R.string.course_classplace) + "%s\n" + getString(R.string.course_classteacher) + "%s", course.getCourseNo(),
-                TIME_ARRAY[id - 1], course.getCourseRoom(),
-                course.getCourseTeacher());
+        String message = String.format(Locale.TAIWAN, "%s%s\n%s%s\n%s%s\n%s%s",
+                getString(R.string.course_courseid), course.getCourseNo(),
+                getString(R.string.course_classtime), TIME_ARRAY[id - 1],
+                getString(R.string.course_classplace), course.getCourseRoom(),
+                getString(R.string.course_classteacher), course.getCourseTeacher());
         course_dialog_builder.setMessage(message);
         course_dialog_builder.setPositiveButton(R.string.course_classdetail, courseDetailDialogLis);
         course_dialog_builder.show();

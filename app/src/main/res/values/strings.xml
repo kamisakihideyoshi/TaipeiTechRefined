@@ -47,7 +47,7 @@
     <string name="course_semester">Semester</string>
     <string name="course_loading">Loading…</string>
     <string name="course_load_course">Loading courses…</string>
-    <string name="course_load_semester">Load semester…</string>
+    <string name="course_load_semester">Loading semester…</string>
     <string name="course_login_portal">Loging in NTUT portal…</string>
     <string name="course_click_for_detail">Click course block for detail.</string>
     <string name="course_no_studentid_typed">Type student id first!</string>
