@@ -33,7 +33,7 @@
         <item>@string/wifi_text</item>
         <item>@string/account_setting_text</item>
     </string-array>
-    <string-array name="time_array">
+    <string-array name="time_array" translatable="false">
         <item>08:10 &#8211; 09:00</item>
         <item>09:10 &#8211; 10:00</item>
         <item>10:10 &#8211; 11:00</item>
