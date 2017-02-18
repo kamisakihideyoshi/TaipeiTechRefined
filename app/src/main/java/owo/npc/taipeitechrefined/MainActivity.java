@@ -2,8 +2,10 @@ package owo.npc.taipeitechrefined;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private FeedbackFragment feedbackFragment = new FeedbackFragment();
     private BaseFragment currentFragment;
     private Boolean lockFinish = true;
+    private SharedPreferences firstOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +71,12 @@ public class MainActivity extends AppCompatActivity {
         setupSidePanel();
         setupDrawer();
         setupVersionText();
+
         String first_func = MainApplication.readSetting("first_func");
-        if (!TextUtils.isEmpty(first_func)) {
+        firstOpen = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
+        if (TextUtils.isEmpty(first_func)) {
+            MainApplication.writeSetting("first_func", "5");
+            first_func = MainApplication.readSetting("first_func");
             switchFragment(Integer.parseInt(first_func));
         } else {
             switchFragment(2);
