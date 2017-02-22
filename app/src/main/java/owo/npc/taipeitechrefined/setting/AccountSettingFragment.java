@@ -2,6 +2,7 @@ package owo.npc.taipeitechrefined.setting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AlertDialog.Builder;
@@ -14,8 +15,10 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import owo.npc.taipeitechrefined.MainActivity;
 import owo.npc.taipeitechrefined.PortalActivity;
 import owo.npc.taipeitechrefined.model.Model;
+import owo.npc.taipeitechrefined.runnable.AccountRunnable;
 import owo.npc.taipeitechrefined.utility.NportalConnector;
 import owo.npc.taipeitechrefined.utility.WifiUtility;
 import owo.npc.taipeitechrefined.BaseFragment;
@@ -140,8 +143,13 @@ public class AccountSettingFragment extends BaseFragment implements
         String passwordText = passwordEditText.getText().toString();
         if (accountText.length() > 0 && passwordText.length() > 0) {
             Model.getInstance().saveAccountPassword(accountText, passwordText);
+            Handler handler = new Handler();
+            Runnable accountRunnable = new AccountRunnable(handler, getActivity());
+            handler.postDelayed(accountRunnable, 1000);
         }
     }
+
+
 
     @Override
     public int getTitleColorId() {

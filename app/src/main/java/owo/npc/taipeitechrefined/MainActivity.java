@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void switchFragment(int index) {
+    public void switchFragment(int index) {
         switch (index) {
             case 0:
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_activity_selector));
@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_feedback_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_feedback_selector));
                 changeFragment(feedbackFragment);
+                break;
         }
     }
 
