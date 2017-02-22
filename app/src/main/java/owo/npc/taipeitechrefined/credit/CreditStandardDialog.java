@@ -97,7 +97,7 @@ public class CreditStandardDialog extends AlertDialog implements
                         if (isUser) {
                             progressDialog = ProgressDialog.show(getContext(),
                                     null, getContext().getString(R.string.credit_loading_academic_system), true);
-                            if(lang.equals("zh"))
+                            if(lang.equals("zh") || lang.equals("ja"))
                                 year = years.get(position).split(" ")[1];
                             else
                                 year = years.get(position).split(" ")[2];

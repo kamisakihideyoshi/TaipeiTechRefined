@@ -122,7 +122,7 @@
     <string name="credit_error">Some trouble happened, please try again later.</string>
     <string name="credit_imformation_complete">Information updated</string>
     <string name="credit_final">Let\'s check your nightmare :p</string>
-    <string name="credit_updating">Updating credit information</string>
+    <string name="credit_updating">Updating credit information…</string>
     <string name="credit_essential_core">Essential:</string>
     <string name="credit_setting_graduation">Set graduation threshold</string>
     <string name="credit_choose_enter_semester">Set admission year</string>
