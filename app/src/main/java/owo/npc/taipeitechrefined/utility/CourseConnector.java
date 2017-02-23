@@ -297,6 +297,10 @@ public class CourseConnector {
         }
     }
 
+//    private static String renameCourseRoom (String courseroom){
+//
+//    }
+
     public static boolean isLogin() {
         return isLogin;
     }
