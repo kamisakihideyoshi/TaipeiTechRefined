@@ -10,6 +10,7 @@ import android.support.v7.app.AlertDialog.Builder;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -26,6 +27,7 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
+import owo.npc.taipeitechrefined.MainApplication;
 import owo.npc.taipeitechrefined.course.task.CourseDetailTask;
 import owo.npc.taipeitechrefined.course.task.QuerySemesterTask;
 import owo.npc.taipeitechrefined.model.Model;
@@ -96,7 +98,6 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         lockSemesterSpinner();
         sidText = (EditText) fragmentView.findViewById(R.id.sidText);
         sidText.addTextChangedListener(new TextWatcher() {
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before,
                                       int count) {
@@ -116,6 +117,16 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
 
             }
         });
+//        Log.e("e", String.valueOf(Model.getInstance().getStudentCourse()));
+//        StudentCourse studentCourse = Model.getInstance()
+//                .getStudentCourse();
+//        if(studentCourse == null && !MainApplication.readSetting("account").isEmpty()){
+//            Log.e("e", "44");
+//            sidText.setText(MainApplication.readSetting("account"));
+//            String sid = sidText.getText().toString();
+//            needShowSemesterDialog = false;
+//            searchLatestCourseTable(sid);
+//        }
         sidText.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId,
@@ -329,6 +340,12 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
         if (studentCourse != null) {
             showCourse(studentCourse);
             Toast.makeText(getActivity(), R.string.course_click_for_detail, Toast.LENGTH_LONG).show();
+        }
+        else if(studentCourse == null && !MainApplication.readSetting("account").isEmpty()){
+            needShowSemesterDialog = false;
+            sidText.setText(MainApplication.readSetting("account"));
+            searchLatestCourseTable(MainApplication.readSetting("account"));
+            saveStudentCourse();
         }
     }
 

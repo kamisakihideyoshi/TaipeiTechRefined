@@ -145,7 +145,7 @@ public class AccountSettingFragment extends BaseFragment implements
             Model.getInstance().saveAccountPassword(accountText, passwordText);
             Handler handler = new Handler();
             Runnable accountRunnable = new AccountRunnable(handler, getActivity());
-            handler.postDelayed(accountRunnable, 1000);
+            handler.postDelayed(accountRunnable, 500);
         }
     }
 

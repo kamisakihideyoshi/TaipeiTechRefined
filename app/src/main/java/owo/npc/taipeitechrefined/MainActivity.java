@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             MainApplication.writeSetting("first_func", "5");
             first_func = MainApplication.readSetting("first_func");
             switchFragment(Integer.parseInt(first_func));
+            showRight();
         } else {
             switchFragment(2);
         }
@@ -125,6 +126,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void showRight(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.right_text);
+        builder.setMessage(R.string.right);
+        builder.setPositiveButton(R.string.ok, null);
+        builder.show();
     }
 
     private void setupDrawer() {
