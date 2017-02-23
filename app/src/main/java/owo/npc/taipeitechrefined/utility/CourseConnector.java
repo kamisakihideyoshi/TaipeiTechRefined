@@ -271,7 +271,8 @@ public class CourseConnector {
                 }
                 course.setCourseName(cols[1].getText().toString());
                 course.setCourseTeacher(cols[4].getText().toString());
-                course.setCourseRoom(cols[13].getText().toString());
+                course.setCourseRoom(renameCourseRoom(cols[13]));
+//                course.setCourseRoom(cols[13].getText().toString());
                 course.setCourseTime(new String[]{cols[6].getText().toString(),
                         cols[7].getText().toString(),
                         cols[8].getText().toString(),
@@ -297,9 +298,17 @@ public class CourseConnector {
         }
     }
 
-//    private static String renameCourseRoom (String courseroom){
-//
-//    }
+    private static String renameCourseRoom (TagNode node){
+        return node.getText().toString().replace("1TB", " 1st Academic Building")
+                .replace("2TB", " 2nd Academic Building").replace("3TB", " 3rd Academic Building")
+                .replace("4TB", " 4th Academic Building").replace("6TB", " 6th Academic Building")
+                .replace("CB", " Complex Building").replace("CEB", " Civil Engineering Building")
+                .replace("ChemEB", " Chemical Engineering Building")
+                .replace("DB", " Design Building").replace("EB", " Everlight Building")
+                .replace("GHB", " Guang Hua Building").replace("GSB", " General Studies Building")
+                .replace("HYTRB", " Hong-Yue Technology Research Building")
+                .replace("TEB", " Textile Engineering Building").trim();
+    }
 
     public static boolean isLogin() {
         return isLogin;
