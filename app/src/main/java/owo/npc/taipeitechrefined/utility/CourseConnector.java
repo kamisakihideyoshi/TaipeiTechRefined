@@ -25,20 +25,20 @@ public class CourseConnector {
     private static final String COURSE_URI_EN = "http://aps.ntut.edu.tw/course/en/Select.jsp";
 
     private static String getPostCoursesUri(String lang) {
-        if (lang.equals("zh"))
+        if (lang.equals("zh") || lang.equals("ja"))
             return POST_COURSES_URI_TW;
         return POST_COURSES_URI_EN;
     }
 
     private static String getCoursesUri(String lang) {
-        if (lang.equals("zh"))
+        if (lang.equals("zh") || lang.equals("ja"))
             return COURSES_URI_TW;
         return COURSES_URI_EN;
     }
 
 
     private static String getCourseUri(String lang) {
-        if (lang.equals("zh"))
+        if (lang.equals("zh") || lang.equals("ja"))
             return COURSE_URI_TW;
         return COURSE_URI_EN;
     }
@@ -229,7 +229,7 @@ public class CourseConnector {
         TagNode[] nodes = tagNode.getElementsByAttValue("border", "1", true,
                 false);
         TagNode[] rows = nodes[0].getElementsByName("tr", true);
-        if (lang.equals("zh")) {
+        if (lang.equals("zh") || lang.equals("ja")) {
             for (int i = 3; i < rows.length - 1; i++) {
                 TagNode[] cols = rows[i].getElementsByName("td", true);
                 if (isWithdraw(cols)){
@@ -288,7 +288,7 @@ public class CourseConnector {
 
     private static boolean isWithdraw(TagNode[] node) throws Exception {
         try{
-            if (lang.equals("zh"))
+            if (lang.equals("zh") || lang.equals("ja"))
                 return node[16].getText().toString().contains("撤選");
             return node[14].getText().toString().contains("Withdraw");
         } catch (Exception e) {
@@ -296,6 +296,10 @@ public class CourseConnector {
             throw new Exception("撤選資訊讀取時發生錯誤");
         }
     }
+
+//    private static String renameCourseRoom (String courseroom){
+//
+//    }
 
     public static boolean isLogin() {
         return isLogin;

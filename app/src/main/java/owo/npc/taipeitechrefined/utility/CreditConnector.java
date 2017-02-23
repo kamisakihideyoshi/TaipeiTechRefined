@@ -31,7 +31,7 @@ public class CreditConnector {
     private final static String CURRENT_URI = "http://aps-stu.ntut.edu.tw/StuQuery/QrySCWarn.jsp";
 
     private static String getStandardUri(String lang) {
-        if (lang.equals("zh"))
+        if (lang.equals("zh") || lang.equals("ja"))
             return STANDARD_URI_TW;
         return STANDARD_URI_EN;
     }
@@ -272,7 +272,7 @@ public class CreditConnector {
             throws Exception {
         try {
             matrics.clear();
-            ArrayList<String> divison_list = new ArrayList<>();
+            ArrayList<String> division_list = new ArrayList<>();
             HashMap<String, String> params = new HashMap<>();
             params.put("format", "-2");
             params.put("year", year);
@@ -286,9 +286,9 @@ public class CreditConnector {
                 String[] temp = row.getAttributeByName("href").split("=");
                 String matric = temp[temp.length - 1];
                 matrics.add(matric);
-                divison_list.add(division);
+                division_list.add(division);
             }
-            return divison_list;
+            return division_list;
         } catch (Exception e) {
             e.printStackTrace();
             throw new Exception("學制清單讀取時發生錯誤");
