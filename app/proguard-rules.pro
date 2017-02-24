@@ -21,3 +21,8 @@
 -keepclassmembers class owo.npc.taipeitechrefined.** {
   *;
 }
+-ignorewarnings
+
+-keep class * {
+    public private *;
+}

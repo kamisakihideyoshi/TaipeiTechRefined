@@ -117,16 +117,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
 
             }
         });
-//        Log.e("e", String.valueOf(Model.getInstance().getStudentCourse()));
-//        StudentCourse studentCourse = Model.getInstance()
-//                .getStudentCourse();
-//        if(studentCourse == null && !MainApplication.readSetting("account").isEmpty()){
-//            Log.e("e", "44");
-//            sidText.setText(MainApplication.readSetting("account"));
-//            String sid = sidText.getText().toString();
-//            needShowSemesterDialog = false;
-//            searchLatestCourseTable(sid);
-//        }
+
         sidText.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId,

@@ -113,7 +113,7 @@
     <string name="nportal_text"><u>校園入口網站</u></string>
     <string name="right_link"><u>免責聲明</u></string>
     <string name="right_text">免責聲明</string>
-    <string name="right">本軟體僅提供免費測試，但不保證運作正確性，同時不承擔造成任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
+    <string name="right">本團隊利用課餘時間提供軟體的無償維護與更新，並將盡力使其更好，但不保證運作正確性，同時不承擔任何一方的損失、賠償、補償、資安風險與衍生責任，使用時用戶須同意自行承擔一切風險。〈同意此聲明才被授權使用本軟體，如不同意請勿安裝使用，作者保留修改權利〉</string>
     <string name="save_success">帳號密碼已儲存！</string>
     <string name="account_empty_error_message">請填入學號</string>
     <string name="password_empty_error_message">請填入密碼</string>
