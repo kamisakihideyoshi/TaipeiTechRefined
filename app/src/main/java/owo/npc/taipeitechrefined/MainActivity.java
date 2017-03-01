@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -24,6 +26,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,14 +38,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import owo.npc.taipeitechrefined.calendar.CalendarFragment;
 import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.credit.CreditFragment;
+import owo.npc.taipeitechrefined.etc.EtcFragment;
 import owo.npc.taipeitechrefined.feedback.FeedbackFragment;
 import owo.npc.taipeitechrefined.setting.AccountSettingFragment;
 import owo.npc.taipeitechrefined.activity.ActivityFragment;
 import owo.npc.taipeitechrefined.utility.PermissionRequestListener;
 import owo.npc.taipeitechrefined.wifi.WifiFragment;
+
+import static owo.npc.taipeitechrefined.MainApplication.lang;
 
 /**
  * Created by Alan on 2015/9/12.
@@ -58,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private AccountSettingFragment accountSettingFragment = new AccountSettingFragment();
     private ActivityFragment activityFragment = new ActivityFragment();
     private FeedbackFragment feedbackFragment = new FeedbackFragment();
+    private EtcFragment etcFragment = new EtcFragment();
     private BaseFragment currentFragment;
     private Boolean lockFinish = true;
     private SharedPreferences firstOpen;
@@ -65,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (MainApplication.readSetting("uiLang").isEmpty() || MainApplication.readSetting("courseLang").isEmpty()) {
+            MainApplication.writeSetting("uiLang", Locale.getDefault().getLanguage());
+            MainApplication.writeSetting("courseLang", Locale.getDefault().getLanguage());
+        }
+        switchLanguage(MainApplication.readSetting("uiLang"));
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(mToolbar);
@@ -73,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         setupVersionText();
 
         String first_func = MainApplication.readSetting("first_func");
+        lang = MainApplication.readSetting("courseLang");
         firstOpen = getSharedPreferences("MyPref", Context.MODE_PRIVATE);
         if (TextUtils.isEmpty(first_func)) {
             MainApplication.writeSetting("first_func", "5");
@@ -118,6 +133,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.sidebar_item_feedback:
                         switchFragment(6);
+                        break;
+                    case R.id.sidebar_item_etc:
+                        switchFragment(7);
                         break;
                     default:
                         return false;
@@ -203,6 +221,11 @@ public class MainActivity extends AppCompatActivity {
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_feedback_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_feedback_selector));
                 changeFragment(feedbackFragment);
+                break;
+            case 7:
+                mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_etc_selector));
+                mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_etc_selector));
+                changeFragment(etcFragment);
                 break;
         }
     }
@@ -356,5 +379,28 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+//  與 EtcFragment 的方法相似，因 getResources() 問題在此複製一份使用
+    protected void switchLanguage(String lang) {
+        Resources resources = getResources();
+        Configuration configuration = resources.getConfiguration();
+        DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+        switch (lang) {
+            case "zh":
+                configuration.locale = Locale.TAIWAN;
+                break;
+            case "ja":
+                configuration.locale = Locale.JAPAN;
+                break;
+            default:
+                configuration.locale = Locale.ENGLISH;
+                break;
+        }
+
+        resources.updateConfiguration(configuration, displayMetrics);
+        /*  避免重複寫入
+        MainApplication.writeSetting("uiLang", lang);
+        //*/
     }
 }

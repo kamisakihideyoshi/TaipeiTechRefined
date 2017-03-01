@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-        android:id="@+id/sidebar_item_activity"
-        android:icon="@drawable/activity_icon"
-        android:title="@string/activity_text"
-        android:visible="false"/>
+            android:id="@+id/sidebar_item_activity"
+            android:icon="@drawable/activity_icon"
+            android:title="@string/activity_text"
+            android:visible="false"/>
 
         <item
             android:id="@+id/sidebar_item_calendar"
@@ -33,5 +33,9 @@
             android:id="@+id/sidebar_item_feedback"
             android:icon="@drawable/ic_announcement_white_24dp"
             android:title="@string/feedback_text"/>
+        <item
+            android:id="@+id/sidebar_item_etc"
+            android:icon="@drawable/ic_dashboard_white_24dp"
+            android:title="@string/etc_text"/>
     </group>
 </menu>

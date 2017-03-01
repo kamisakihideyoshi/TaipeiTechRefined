@@ -186,9 +186,18 @@
     <string name="wifi_autoconnect_disabled">Ntutcc自動連線已關閉！</string>
     <string name="course_loading">課程資料讀取中~</string>
     <string name="course_semester">學期</string>
-    <string name="course_login_portal">登入校園入口網站中...</string>
-    <string name="course_load_semester">學期清單查詢中...</string>
-    <string name="course_load_course">課表查詢中...</string>
+    <string name="course_login_portal">登入校園入口網站中…</string>
+    <string name="course_load_semester">學期清單查詢中…</string>
+    <string name="course_load_course">課表查詢中…</string>
     <string name="calendar_loading">行事曆資料讀取中~</string>
     <string name="send">送出</string>
+    <string name="etc_text">其他</string>
+    <string name="etc_language_en">英</string>
+    <string name="etc_language_ja">日</string>
+    <string name="etc_language_zh">中</string>
+    <string name="etc_uilanguage_text">UI 語言</string>
+    <string name="etc_uilanguage_hint">將自動重啟以套用變更</string>
+    <string name="etc_courselanguage_text">課表語言</string>
+    <string name="etc_courselanguage_hint">學分計算頁面也會受到部分影響</string>
+    <string name="etc_courselanguage_applied">變更已套用，請手動更新課表</string>
 </resources>
