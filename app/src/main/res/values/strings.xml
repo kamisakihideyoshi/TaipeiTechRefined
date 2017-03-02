@@ -199,9 +199,9 @@
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
     <string name="send">Send</string>
     <string name="etc_text">etc</string>
-    <string name="etc_language_en">en</string>
-    <string name="etc_language_zh">zh</string>
-    <string name="etc_language_ja">ja</string>
+    <string name="etc_language_en">EN</string>
+    <string name="etc_language_zh">中</string>
+    <string name="etc_language_ja">日</string>
     <string name="etc_uilanguage_text">UI Language</string>
     <string name="etc_uilanguage_hint">will restart to apply changes</string>
     <string name="etc_courselanguage_text">Course Language</string>

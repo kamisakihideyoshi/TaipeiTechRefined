@@ -192,7 +192,7 @@
     <string name="calendar_loading">行事曆資料讀取中~</string>
     <string name="send">送出</string>
     <string name="etc_text">其他</string>
-    <string name="etc_language_en">英</string>
+    <string name="etc_language_en">EN</string>
     <string name="etc_language_ja">日</string>
     <string name="etc_language_zh">中</string>
     <string name="etc_uilanguage_text">UI 語言</string>

@@ -193,7 +193,7 @@
     <string name="etc_text">其他</string>
     <string name="etc_language_zh">中</string>
     <string name="etc_language_ja">日</string>
-    <string name="etc_language_en">英</string>
+    <string name="etc_language_en">EN</string>
     <string name="etc_uilanguage_text">UI 語言</string>
     <string name="etc_uilanguage_hint">將自動重啟以套用變更</string>
     <string name="etc_courselanguage_text">課表語言</string>
