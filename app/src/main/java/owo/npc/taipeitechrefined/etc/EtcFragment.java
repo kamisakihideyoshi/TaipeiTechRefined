@@ -130,14 +130,14 @@ public class EtcFragment extends BaseFragment {
                     if (courseLang != 0) {
                         MainApplication.writeSetting("courseLang", "en");
                         lang = "en";
-                        Toast.makeText(getActivity(), R.string.etc_courselanguage_applied, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.etc_courselanguage_applied, Toast.LENGTH_LONG).show();
                     }
                 } else {
                     seekBar.setProgress(100);
                     if (courseLang != 100) {
                         MainApplication.writeSetting("courseLang", "zh");
                         lang = "zh";
-                        Toast.makeText(getActivity(), R.string.etc_courselanguage_applied, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), R.string.etc_courselanguage_applied, Toast.LENGTH_LONG).show();
                     }
                 }
             }
