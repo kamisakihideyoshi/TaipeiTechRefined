@@ -81,9 +81,9 @@
     <string name="Mo">Mo</string>
     <string name="Tu">Tu</string>
     <string name="We">We</string>
-    <string name="Sa">Sa</string>
     <string name="Th">Th</string>
     <string name="Fr">Fr</string>
+    <string name="Sa">Sa</string>
 
     <string name="first">1</string>
     <string name="second">2</string>
@@ -175,6 +175,17 @@
     <string name="feedback_finish">Sincerely thanks for contacting us and we\'ll get back to you as fast as possible.</string>
     <string name="feedback_check">"You're not fill in the contact information, we'll send it as anonymous and couldn't respond you properly. Are you sure? "</string>
 
+    <!-- ETC -->
+    <string name="etc_text">etc</string>
+    <string name="etc_language_en">EN</string>
+    <string name="etc_language_zh">中</string>
+    <string name="etc_language_ja">日</string>
+    <string name="etc_uilanguage_text">UI Language</string>
+    <string name="etc_uilanguage_hint">will restart to apply changes</string>
+    <string name="etc_courselanguage_text">Course Language</string>
+    <string name="etc_courselanguage_hint">also affect part of credit page</string>
+    <string name="etc_courselanguage_applied">Change applied, please update course manually</string>
+
     <!-- Setting -->
     <string name="account_setting_text">Account</string>
     <string name="portal_title">Portal</string>
@@ -198,14 +209,5 @@
     <string name="ok">OK</string>
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
     <string name="send">Send</string>
-    <string name="etc_text">etc</string>
-    <string name="etc_language_en">EN</string>
-    <string name="etc_language_zh">中</string>
-    <string name="etc_language_ja">日</string>
-    <string name="etc_uilanguage_text">UI Language</string>
-    <string name="etc_uilanguage_hint">will restart to apply changes</string>
-    <string name="etc_courselanguage_text">Course Language</string>
-    <string name="etc_courselanguage_hint">also affect part of credit page</string>
-    <string name="etc_courselanguage_applied">Change applied, please update course manually</string>
 
 </resources>
