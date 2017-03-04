@@ -89,7 +89,7 @@ public class EtcFragment extends BaseFragment {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int mProgress = seekBar.getProgress();
                 int uiLang = getCurrentUILang(MainApplication.readSetting("uiLang"));
-                if (mProgress > 0 & mProgress < 33) {
+                if (mProgress >= 0 & mProgress < 33) {
                     seekBar.setProgress(0);
                     if (uiLang != 0) {
                         MainApplication.writeSetting("uiLang", "en");
