@@ -314,15 +314,17 @@ public class Connector {
         }
     }
 
-
+    // 取得 Cookie 的方法，Android 5.0 以下的版本會出錯，導致程式崩潰
     public static String getCookieFromAppCookieManager(String url) throws MalformedURLException {
         CookieManager cookieManager = CookieManager.getInstance();
         if (cookieManager == null)
             return null;
+        // 出錯點 1
         cookieManager.setAcceptCookie(true);
         String rawCookieHeader = null;
         URL parsedURL = new URL(url);
 
+        // 出錯點 2
         // Extract Set-Cookie header value from Android app CookieManager for this URL
         rawCookieHeader = cookieManager.getCookie(parsedURL.getHost());
         if (rawCookieHeader == null)

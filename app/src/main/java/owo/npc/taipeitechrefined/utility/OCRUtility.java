@@ -3,8 +3,10 @@ package owo.npc.taipeitechrefined.utility;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
+// 驗證碼圖形辨識
 public class OCRUtility {
 
+    // 將圖形轉為黑白陣列
     public static byte[][] bitmap2grayByteArry(Bitmap bm) {
         byte[][] grayImage = new byte[bm.getHeight()][bm.getWidth()];
         for (int i = 0; i < bm.getWidth(); i++) {
@@ -19,11 +21,13 @@ public class OCRUtility {
         return grayImage;
     }
 
+    // 圖形辨識整體流程
     public static String authOCR(byte[][] grayArray, int width, int height) {
         int start = -1;
         int end = -1;
         String text = "";
         for (int i = 0; i < width; i++) {
+            // 取得文字範圍
             Boolean isBackground = true;
             for (int j = 0; j < height; j++) {
                 if (grayArray[j][i] == 0) {
@@ -33,9 +37,11 @@ public class OCRUtility {
                     }
                 }
             }
-            if (isBackground == true && start != -1) {
+            if (isBackground && start != -1) {
                 end = i - 1;
             }
+
+            // 辨識分割字母並加入回傳字串
             if (start != -1 && end != -1) {
                 String wordArray = splitWord(grayArray, start, end, height);
                 text += recognizeWord(wordArray);
@@ -77,6 +83,7 @@ public class OCRUtility {
             "000111111100100011111001100011111001100001110001110001110011110000100011111000100111111000100111111100001111111100001111111100001111111110011111111100011111111100111111111000111111110000111111",
             "000000000000000000000011111110000111111000011111100001111110000111111000011111100001111110000111111000011111110000000000000000000000"};
 
+    // 與字串做比對，得出驗證碼
     private static String recognizeWord(String wordArray) {
         for (int i = 0; i < LETTERS.length; i++) {
             if (wordArray.equals(LETTER_ARRAY[i])) {
@@ -86,6 +93,7 @@ public class OCRUtility {
         return null;
     }
 
+    // 將單獨字母的陣列取出，並轉成字串
     private static String splitWord(byte[][] grayArray, int start, int end,
                                     int height) {
         int top = -1;

@@ -73,6 +73,7 @@ public class NportalConnector {
         return result;
     }
 
+    // 讀取驗證碼圖片
     public static Bitmap loadAuthcodeImage() throws Exception {
         try {
             Connector.getDataByGet(NPORTAL_URI,
@@ -98,6 +99,7 @@ public class NportalConnector {
         isLogin = false;
     }
 
+    // 用密碼對帳號進行 MD5 加密，入口網站驗證用
     private static String getMD5Code(String account, String password) throws NoSuchPaddingException, NoSuchAlgorithmException, NoSuchProviderException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
         byte[] key = password.getBytes();
         byte[] input = account.getBytes();
