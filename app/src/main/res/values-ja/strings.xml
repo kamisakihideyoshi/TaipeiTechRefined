@@ -178,4 +178,5 @@
     <string name="etc_courselanguage_applied">変更しました、コースデータを更新してください</string>
     <string name="etc_language_en">EN</string>
     <string name="portal">ポータルサイト</string>
+    <string name="account_check">先にアカウント設定を完了してください</string>
 </resources>

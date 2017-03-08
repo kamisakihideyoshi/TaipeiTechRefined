@@ -18,7 +18,7 @@
     <string name="original_developer">based on Alen Chiou\'s</string>
     <string name="open_drawer">打開</string>
     <string name="close_drawer">關閉</string>
-    <string name="account_password_empty_toast_text">請先至帳號設定，設定校園入口網站帳號密碼！</string>
+    <string name="account_password_empty_toast_text">請先至帳號管理，設定校園入口網站帳號密碼！</string>
 
     <!-- Activity -->
     <string name="activity_text">活動報報</string>
@@ -201,4 +201,5 @@
     <string name="etc_courselanguage_hint">學分計算頁面也會受到部分影響</string>
     <string name="etc_courselanguage_applied">變更已套用，請手動更新課表</string>
     <string name="portal">校園入口網站</string>
+    <string name="account_check">請先至帳號管理，設定校園入口網站帳號密碼！</string>
 </resources>

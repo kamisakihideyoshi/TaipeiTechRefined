@@ -210,6 +210,6 @@
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
     <string name="send">Send</string>
     <string name="portal">Taipei Tech Portal</string>
-    <string name="account_check">請先輸入帳號密碼</string>
+    <string name="account_check">Please set account at \"Account\" first!</string>
 
 </resources>
