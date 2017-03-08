@@ -209,5 +209,6 @@
     <string name="ok">OK</string>
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
     <string name="send">Send</string>
+    <string name="portal">校園入口網</string>
 
 </resources>

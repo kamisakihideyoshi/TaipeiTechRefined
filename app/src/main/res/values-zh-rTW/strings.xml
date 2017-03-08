@@ -199,4 +199,5 @@
     <string name="etc_courselanguage_text">課表語言</string>
     <string name="etc_courselanguage_hint">學分計算頁面也會受到部分影響</string>
     <string name="etc_courselanguage_applied">變更已套用，請手動更新課表</string>
+    <string name="portal">校園入口網</string>
 </resources>

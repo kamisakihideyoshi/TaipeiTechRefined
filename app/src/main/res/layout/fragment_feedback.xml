@@ -69,15 +69,15 @@
         android:layout_weight="0.08" />
 
     <Button
-        android:text="@string/send"
-        android:textColor="@color/white"
+        android:id="@+id/send_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/send_button"
-        android:background="@drawable/blue_background_selector"
         android:layout_marginLeft="50px"
         android:layout_marginRight="50px"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_background_selector"
+        android:text="@string/send"
+        android:textColor="@color/white" />
 
     <!--<android.support.design.widget.FloatingActionButton-->
         <!--android:id="@+id/fab"-->

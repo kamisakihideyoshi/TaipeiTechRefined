@@ -45,6 +45,7 @@ import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.credit.CreditFragment;
 import owo.npc.taipeitechrefined.etc.EtcFragment;
 import owo.npc.taipeitechrefined.feedback.FeedbackFragment;
+import owo.npc.taipeitechrefined.portal.PortalFragment;
 import owo.npc.taipeitechrefined.setting.AccountSettingFragment;
 import owo.npc.taipeitechrefined.activity.ActivityFragment;
 import owo.npc.taipeitechrefined.utility.PermissionRequestListener;
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityFragment activityFragment = new ActivityFragment();
     private FeedbackFragment feedbackFragment = new FeedbackFragment();
     private EtcFragment etcFragment = new EtcFragment();
+    private PortalFragment portalFragment = new PortalFragment();
     private BaseFragment currentFragment;
     private Boolean lockFinish = true;
     private SharedPreferences firstOpen;
@@ -131,11 +133,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.sidebar_item_account_setting:
                         switchFragment(5);
                         break;
-                    case R.id.sidebar_item_feedback:
+                    case R.id.sidebar_item_portal:
                         switchFragment(6);
                         break;
-                    case R.id.sidebar_item_etc:
+                    case R.id.sidebar_item_feedback:
                         switchFragment(7);
+                        break;
+                    case R.id.sidebar_item_etc:
+                        switchFragment(8);
                         break;
                     default:
                         return false;
@@ -220,9 +225,14 @@ public class MainActivity extends AppCompatActivity {
             case 6:
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_feedback_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_feedback_selector));
-                changeFragment(feedbackFragment);
+                changeFragment(portalFragment);
                 break;
             case 7:
+                mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_feedback_selector));
+                mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_feedback_selector));
+                changeFragment(feedbackFragment);
+                break;
+            case 8:
                 mSideBar.setItemIconTintList(getResources().getColorStateList(R.color.sidebar_etc_selector));
                 mSideBar.setItemTextColor(getResources().getColorStateList(R.color.sidebar_etc_selector));
                 changeFragment(etcFragment);

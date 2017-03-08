@@ -177,4 +177,5 @@
     <string name="etc_courselanguage_hint">単位ページの一部も影響されます</string>
     <string name="etc_courselanguage_applied">変更しました、コースデータを更新してください</string>
     <string name="etc_language_en">EN</string>
+    <string name="portal">校園入口網</string>
 </resources>
