@@ -330,7 +330,7 @@ public class CourseFragment extends BaseFragment implements OnClickListener,
                 .getStudentCourse();
         if (studentCourse != null) {
             showCourse(studentCourse);
-            Toast.makeText(getActivity(), R.string.course_click_for_detail, Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), R.string.course_click_for_detail, Toast.LENGTH_SHORT).show();
         }
         else if(studentCourse == null && !MainApplication.readSetting("account").isEmpty()){
             needShowSemesterDialog = false;

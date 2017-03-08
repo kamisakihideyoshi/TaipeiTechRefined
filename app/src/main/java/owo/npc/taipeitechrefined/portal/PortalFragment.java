@@ -66,6 +66,9 @@ public class PortalFragment extends BaseFragment {
                     new LoginHandler(this)));
             loginThread.start();
         }
+        else{
+            Toast.makeText(getActivity(), R.string.account_check, Toast.LENGTH_LONG).show();
+        }
         return fragmentView;
     }
 

@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.sidebar_item_credit:
                         switchFragment(3);
                         break;
-                    case R.id.sidebar_item_wifi:
-                        switchFragment(4);
-                        break;
+//                    case R.id.sidebar_item_wifi:
+//                        switchFragment(4);
+//                        break;
                     case R.id.sidebar_item_account_setting:
                         switchFragment(5);
                         break;

@@ -20,11 +20,11 @@
             android:id="@+id/sidebar_item_credit"
             android:icon="@drawable/credit_icon"
             android:title="@string/credit_text"/>
-        <item
-            android:id="@+id/sidebar_item_wifi"
-            android:icon="@drawable/wifi_icon"
-            android:title="@string/wifi_text"
-            android:visible="false"/>
+        <!--<item-->
+            <!--android:id="@+id/sidebar_item_wifi"-->
+            <!--android:icon="@drawable/wifi_icon"-->
+            <!--android:title="@string/wifi_text"-->
+            <!--android:visible="false"/>-->
         <item
             android:id="@+id/sidebar_item_account_setting"
             android:icon="@drawable/account_setting_icon"
