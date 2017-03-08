@@ -167,7 +167,7 @@
     <string name="feedback_check">メールアドレスを入力していませんので、匿名で送ることになります。適確な返事がもらえません可能性がありますが、よろしいですか？</string>
     <string name="overview_general">教養科目</string>
     <string name="credit_maximum_elective">他学科単位修得上限</string>
-    <string name="right">このアプリは単に機能テスト用のものです、正しく動くことを保証できません。また、使用中に何か問題が起こしてしまっても、一切自己責任になります。</string>
+    <string name="right">このアプリは単に機能テスト用のものです、正しく動くことを保証できません。また、使用中に何か問題が起こしてしまっても、一切自己責任となります。</string>
     <string name="etc_text">設定</string>
     <string name="etc_language_zh">中</string>
     <string name="etc_language_ja">日</string>
