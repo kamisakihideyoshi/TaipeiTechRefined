@@ -165,7 +165,7 @@
     <string name="wifi_permission_error">No permission granted, cannot provide the function.</string>
 
     <!-- Feedback -->
-    <string name="feedback_text">feedback</string>
+    <string name="feedback_text">Feedback</string>
     <string name="question_or_suggestion">Problems and Suggestions</string>
     <string name="feedback_hint">Sincerely thanks for contacting us. \nYour advice is the greatest push for our progress.</string>
     <string name="feedback_contact">Your Email</string>
@@ -176,7 +176,7 @@
     <string name="feedback_check">"You're not fill in the contact information, we'll send it as anonymous and couldn't respond you properly. Are you sure? "</string>
 
     <!-- ETC -->
-    <string name="etc_text">etc</string>
+    <string name="etc_text">Settings</string>
     <string name="etc_language_en">EN</string>
     <string name="etc_language_zh">中</string>
     <string name="etc_language_ja">日</string>
@@ -188,7 +188,7 @@
 
     <!-- Setting -->
     <string name="account_setting_text">Account</string>
-    <string name="portal_title">Portal</string>
+    <string name="portal_title">Taipei Tech Portal</string>
     <string name="password_text">Password</string>
     <string name="save_button">Save</string>
     <string name="clear_button">Clear</string>
@@ -209,6 +209,6 @@
     <string name="ok">OK</string>
     <string name="Exception_loginNportal">Please set account at \"Account\" first!</string>
     <string name="send">Send</string>
-    <string name="portal">校園入口網</string>
+    <string name="portal">Taipei Tech Portal</string>
 
 </resources>
