@@ -117,10 +117,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/button_layout"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
                 android:text="@string/right_link"
                 android:textColor="@drawable/purple_color_selector"
-                android:textSize="@dimen/textMedium"/>
+                android:textSize="@dimen/textMedium" />
 
             <TextView
                 android:id="@+id/nportal_link"
@@ -130,7 +130,8 @@
                 android:layout_centerHorizontal="true"
                 android:text="@string/nportal_text"
                 android:textColor="@drawable/purple_color_selector"
-                android:textSize="@dimen/textMedium"/>
+                android:textSize="@dimen/textMedium"
+                android:visibility="invisible" />
         </RelativeLayout>
     </LinearLayout>
 

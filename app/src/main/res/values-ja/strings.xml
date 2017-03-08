@@ -8,7 +8,7 @@
     <string name="Th">木</string>
     <string name="Tu">火</string>
     <string name="We">水</string>
-    <string name="account_setting_text">アカウント設定</string>
+    <string name="account_setting_text">アカウント管理</string>
     <string name="activity_enddate">終了時間：</string>
     <string name="activity_text">イベント</string>
     <string name="calendar_text">カレンダー</string>
@@ -168,7 +168,7 @@
     <string name="overview_general">教養科目</string>
     <string name="credit_maximum_elective">他学科単位修得上限</string>
     <string name="right">このアプリは単に機能テスト用のものです、正しく動くことを保証できません。また、使用中に何か問題が起こしてしまっても、一切自己責任になります。</string>
-    <string name="etc_text">その他</string>
+    <string name="etc_text">設定</string>
     <string name="etc_language_zh">中</string>
     <string name="etc_language_ja">日</string>
     <string name="etc_uilanguage_text">UI 言語</string>
@@ -177,5 +177,5 @@
     <string name="etc_courselanguage_hint">単位ページの一部も影響されます</string>
     <string name="etc_courselanguage_applied">変更しました、コースデータを更新してください</string>
     <string name="etc_language_en">EN</string>
-    <string name="portal">校園入口網</string>
+    <string name="portal">ポータルサイト</string>
 </resources>

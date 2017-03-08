@@ -31,7 +31,7 @@
             android:title="@string/account_setting_text"/>
         <item
             android:id="@+id/sidebar_item_portal"
-            android:icon="@drawable/ic_dashboard_white_24dp"
+            android:icon="@drawable/ic_explore_white_24dp"
             android:title="@string/portal"
             />
         <item

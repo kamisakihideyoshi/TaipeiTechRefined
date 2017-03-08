@@ -104,7 +104,7 @@
     <string name="feedback_contact_hint">請輸入您的聯絡信箱</string>
 
     <!-- Setting -->
-    <string name="account_setting_text">帳號設定</string>
+    <string name="account_setting_text">帳號管理</string>
     <string name="portal_title">校園入口網站</string>
     <string name="password_text">密碼</string>
     <string name="save_button">儲存</string>
@@ -191,7 +191,7 @@
     <string name="course_load_course">課表查詢中…</string>
     <string name="calendar_loading">行事曆資料讀取中~</string>
     <string name="send">送出</string>
-    <string name="etc_text">其他</string>
+    <string name="etc_text">設定</string>
     <string name="etc_language_en">EN</string>
     <string name="etc_language_ja">日</string>
     <string name="etc_language_zh">中</string>
@@ -200,5 +200,5 @@
     <string name="etc_courselanguage_text">課表語言</string>
     <string name="etc_courselanguage_hint">學分計算頁面也會受到部分影響</string>
     <string name="etc_courselanguage_applied">變更已套用，請手動更新課表</string>
-    <string name="portal">校園入口網</string>
+    <string name="portal">校園入口網站</string>
 </resources>

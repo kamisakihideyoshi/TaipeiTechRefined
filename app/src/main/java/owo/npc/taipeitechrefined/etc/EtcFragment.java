@@ -181,7 +181,7 @@ public class EtcFragment extends BaseFragment {
     }
 
     private int getCurrentCourseLang(String lang) {
-        if(lang.equals("zh")) {
+        if(lang.equals("zh") || lang.equals("ja")) {
             return 100;
         } else{
             return 0;
