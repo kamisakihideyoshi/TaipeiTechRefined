@@ -6,7 +6,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.CookieManager;
@@ -20,7 +22,6 @@ import java.net.HttpCookie;
 import java.net.URI;
 
 import owo.npc.taipeitechrefined.BaseFragment;
-import owo.npc.taipeitechrefined.MainActivity;
 import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;
@@ -51,7 +52,7 @@ public class PortalFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         fragmentView = inflater.inflate(R.layout.fragment_portal, container, false);
-        WebView webview = (WebView) fragmentView.findViewById(R.id.webview);
+        final WebView webview = (WebView) fragmentView.findViewById(R.id.webview);
         webview.setWebViewClient(new WebViewClient());
         webview.clearCache(true);
         webview.clearHistory();
@@ -59,6 +60,20 @@ public class PortalFragment extends BaseFragment {
         webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         String account = Model.getInstance().getAccount();
         String password = Model.getInstance().getPassword();
+        webview.setOnKeyListener(new View.OnKeyListener(){
+
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK
+                        && event.getAction() == MotionEvent.ACTION_UP
+                        && webview.canGoBack()) {
+                    webview.goBack();
+                    return true;
+                }
+
+                return false;
+            }
+
+        });
         if (!TextUtils.isEmpty(account) && !TextUtils.isEmpty(password)) {
             mProgressDialog = ProgressDialog.show(this.getContext(), null,
                     getString(R.string.nportal_loggingin));
@@ -66,9 +81,7 @@ public class PortalFragment extends BaseFragment {
                     new LoginHandler(this)));
             loginThread.start();
         }
-        else{
-            Toast.makeText(getActivity(), R.string.account_check, Toast.LENGTH_LONG).show();
-        }
+
         return fragmentView;
     }
 
@@ -107,14 +120,14 @@ public class PortalFragment extends BaseFragment {
                             e.printStackTrace();
                         }
                     }
-                    webview.loadUrl(PORTAL_URL + "myPortal.do");
+                    webview.loadUrl(PORTAL_URL + "aptreeList.do");
                     break;
                 case BaseRunnable.ERROR:
                     webview.loadUrl(PORTAL_URL);
                     break;
             }
             fragment.dismissProgressDialog();
-            Toast.makeText(fragment.getContext(), R.string.web_back_hint, Toast.LENGTH_LONG)
+            Toast.makeText(fragment.getContext(), R.string.web_back_hint, Toast.LENGTH_SHORT)
                     .show();
         }
     }

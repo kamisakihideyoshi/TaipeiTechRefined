@@ -14,6 +14,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -45,7 +46,9 @@ import owo.npc.taipeitechrefined.course.CourseFragment;
 import owo.npc.taipeitechrefined.credit.CreditFragment;
 import owo.npc.taipeitechrefined.etc.EtcFragment;
 import owo.npc.taipeitechrefined.feedback.FeedbackFragment;
+import owo.npc.taipeitechrefined.model.Model;
 import owo.npc.taipeitechrefined.portal.PortalFragment;
+import owo.npc.taipeitechrefined.runnable.PortalRunnable;
 import owo.npc.taipeitechrefined.setting.AccountSettingFragment;
 import owo.npc.taipeitechrefined.activity.ActivityFragment;
 import owo.npc.taipeitechrefined.utility.PermissionRequestListener;
@@ -134,7 +137,17 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(5);
                         break;
                     case R.id.sidebar_item_portal:
-                        switchFragment(6);
+                        String account = Model.getInstance().getAccount();
+                        String password = Model.getInstance().getPassword();
+                        if(!TextUtils.isEmpty(account) && !TextUtils.isEmpty(password)){
+                            switchFragment(6);
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, R.string.account_check, Toast.LENGTH_LONG).show();
+                            Handler handler = new Handler();
+                            Runnable accountRunnable = new PortalRunnable(handler, MainActivity.this);
+                            handler.postDelayed(accountRunnable, 500);
+                        }
                         break;
                     case R.id.sidebar_item_feedback:
                         switchFragment(7);
