@@ -1,0 +1,307 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>選課表</title> 
+<script src="http://font.cc.ntut.edu.tw/wfs/js/lib/wfs.js" type="text/javascript"></script>
+<!-- 
+<Script Language=JavaScript>
+function CheckData1(form) {
+  if (form.code.value.length==0) {
+     alert("請輸入[學號]");  form.code.focus();  return false;
+  }
+  return true;
+}
+function CheckData2(form) {
+  if (form.code.value.length==0) {
+     alert("請輸入[課號]");  form.code.focus();  return false;
+  }
+  return true;
+}
+</Script>
+-->
+<script type="text/javascript" src="//font.ntut.edu.tw/gws/lib/js/gws.require.js" id="dynaGWS_require" charset="UTF-8" data-transferred="1"></script><script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.setting.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.compatibility.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.extend.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.gws.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.font.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wfa.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/trigger.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/ready.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wime.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/js/lib/wfs.wcmp.json.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.config.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/candidate.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/wime.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-changjie.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-phonetic.html"></script><link type="text/css" href="//font.ntut.edu.tw/gws/lib/css/gws.css" media="all" rel="stylesheet" id="dcw-style"><link type="text/css" href="//font.ntut.edu.tw/gws/lib/css/untitle.css" media="all" rel="stylesheet" id="dcw-MingLiuID"><link type="text/css" href="//font.ntut.edu.tw/gws/lib/css/untitle.css" media="all" rel="stylesheet" id="dcw-wimeCSS"><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.compatibility.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.extend.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.gws.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.compatibility.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.extend.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.gws.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.font.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wfa.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wime.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/trigger.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/ready.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/candidate.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/wime.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-changjie.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-phonetic.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/js/lib/wfs.wcmp.json.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.config.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.font.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wfa.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wime.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/js/lib/wfs.wcmp.json.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.config.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/trigger.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/ready.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/candidate.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/wime.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-changjie.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-phonetic.html"></script><script type="text/javascript" src="//font.ntut.edu.tw/gws/lib/js/gws.require.js" id="dynaGWS_require" charset="UTF-8" data-transferred="1"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.compatibility.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.extend.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.gws.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.font.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wfa.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/trigger.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/ready.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.wime.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/js/lib/wfs.wcmp.json.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/js/gws.config.js"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/candidate.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/wime.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-changjie.html"></script><script type="text/javascript" charset="utf-8" async="" src="//font.ntut.edu.tw/gws/lib/template/keyboard-phonetic.html"></script></head>
+
+
+<body bgcolor="#ffffdf" background="../image/grey918y.gif" text="#003398">
+<h2>選 課 表</h2>
+
+<table border="1">
+<tbody><tr valign="middle"><td align="center" colspan="21">
+
+<form name="F4" method="POST" action="Select.jsp">
+  <input type="hidden" name="format" value="-4">
+  <input type="hidden" name="year" value="105">
+  <input type="hidden" name="sem" value="2">
+  <input type="hidden" name="code" value="105810018">
+  <input type="submit" value="列 印 上 課 時 間 表">　
+</form>
+</td></tr><tr><td align="center" colspan="21">學號：07214545　　姓名：OωO　　班級：XDDD　　　<img src="../image/or_ball.gif"> 105 學年度 第 2 學期　選課表
+</td></tr><tr><th>課號</th><th>課程名稱</th><th>階段</th><th>學分</th><th>時數</th><th>修</th><th>教師</th><th>班級</th><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th><th>教室</th><th>選課<br>狀況</th><th>教學<br>助理</th><th>授課<br>語言</th><th>教學大綱<br>與進度表</th><th>備註
+</th></tr><tr><td>　</td><td>班週會及導師時間</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>3 4</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　
+</td></tr><tr>
+<td><a href="Select.jsp?format=-1&amp;code=225459">225459</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1400027">英文閱讀與聽講練習</a>
+</td><td align="CENTER">2
+</td><td align="CENTER">2.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=23846">李乃欣</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2074">資工一</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td>　</td><td> 8</td><td> 3 4</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11">一教303</a><br>
+<a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=19">二教201</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225459&amp;code=23846">查詢</a><br>
+</td><td>高級
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225482">225482</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1001001">體育</a>
+</td><td align="CENTER">2
+</td><td align="CENTER">0.0
+</td><td align="CENTER">2
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11172">林威玲</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td>　</td><td> 3 4</td><td>　</td><td>　</td><td>　
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225482&amp;code=11172">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225483">225483</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1101005">全民國防教育軍事訓練(二)</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">0.0
+</td><td align="CENTER">2
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11837">劉礎豪</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td> 7 8</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=334">三教301</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225483&amp;code=11837">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225485">225485</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1400099">服務學習</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">0.0
+</td><td align="CENTER">1
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=23862">蔡昕璋</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td> 7</td><td>　</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=51">三教311</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225485&amp;code=23862">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225486">225486</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1404003">國文</a>
+</td><td align="CENTER">2
+</td><td align="CENTER">2.0
+</td><td align="CENTER">2
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=21789">楊衛中</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td> 5 6</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=44">三教211</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225489">225489</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1401032">微積分</a>
+</td><td align="CENTER">2
+</td><td align="CENTER">3.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11399">吳舜堂</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td> 5 6</td><td>　</td><td>　</td><td> 2</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=35">三教109</a><br>
+<a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=44">三教211</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225489&amp;code=11399">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225490">225490</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1401041">物理</a>
+</td><td align="CENTER">2
+</td><td align="CENTER">3.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=23700">施坤龍</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td> 1 2</td><td>　</td><td>　</td><td> 1</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=46">三教303</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225490&amp;code=23700">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225491">225491</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1401044">物理實驗</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">1.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11610">李穎玟</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td>　</td><td> 5 6 7</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=524">億光0712</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225491&amp;code=11610">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225492">225492</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=3001015">專業基礎實習(二)</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">1.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=21170">馮熊年</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td> 7 8 9</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=167">綜科112</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225492&amp;code=21170">查詢</a><br>
+</td><td>綜科112
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225493">225493</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=3001024">電工原理及實驗</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">3.0
+</td><td align="CENTER">4
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11098">許東亞</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td>　</td><td> 8 9</td><td>　</td><td>　</td><td> 5 6</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=44">三教211</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225493&amp;code=11098">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=225494">225494</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=3002014">熱力學</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">3.0
+</td><td align="CENTER">3
+</td><td><div align="center">必</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=10590">陳澤明</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2076">XDDD</a><br>
+
+</td><td>　</td><td> 7</td><td> 5 6</td><td>　</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=44">三教211</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=225494&amp;code=10590">查詢</a><br>
+</td><td>　
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=228636">228636</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1400210">台灣史</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">2.0
+</td><td align="CENTER">2
+</td><td><div align="center">通</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=22689">何鳳嬌</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=1325">博雅核心－歷史(一)</a><br>
+
+</td><td>　</td><td> 1 2</td><td>　</td><td>　</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=63">三教506</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=228636&amp;code=22689">查詢</a><br>
+</td><td>歷史向度
+</td></tr>
+<tr>
+<td><a href="Select.jsp?format=-1&amp;code=228871">228871</a>
+</td><td><a href="Curr.jsp?format=-2&amp;code=1418002">創新思考</a>
+</td><td align="CENTER">1
+</td><td align="CENTER">2.0
+</td><td align="CENTER">2
+</td><td><div align="center">通</div>
+</td><td><a href="Teach.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=11314">陳建文</a><br>
+
+</td><td><a href="Subj.jsp?format=-4&amp;year=105&amp;sem=2&amp;code=2163">博雅核心—創創(二)</a><br>
+
+</td><td>　</td><td>　</td><td>　</td><td> 3 4</td><td>　</td><td>　</td><td>　</td><td><a href="Croom.jsp?format=-3&amp;year=105&amp;sem=2&amp;code=42">三教208</a><br>
+
+</td><td><div align="center">　</div>
+</td><td>　
+</td><td align="CENTER">　
+</td><td align="center"><a href="ShowSyllabus.jsp?snum=228871&amp;code=11314">查詢</a><br>
+</td><td>創創向度，A班
+</td></tr>
+<tr><td>小計</td><td>　</td><td>　</td><td><div align="center">22.0</div></td><td><div align="center">33</div></td><td colspan="17">　</td></tr>
+</tbody></table>
+
+
+<p>備註：<input type="button" onclick="history.back()" value="回上一頁"></p><ol>
+<li>本資料係由本校各教學單位、教務處課務組、進修部教務組、進修學院教務組及計網中心所共同提供！</li>
+<li>本資料僅供參考，正式資料仍以教務處、進修部、進修學院所公佈之書面資料為準。</li>
+
+<li><a href="RemarkDay.jsp">日間部上課時間一覽表</a></li>
+<li><a href="RemarkOce.jsp">進修部上課時間一覽表</a></li>
+<li><a href="RemarkAcce.jsp">進修學院上課時間注意事項</a></li>
+
+<!--
+<LI>您是自86年9月9日以來第<IMG SRC="/cgi-bin/cgiwrap/dbquery/db_select_counter">人次查詢本頁。</LI></OL>
+-->
+</ol>
+ 
+
+
+<script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.setting.js"></script><script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.require.config.js"></script><script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.require.config.js"></script><script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.setting.js"></script><script type="text/javascript" charset="utf-8" src="//font.ntut.edu.tw/gws/lib/js/gws.require.config.js"></script></body></html>
