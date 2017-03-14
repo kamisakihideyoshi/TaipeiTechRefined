@@ -202,4 +202,6 @@
     <string name="etc_courselanguage_applied">變更已套用，請手動更新課表</string>
     <string name="portal">校園入口網站</string>
     <string name="account_check">請先至帳號管理，設定校園入口網站帳號密碼！</string>
+    <string name="ntut_message">認證成功，ntutcc已可以上網！</string>
+    <string name="ntutcc_title">Ntutcc自動登入</string>
 </resources>

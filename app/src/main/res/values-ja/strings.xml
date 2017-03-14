@@ -179,4 +179,6 @@
     <string name="etc_language_en">EN</string>
     <string name="portal">ポータルサイト</string>
     <string name="account_check">先にアカウント設定を完了してください</string>
+    <string name="ntutcc_title">Ntutcc自動登入</string>
+    <string name="ntut_message">認證成功，ntutcc已可以上網！</string>
 </resources>

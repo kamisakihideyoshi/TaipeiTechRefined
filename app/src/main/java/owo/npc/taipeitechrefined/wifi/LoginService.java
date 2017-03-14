@@ -3,12 +3,15 @@ package owo.npc.taipeitechrefined.wifi;
 import android.app.Service;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.support.v7.app.AlertDialog;
 
+import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;
 import owo.npc.taipeitechrefined.runnable.LoginNtutccRunnable;
 import owo.npc.taipeitechrefined.runnable.LoginNtutccWay1Runnable;
@@ -80,24 +83,30 @@ public class LoginService extends Service {
                 case BaseRunnable.REFRESH:
                     if (msg.obj instanceof String) {
                         String result = (String) msg.obj;
-                        if (result.contains("www.google.com")) {
-                            Utility.showNotification(getApplicationContext(),
-                                    "Ntutcc自動登入", "認證成功，ntutcc已可以上網！", true);
-                            isLogin = true;
-                        } else if (result
-                                .contains("captiveportal-login.ntut.edu.tw")) {
-                            Thread t = new Thread(new LoginNtutccWay1Runnable(
-                                    login1Handler, account, password));
-                            t.start();
-                        } else if (result.contains("externalGuestRedirect.html")) {
-                            Thread t = new Thread(new LoginNtutccWay2Runnable(
-                                    login1Handler, result, account, password));
-                            t.start();
-                        } else {
-                            Utility.showNotification(getApplicationContext(),
-                                    "Ntutcc自動登入", "此為未定義轉址網域！" + " " + result, true);
-                            isLogin = false;
-                        }
+//                        if (result.contains("www.google.com")) {
+//                            Utility.showNotification(getApplicationContext(),
+//                                    "Ntutcc自動登入", "認證成功，ntutcc已可以上網！", true);
+//                            isLogin = true;
+//                        } else
+//                        if (result
+//                                .contains("captiveportal-login.ntut.edu.tw")) {
+                        Thread t = new Thread(new LoginNtutccWay1Runnable(
+                                login1Handler, account, password));
+                        t.start();
+//                        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getBaseContext());
+//                        alertDialog.setTitle(R.string.ntutcc_title);
+//                        alertDialog.setMessage(R.string.ntut_message);
+//                        alertDialog.setPositiveButton(R.string.ok, null);
+//                        alertDialog.show();
+//                        } else if (result.contains("externalGuestRedirect.html")) {
+//                            Thread t = new Thread(new LoginNtutccWay2Runnable(
+//                                    login1Handler, result, account, password));
+//                            t.start();
+//                        } else {
+//                            Utility.showNotification(getApplicationContext(),
+//                                    "Ntutcc自動登入", "此為未定義轉址網域！" + " " + result, true);
+//                            isLogin = false;
+//                        }
                     }
                     break;
                 case BaseRunnable.ERROR:

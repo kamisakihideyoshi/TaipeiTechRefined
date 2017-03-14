@@ -211,5 +211,7 @@
     <string name="send">Send</string>
     <string name="portal">Taipei Tech Portal</string>
     <string name="account_check">Please set account at \"Account\" first!</string>
+    <string name="ntutcc_title">Ntutcc</string>
+    <string name="ntut_message">Connect to ntutcc successfully!</string>
 
 </resources>
