@@ -118,7 +118,6 @@ public class WifiUtility {
     }
 
     public static boolean connectToNtutcc(Context context) {
-        testCount++;
         try {
             WifiManager wifiManager = (WifiManager) context
                     .getSystemService(Context.WIFI_SERVICE);

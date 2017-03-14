@@ -213,5 +213,13 @@
     <string name="account_check">Please set account at \"Account\" first!</string>
     <string name="ntutcc_title">Ntutcc</string>
     <string name="ntut_message">Connect to ntutcc successfully!</string>
+    <string name="scan_wifi">Wifi掃描中~</string>
+    <string name="open_wifi">尚未開啟Wi-Fi，請問是否要開啟？</string>
+    <string name="open">開啟</string>
+    <string name="ntutcc_login">Ntutcc自動登入</string>
+    <string name="ntutcc_try">嘗試連線到ntutcc！</string>
+    <string name="ntutcc_none">未偵測到ntutcc！</string>
+    <string name="wifi_scan">掃描中</string>
+    <string name="wait">請稍後..</string>
 
 </resources>

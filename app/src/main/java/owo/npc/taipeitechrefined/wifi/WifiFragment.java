@@ -2,6 +2,7 @@ package owo.npc.taipeitechrefined.wifi;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -43,6 +44,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
     private Context activityContext = null;
     private boolean isScan = false;
     private LoginService loginService;
+    private ProgressDialog pd;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         button = fragmentView.findViewById(R.id.login_button);
         button.setOnClickListener(this);
         initWifi();
+        pd = ProgressDialog.show(getContext(), getString(R.string.wifi_scan), getString(R.string.wait), true);
         return fragmentView;
     }
 
@@ -65,6 +68,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         activityContext = getActivity();
+        scanWifi();
     }
 
     public void scanWifi() {
@@ -76,9 +80,9 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         }
         if (!WifiUtility.isWifiOpen(MainApplication.getInstance())) {
             Builder checkDialog = new AlertDialog.Builder(activityContext);
-            checkDialog.setTitle("提示");
-            checkDialog.setMessage("尚未開啟Wi-Fi，請問是否要開啟？");
-            checkDialog.setPositiveButton("開啟",
+            checkDialog.setTitle(R.string.hint);
+            checkDialog.setMessage(R.string.open_wifi);
+            checkDialog.setPositiveButton(R.string.open,
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -119,12 +123,14 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
                             apList));
                 }
                 if (WifiUtility.isNtutccAround) {
-                    Utility.showNotification(getActivity(), "Ntutcc自動登入",
-                            "嘗試連線到ntutcc！", true);
+                    Utility.showNotification(getActivity(), getString(R.string.ntutcc_login),
+                            getString(R.string.ntutcc_try), true);
+                    Toast.makeText(getContext(), getString(R.string.ntutcc_try), Toast.LENGTH_SHORT).show();
                     WifiUtility.connectToNtutcc(context);
                 } else {
-                    Utility.showNotification(getActivity(), "Ntutcc自動登入",
-                            "未偵測到ntutcc！", true);
+                    Utility.showNotification(getActivity(), getString(R.string.ntutcc_login),
+                            getString(R.string.ntutcc_none), true);
+                    Toast.makeText(getContext(), getString(R.string.ntutcc_none), Toast.LENGTH_SHORT).show();
                 }
                 isScan = false;
                 try {
@@ -134,6 +140,9 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
+                }
+                finally {
+                    pd.dismiss();
                 }
             }
         };
@@ -150,7 +159,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
             getActivity().bindService(intent, this, Context.BIND_AUTO_CREATE);
             return true;
         } else {
-            showAlertMessage("請先至帳號設定，設定校園入口網站帳號密碼！");
+            showAlertMessage(getString(R.string.none_account_error));
             return false;
         }
     }
@@ -198,7 +207,6 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         switch (id) {
             case R.id.refresh_button:
                 if (result) {
-                    WifiUtility.testCount = 0;
                     scanWifi();
                 }
                 break;

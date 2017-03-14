@@ -357,7 +357,6 @@ public class CreditFragment extends BaseFragment implements OnClickListener,
                         pd.setMax(count);
                     }
                     break;
-
             }
         }
     };
