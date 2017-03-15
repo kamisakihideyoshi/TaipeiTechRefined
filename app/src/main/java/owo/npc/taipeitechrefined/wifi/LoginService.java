@@ -44,8 +44,8 @@ public class LoginService extends Service {
                                 }
                             } else {
                                 Utility.showNotification(
-                                        getApplicationContext(), "Ntutcc自動登入",
-                                        currentSSID + "已連線！", true);
+                                        getApplicationContext(), getString(R.string.ntutcc_login),
+                                        currentSSID + getString(R.string.connected), true);
                                 isLogin = false;
                             }
                         } else {
@@ -85,9 +85,6 @@ public class LoginService extends Service {
                         Thread t = new Thread(new LoginNtutccWay1Runnable(
                                 login1Handler, account, password));
                         t.start();
-                        Toast.makeText(getBaseContext(), R.string.ntut_message, Toast.LENGTH_SHORT).show();
-                        Utility.showNotification(getApplicationContext(),
-                                    "Ntutcc自動登入", "認證成功，ntutcc已可以上網！", true);
 //                        } else if (result.contains("externalGuestRedirect.html")) {
 //                            Thread t = new Thread(new LoginNtutccWay2Runnable(
 //                                    login1Handler, result, account, password));
@@ -110,8 +107,10 @@ public class LoginService extends Service {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case BaseRunnable.REFRESH:
-                    Thread t = new Thread(new LoginNtutccRunnable(checkHandler));
-                    t.start();
+                    Toast.makeText(getBaseContext(), R.string.ntut_message, Toast.LENGTH_SHORT).show();
+                    Utility.showNotification(getApplicationContext(),
+                            getString(R.string.ntutcc_login), getString(R.string.ntut_message), true);
+                    break;
                 case BaseRunnable.ERROR:
                     isLogin = false;
                     if (mFragment != null) {
@@ -122,33 +121,33 @@ public class LoginService extends Service {
         }
     };
 
-    private Handler checkHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case BaseRunnable.REFRESH:
-                    if (msg.obj instanceof String) {
-                        String result = (String) msg.obj;
-                        if (result.contains("www.google.com")) {
-                            Utility.showNotification(getApplicationContext(),
-                                    "Ntutcc自動登入", "認證成功，ntutcc已可以上網！", true);
-                            isLogin = false;
-                        } else {
-                            Thread t = new Thread(new LoginNtutccRunnable(
-                                    loginHandler));
-                            t.start();
-                        }
-                    }
-                    break;
-                case BaseRunnable.ERROR:
-                    isLogin = false;
-                    if (mFragment != null) {
-                        mFragment.scanWifi();
-                    }
-                    break;
-            }
-        }
-    };
+//    private Handler checkHandler = new Handler() {
+//        @Override
+//        public void handleMessage(Message msg) {
+//            switch (msg.what) {
+//                case BaseRunnable.REFRESH:
+//                    if (msg.obj instanceof String) {
+//                        String result = (String) msg.obj;
+//                        if (result.contains("www.google.com")) {
+//                            Utility.showNotification(getApplicationContext(),
+//                                    getString(R.string.ntutcc_login), getString(R.string.ntut_message), true);
+//                            isLogin = false;
+//                        } else {
+//                            Thread t = new Thread(new LoginNtutccRunnable(
+//                                    loginHandler));
+//                            t.start();
+//                        }
+//                    }
+//                    break;
+//                case BaseRunnable.ERROR:
+//                    isLogin = false;
+//                    if (mFragment != null) {
+//                        mFragment.scanWifi();
+//                    }
+//                    break;
+//            }
+//        }
+//    };
 
     public void setWifiFragment(WifiFragment wifiFragment) {
         this.mFragment = wifiFragment;
