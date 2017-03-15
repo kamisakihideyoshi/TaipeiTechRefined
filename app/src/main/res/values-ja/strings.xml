@@ -59,7 +59,7 @@
     <string name="search_text">查詢</string>
     <string name="send">送信</string>
     <string name="share_using">シェア</string>
-    <string name="wifi_text">Ntutcc にログイン</string>
+    <string name="wifi_text">ntutcc に接続</string>
     <string name="year">入学年度</string>
     <string name="account_empty_error_message">学籍番号を入力してください</string>
     <string name="activity_date">時間：</string>
@@ -179,6 +179,14 @@
     <string name="etc_language_en">EN</string>
     <string name="portal">ポータルサイト</string>
     <string name="account_check">先にアカウント設定を完了してください</string>
-    <string name="ntutcc_title">Ntutcc自動登入</string>
-    <string name="ntut_message">認證成功，ntutcc已可以上網！</string>
+    <string name="wifi_title">Ntutcc自動登入</string>
+    <string name="wifi_message">ntutcc に接続済み</string>
+    <string name="wifi_none">ntutcc が見つかりません</string>
+    <string name="wifi_try">ntutcc に接続中…</string>
+    <string name="wifi_enable">オン</string>
+    <string name="wifi_login">ntutcc 自動接続</string>
+    <string name="wifi_needenable">Wi-fi の状態がオフです、オンにしますか？</string>
+    <string name="wifi_scan">Wi-fi をスキャン中…</string>
+    <string name="wifi_wait">しばらくお待ちください…</string>
+    <string name="wifi_already_connected">ntutcc に接続済みです</string>
 </resources>

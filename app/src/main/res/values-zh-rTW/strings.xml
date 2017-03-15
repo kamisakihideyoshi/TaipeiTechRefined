@@ -90,7 +90,7 @@
     <string name="creative_dimension">創創向度</string>
 
     <!-- Wifi -->
-    <string name="wifi_text">Ntutcc登入</string>
+    <string name="wifi_text">ntutcc 登入</string>
     <string name="current_wifi">目前偵測到的Wifi</string>
     <string name="login">認證登入</string>
     <string name="scan">重新掃描</string>
@@ -201,6 +201,14 @@
     <string name="portal">校園入口網站</string>
     <string name="account_setting_text">帳號管理</string>
     <string name="account_check">請先至帳號管理，設定校園入口網站帳號密碼！</string>
-    <string name="ntut_message">認證成功，ntutcc已可以上網！</string>
-    <string name="ntutcc_title">Ntutcc自動登入</string>
+    <string name="wifi_message">認證成功，ntutcc已可以上網！</string>
+    <string name="wifi_title">Ntutcc自動登入</string>
+    <string name="wifi_scan">Wi-fi 掃描中〜</string>
+    <string name="wifi_wait">請稍後…</string>
+    <string name="wifi_none">未偵測到 ntutcc！</string>
+    <string name="wifi_login">ntutcc 自動登入</string>
+    <string name="wifi_try">嘗試連線到 ntutcc！</string>
+    <string name="wifi_enable">開啟</string>
+    <string name="wifi_needenable">尚未開啟Wi-Fi，請問是否要開啟？</string>
+    <string name="wifi_already_connected">已連線至  ntutcc！</string>
 </resources>

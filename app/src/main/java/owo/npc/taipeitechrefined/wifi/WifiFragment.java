@@ -60,7 +60,7 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         button = fragmentView.findViewById(R.id.login_button);
         button.setOnClickListener(this);
         initWifi();
-        pd = ProgressDialog.show(getContext(), getString(R.string.wifi_scan), getString(R.string.wait), true);
+        pd = ProgressDialog.show(getContext(), getString(R.string.wifi_scan), getString(R.string.wifi_wait), true);
         return fragmentView;
     }
 
@@ -81,8 +81,8 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
         if (!WifiUtility.isWifiOpen(MainApplication.getInstance())) {
             Builder checkDialog = new AlertDialog.Builder(activityContext);
             checkDialog.setTitle(R.string.hint);
-            checkDialog.setMessage(R.string.open_wifi);
-            checkDialog.setPositiveButton(R.string.open,
+            checkDialog.setMessage(R.string.wifi_needenable);
+            checkDialog.setPositiveButton(R.string.wifi_enable,
                     new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -123,14 +123,14 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
                             apList));
                 }
                 if (WifiUtility.isNtutccAround) {
-                    Utility.showNotification(getActivity(), getString(R.string.ntutcc_login),
-                            getString(R.string.ntutcc_try), true);
-                    Toast.makeText(getContext(), getString(R.string.ntutcc_try), Toast.LENGTH_SHORT).show();
+                    Utility.showNotification(getActivity(), getString(R.string.wifi_login),
+                            getString(R.string.wifi_try), true);
+                    Toast.makeText(getContext(), getString(R.string.wifi_try), Toast.LENGTH_SHORT).show();
                     WifiUtility.connectToNtutcc(context);
                 } else {
-                    Utility.showNotification(getActivity(), getString(R.string.ntutcc_login),
-                            getString(R.string.ntutcc_none), true);
-                    Toast.makeText(getContext(), getString(R.string.ntutcc_none), Toast.LENGTH_SHORT).show();
+                    Utility.showNotification(getActivity(), getString(R.string.wifi_login),
+                            getString(R.string.wifi_none), true);
+                    Toast.makeText(getContext(), getString(R.string.wifi_none), Toast.LENGTH_SHORT).show();
                 }
                 isScan = false;
                 try {

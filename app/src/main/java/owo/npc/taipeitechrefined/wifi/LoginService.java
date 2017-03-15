@@ -14,7 +14,6 @@ import owo.npc.taipeitechrefined.R;
 import owo.npc.taipeitechrefined.runnable.BaseRunnable;
 import owo.npc.taipeitechrefined.runnable.LoginNtutccRunnable;
 import owo.npc.taipeitechrefined.runnable.LoginNtutccWay1Runnable;
-import owo.npc.taipeitechrefined.runnable.LoginNtutccWay2Runnable;
 import owo.npc.taipeitechrefined.utility.WifiUtility;
 import owo.npc.taipeitechrefined.utility.Utility;
 
@@ -44,8 +43,8 @@ public class LoginService extends Service {
                                 }
                             } else {
                                 Utility.showNotification(
-                                        getApplicationContext(), getString(R.string.ntutcc_login),
-                                        currentSSID + getString(R.string.connected), true);
+                                        getApplicationContext(), getString(R.string.wifi_login),
+                                        currentSSID + getString(R.string.wifi_already_connected), true);
                                 isLogin = false;
                             }
                         } else {
@@ -107,9 +106,9 @@ public class LoginService extends Service {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case BaseRunnable.REFRESH:
-                    Toast.makeText(getBaseContext(), R.string.ntut_message, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getBaseContext(), R.string.wifi_message, Toast.LENGTH_SHORT).show();
                     Utility.showNotification(getApplicationContext(),
-                            getString(R.string.ntutcc_login), getString(R.string.ntut_message), true);
+                            getString(R.string.wifi_login), getString(R.string.wifi_message), true);
                     break;
                 case BaseRunnable.ERROR:
                     isLogin = false;
