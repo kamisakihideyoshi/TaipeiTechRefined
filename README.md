@@ -1,5 +1,5 @@
 # Taipei Tech Refined #
-本軟體接受MIT授權條款並修改自 **TaipeiTechApp https://github.com/AlanChiou/TaipeiTechApp**
+本軟體接受GPLv3授權條款並修改自 **TaipeiTechApp https://github.com/AlanChiou/TaipeiTechApp**
 
 ## 介紹 ##
 在原程式的架構下，修正既有 Bug 、移除 Google Analytics，並做出下列修改：  
