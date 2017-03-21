@@ -9,7 +9,6 @@ import java.net.URLConnection;
 import java.util.HashMap;
 
 public class NtutccLoginConnector {
-
     public static String login_1(String account, String password)
             throws Exception {
         String uri = "https://captiveportal-login.ntut.edu.tw/auth/index.html/u";

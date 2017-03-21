@@ -122,12 +122,11 @@ public class WifiFragment extends BaseFragment implements ServiceConnection,
                             getActivity(), android.R.layout.simple_list_item_1,
                             apList));
                 }
-                if (WifiUtility.isNtutccAround) {
-                    Utility.showNotification(getActivity(), getString(R.string.wifi_login),
-                            getString(R.string.wifi_try), true);
-                    Toast.makeText(getContext(), getString(R.string.wifi_try), Toast.LENGTH_SHORT).show();
-                    WifiUtility.connectToNtutcc(context);
-                } else {
+                if (!WifiUtility.isNtutccAround) {
+//                    Utility.showNotification(getActivity(), getString(R.string.wifi_login),
+//                            getString(R.string.wifi_try), true);
+//                    Toast.makeText(getContext(), getString(R.string.wifi_try), Toast.LENGTH_SHORT).show();
+//                    WifiUtility.connectToNtutcc(context);
                     Utility.showNotification(getActivity(), getString(R.string.wifi_login),
                             getString(R.string.wifi_none), true);
                     Toast.makeText(getContext(), getString(R.string.wifi_none), Toast.LENGTH_SHORT).show();

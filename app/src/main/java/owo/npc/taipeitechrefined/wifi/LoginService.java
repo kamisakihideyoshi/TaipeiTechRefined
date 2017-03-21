@@ -40,6 +40,9 @@ public class LoginService extends Service {
                             if (currentSSID.contains("ntutcc")) {
                                 if (!isLogin) {
                                     LoginNtutcc();
+                                    Toast.makeText(context, R.string.wifi_message, Toast.LENGTH_SHORT).show();
+                                    Utility.showNotification(context,
+                                            getString(R.string.wifi_login), getString(R.string.wifi_message), true);
                                 }
                             } else {
                                 Utility.showNotification(
