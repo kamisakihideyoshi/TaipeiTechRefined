@@ -4,17 +4,18 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.TextView;
 
 import owo.npc.taipeitechrefined.R;
 
-public class CourseBlock extends TextView {
+public class CourseBlock extends android.support.v7.widget.AppCompatTextView {
 
     public CourseBlock(Context context) {
         super(context);
-        setTextColor(getResources().getColor(R.color.darken));
+        setTextColor(ContextCompat.getColor(context, R.color.darken));
         setGravity(Gravity.CENTER);
         setPadding(2, 0, 2, 0);
         setTextSize(TypedValue.COMPLEX_UNIT_PX,

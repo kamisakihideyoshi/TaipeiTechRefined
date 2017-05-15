@@ -129,7 +129,7 @@ public class Connector {
                 charsetName);
     }
 
-    public static String getDataByGet(String uri, String charsetName, String referer)
+    public static String    getDataByGet(String uri, String charsetName, String referer)
             throws Exception {
         return convertStreamToString(getInputStreamByGet(uri,referer),
                 charsetName);

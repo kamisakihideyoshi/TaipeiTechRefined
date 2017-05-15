@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class ActivityInfo {
+public class   ActivityInfo {
     private static final SimpleDateFormat sdf = new SimpleDateFormat(
             "yyyy/MM/dd", Locale.TAIWAN);
     private Date start;

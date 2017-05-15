@@ -26,7 +26,7 @@ public class CourseDetailTask extends AsyncTask<String, Void, Object> {
         super.onPreExecute();
         CourseFragment fragment = mCourseFragmentWeakReference.get();
         if (fragment != null && !NportalConnector.isLogin()) {
-            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, fragment.getContext().getString(R.string.course_login_portal));
+            ProgressDialog progressDialog = ProgressDialog.show(fragment.getContext(), null, "學期清單查詢中…");
             mProgressDialogWeakReference = new WeakReference<>(progressDialog);
         }
     }

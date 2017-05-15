@@ -125,8 +125,7 @@
     <string name="credit_updating">學分資料查詢中~</string>
     <string name="credit_essential_core">應修核心:</string>
     <string name="credit_setting_graduation">畢業學分標準設定</string>
-    <string name="cancel">取消</string>
-    <string name="save">儲存</string>
+
     <string name="credit_choose_enter_semester">請選擇入學年度</string>
     <string name="credit_loading_academic_system">學制清單讀取中~</string>
     <string name="credit_loading_semester_list">入學年度清單讀取中~</string>

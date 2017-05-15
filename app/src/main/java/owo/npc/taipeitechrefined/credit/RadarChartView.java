@@ -18,41 +18,41 @@ import owo.npc.taipeitechrefined.R;
 
 public class RadarChartView extends View {
     private int count;
-    private float angle;
-    private final float angle_offset = 90;
-    private final int point_radius = 5; // 頂點半徑
-    private final int valueRulingCount = 3; // 等分
-    private int radius;
-    private int centerX;
-    private int centerY;
-    private String[] titles = null;
-    private int margin_dp = 25;
-    private Point[] pts; // 维度端点
-    private Path totalPath;
-    private Path corePath;
-    private float[] totalValues = null; // 各维度分值
-    private float[] coreValues = null; // 各维度分值
-    private int maxValue = 6;
-    private Point[] total_pts; // 维度端点
-    private Point[] core_pts; // 维度端点
-    private Paint paint;
-    private Paint totalPaint;
-    private Paint corePaint;
-    private int anim_delta = 30;
-    private int total_anim_count = 0;
-    private int core_anim_count = 0;
-    private int max_anim_count;
-    private float total_anim_percentage = 1.0f;
-    private float core_anim_percentage = 1.0f;
-    private Interpolator interpolator = new OvershootInterpolator();
+        private float angle;
+        private final float angle_offset = 90;
+        private final int point_radius = 5; // 頂點半徑
+        private final int valueRulingCount = 3; // 等分
+        private int radius;
+        private int centerX;
+        private int centerY;
+        private String[] titles = null;
+        private int margin_dp = 25;
+        private Point[] pts; // 维度端点
+        private Path totalPath;
+        private Path corePath;
+        private float[] totalValues = null; // 各维度分值
+        private float[] coreValues = null; // 各维度分值
+        private int maxValue = 6;
+        private Point[] total_pts; // 维度端点
+        private Point[] core_pts; // 维度端点
+        private Paint paint;
+        private Paint totalPaint;
+        private Paint corePaint;
+        private int anim_delta = 30;
+        private int total_anim_count = 0;
+        private int core_anim_count = 0;
+        private int max_anim_count;
+        private float total_anim_percentage = 1.0f;
+        private float core_anim_percentage = 1.0f;
+        private Interpolator interpolator = new OvershootInterpolator();
 
-    public float[] getTotalValues() {
-        return totalValues;
-    }
+        public float[] getTotalValues() {
+            return totalValues;
+        }
 
-    public float[] getCoreValues() {
-        return totalValues;
-    }
+        public float[] getCoreValues() {
+            return totalValues;
+        }
 
     public void setTotalValues(float[] values) {
         this.totalValues = values;

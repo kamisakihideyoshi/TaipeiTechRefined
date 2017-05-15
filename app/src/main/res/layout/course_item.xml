@@ -22,7 +22,7 @@
         android:layout_weight="1"
         android:textColor="@color/darken"
         android:ellipsize="marquee"
-        android:gravity="left"
+        android:gravity="start"
         android:singleLine="true"
         android:textSize="@dimen/textMedium"/>
 

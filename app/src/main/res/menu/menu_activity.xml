@@ -5,4 +5,3 @@
         android:title="@string/activity_update"
         android:visible="true"/>
 </menu>
-<!-- hello world -->

@@ -51,7 +51,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
         final NotificationManager notificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE); // 取得系統的通知服務
         final Notification notification = new Notification.Builder(getApplicationContext())
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle("消息")
                 .setContentText(remoteMessage.getNotification().getBody())
                 .setContentIntent(pendingIntent)

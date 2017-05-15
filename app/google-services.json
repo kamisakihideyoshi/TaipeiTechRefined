@@ -15,11 +15,35 @@
       },
       "oauth_client": [
         {
+          "client_id": "675312916885-bd8sfp9ep4mm2serkrugkub06k58te7v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "owo.npc.taipeitechrefined",
+            "certificate_hash": "a2b8fef234448215336a9f0159cf7abca44008c7"
+          }
+        },
+        {
+          "client_id": "675312916885-a8qm0o6oomdq4gh2ihes84s6tu227u4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "owo.npc.taipeitechrefined",
+            "certificate_hash": "eee4c27fe0596993c4f8f5d411ba264c43887385"
+          }
+        },
+        {
+          "client_id": "675312916885-0556p9s8s2kr9atbq8cf38m4qenid992.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "owo.npc.taipeitechrefined",
+            "certificate_hash": "19c7a14f787906b208f261dfc7543b1256c59bf9"
+          }
+        },
+        {
           "client_id": "675312916885-mb8j1l6nog3sodljtocjf96osmgjlorh.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "owo.npc.taipeitechrefined",
-            "certificate_hash": "4E7EA922AC3574413E15CC97ADC607D198DDD41C"
+            "certificate_hash": "4e7ea922ac3574413e15cc97adc607d198ddd41c"
           }
         },
         {

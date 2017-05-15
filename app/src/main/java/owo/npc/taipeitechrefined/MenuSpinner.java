@@ -2,9 +2,9 @@ package owo.npc.taipeitechrefined;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.Spinner;
+import android.support.v7.widget.AppCompatSpinner;
 
-public class MenuSpinner extends Spinner {
+public class MenuSpinner extends AppCompatSpinner {
 
     OnItemSelectedListener listener;
 
